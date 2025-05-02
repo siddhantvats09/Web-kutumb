@@ -17,12 +17,11 @@ export default function Homes() {
 
       {/* View Demos Button */}
       <div className="flex justify-center mt-16 z-10 relative">
-      <button className="flex items-center px-5 py-2 bg-gray-800 border border-gray-600 rounded-full hover:bg-gray-700 transition">
-        <div className="w-4 h-4 bg-gradient-to-tr from-purple-400 to-blue-400 rounded-full mr-2" />
-        View Demos and Highlights
-      </button>
-    </div>
-
+        <button className="flex items-center px-5 py-2 bg-gray-800 border border-gray-600 rounded-full hover:bg-gray-700 transition">
+          <div className="w-4 h-4 bg-gradient-to-tr from-purple-400 to-blue-400 rounded-full mr-2" />
+          View Demos and Highlights
+        </button>
+      </div>
 
       {/* Abstract Background Shape */}
       <div className="absolute top-50 left-1/2 transform -translate-x-1/2 z-0">
@@ -39,9 +38,9 @@ export default function Homes() {
         ].map((item, i) => (
           <div
             key={i}
-            className="rounded-xl bg-gradient-to-br from-[#1c1c1c68] to-[#2a2a2a64] p-6 border-[1px] border-[#5b5b5b7a] text-center hover:scale-105 transition transform shadow-lg"
+            className="w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-auto md:h-auto rounded-xl bg-gradient-to-br from-[#1c1c1c68] to-[#2a2a2a64] p-6 border border-[#5b5b5b7a] text-center hover:scale-105 transition transform shadow-lg flex flex-col justify-center items-center mx-auto"
           >
-            <p className="text-lg font-semibold mb-1">{item.label}</p>
+            <p className="text-base font-semibold mb-1">{item.label}</p>
             <p className="text-sm text-gray-400">{item.desc}</p>
           </div>
         ))}

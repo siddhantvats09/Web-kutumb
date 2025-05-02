@@ -1,27 +1,42 @@
-'use client'; // for app directory or remove if using pages
+"use client"; // for app directory or remove if using pages
 
-import { useState } from 'react';
-import { HiOutlineMenuAlt3 } from 'react-icons/hi';
-import { FiSearch } from 'react-icons/fi';
+import { useState } from "react";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { FiSearch } from "react-icons/fi";
+import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-[#1c1c1e] text-white p-4 px-6 flex items-center justify-between">
+    <nav className="bg-[#1c1c1e9d] relative z-2 text-white p-4 px-6 flex items-center justify-between">
       {/* Logo */}
       <div className="flex items-center space-x-2">
-       <img src={"/images/logo.png"} alt='logo' className='w-[150px] h-auto'>
-       </img>
+        <Link href={"/"}>
+          <img
+            src={"/images/logo.png"}
+            alt="logo"
+            className="w-[150px] h-auto"
+          ></img>
+        </Link>
       </div>
 
       {/* Links - Hidden on small screens */}
       <div className="hidden md:flex space-x-16 text-[20px] font-medium pr-10">
-        <a href="#" className="hover:text-gray-300">Home</a>
-        <a href="#" className="hover:text-gray-300">About</a>
-        <a href="#" className="hover:text-gray-300">Services</a>
-        <a href="#" className="hover:text-gray-300">Data</a>
-        <a href="#" className="hover:text-gray-300">Clients</a>
+        <Link href="/" className="hover:text-gray-300">
+          Home
+        </Link>
+      
+        <Link href={"/about-us"} className="hover:text-gray-300">
+          About
+        </Link>
+        <Link href="/services" className="hover:text-gray-300">
+          Services
+        </Link>
+      
+        <Link href="/contactus" className="hover:text-gray-300">
+          Contact Us
+        </Link>
       </div>
 
       {/* Right side: Search & Menu */}
@@ -35,15 +50,23 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-18 left-0 right-0 bg-[#1c1c1e] flex flex-col items-center space-y-4 py-4 md:hidden z-50">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Data</a>
-          <a href="#">Clients</a>
+        <div className="absolute z-99  top-18 left-0 right-0 bg-[#1c1c1e] flex flex-col items-center space-y-4 py-4 md:hidden ">
+         <Link href="/" className="hover:text-gray-300">
+          Home
+        </Link>
+      
+        <Link href={"/about-us"} className="hover:text-gray-300">
+          About
+        </Link>
+        <Link href="/services" className="hover:text-gray-300">
+          Services
+        </Link>
+      
+        <Link href="/contactus" className="hover:text-gray-300">
+          Contact Us
+        </Link>
         </div>
       )}
     </nav>
   );
 }
-

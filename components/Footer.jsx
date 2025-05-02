@@ -48,8 +48,8 @@ const Footer = () => {
         {/* Contact */}
         <div className="space-y-3">
           <h3 className="text-white text-xl font-medium">Contact</h3>
-          <p className="text-gray-400 text-sm">Email: info@webkutumb.com</p>
-          <p className="text-gray-400 text-sm">Phone: +91 98765 43210</p>
+          <p className="text-gray-400 text-sm">Email: shivanshvats16@gmail.com</p>
+          <p className="text-gray-400 text-sm">Phone: +91 79881 80681</p>
           <div className="flex gap-4 mt-3">
             <a href="#" className="text-gray-400 hover:text-white transition">
               <i className="fab fa-facebook-f"></i>
