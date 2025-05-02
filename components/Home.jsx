@@ -17,11 +17,12 @@ export default function Homes() {
 
       {/* View Demos Button */}
       <div className="flex justify-center mt-16 z-10 relative">
-        <button className="flex items-center px-5 py-2 bg-gray-800 border border-gray-600 rounded-full hover:bg-gray-700 transition">
-          <div className="w-4 h-4 bg-gradient-to-tr from-purple-400 to-blue-400 rounded-full mr-2" />
-          View Demos and Highlights
-        </button>
-      </div>
+      <button className="flex items-center px-5 py-2 bg-gray-800 border border-gray-600 rounded-full hover:bg-gray-700 transition">
+        <div className="w-4 h-4 bg-gradient-to-tr from-purple-400 to-blue-400 rounded-full mr-2" />
+        View Demos and Highlights
+      </button>
+    </div>
+
 
       {/* Abstract Background Shape */}
       <div className="absolute top-50 left-1/2 transform -translate-x-1/2 z-0">
