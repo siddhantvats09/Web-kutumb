@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -17,49 +18,22 @@ const Footer = () => {
         <div className="space-y-3">
           <h3 className="text-white text-xl font-medium">Services</h3>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li>
-              <a href="#" className="hover:text-white transition">
-                Web Design
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white transition">
-                Web Development
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white transition">
-                Graphic Design
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white transition">
-                Video Editing
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white transition">
-                Google Ads
-              </a>
-            </li>
+            <li><a href="#" className="hover:text-white transition">Web Design</a></li>
+            <li><a href="#" className="hover:text-white transition">Web Development</a></li>
+            <li><a href="#" className="hover:text-white transition">Graphic Design</a></li>
+            <li><a href="#" className="hover:text-white transition">Video Editing</a></li>
+            <li><a href="#" className="hover:text-white transition">Google Ads</a></li>
           </ul>
         </div>
 
         {/* Contact */}
         <div className="space-y-3">
           <h3 className="text-white text-xl font-medium">Contact</h3>
-          <p className="text-gray-400 text-sm">Email: shivanshvats16@gmail.com</p>
+          <p className="text-gray-400 text-sm">Email: webkutumb81@gmail.com</p>
           <p className="text-gray-400 text-sm">Phone: +91 79881 80681</p>
-          <div className="flex gap-4 mt-3">
-            <a href="#" className="text-gray-400 hover:text-white transition">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
+          <div className="flex gap-4 mt-3 text-xl">
+            <a href="https://www.linkedin.com/in/web-kutumb-746129364?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-400 hover:text-white transition"><FaLinkedinIn /></a>
+            <a href="https://www.instagram.com/kutumb_rachna?igsh=MWo3emlvZmNha2hmbg==" className="text-gray-400 hover:text-white transition"><FaInstagram /></a>
           </div>
         </div>
       </div>

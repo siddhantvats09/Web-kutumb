@@ -4,7 +4,7 @@ export default function Homes() {
   return (
     <main className="min-h-full bg-black text-white px-6 py-18 relative overflow-hidden">
       {/* Hero Text */}
-      <div className="max-w-4xl mx-auto text-center z-10 relative">
+      <div className="max-w-4xl mx-auto  text-center z-1 relative">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Everything you need <br />
           to start and run your <span className="text-white">Business</span>
