@@ -17,7 +17,7 @@ export default function ContactUsPage() {
       {/* Contact Form */}
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Form */}
-        <img src={"/images/contact2.png"} alt="img" className="rounded-[18px] hidden lg:block">
+        <img src={"/images/contact.png"} alt="img" className="rounded-[18px] hidden lg:block">
         </img>
 
         {/* Contact Info */}
