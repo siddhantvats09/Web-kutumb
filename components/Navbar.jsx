@@ -12,13 +12,23 @@ export default function Navbar() {
     <nav className="bg-[#1c1c1e9d] relative z-2 text-white p-4 px-6 flex items-center justify-between">
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        <Link href={"/"}>
+        {/* <Link href={"/"}>
           <img
             src={"/images/logo22.png"}
             alt="logo"
             className="w-[150px] h-auto"
           ></img>
-        </Link>
+        </Link> */}
+
+      {/* Logo text */}
+      <h1 className="text-3xl font-[cursive] text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-600 drop-shadow-[0_0_10px_rgba(147,51,234,0.4)] hover:scale-105 transition-all duration-300">
+  SixthGenX
+</h1>
+
+
+
+
+
       </div>
 
       {/* Links - Hidden on small screens */}
