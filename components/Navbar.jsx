@@ -20,15 +20,12 @@ export default function Navbar() {
           ></img>
         </Link> */}
 
-      {/* Logo text */}
-      <h1 className="text-3xl font-[cursive] text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-600 drop-shadow-[0_0_10px_rgba(147,51,234,0.4)] hover:scale-105 transition-all duration-300">
-  SixthGenX
-</h1>
-
-
-
-
-
+        {/* Logo text */}
+        <Link href={"/"}>
+          <h1 className="text-3xl font-[cursive] text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-600 drop-shadow-[0_0_10px_rgba(147,51,234,0.4)] hover:scale-105 transition-all duration-300">
+            SixthGenX
+          </h1>
+        </Link>
       </div>
 
       {/* Links - Hidden on small screens */}
@@ -36,14 +33,14 @@ export default function Navbar() {
         <Link href="/" className="hover:text-gray-300">
           Home
         </Link>
-      
+
         <Link href={"/about-us"} className="hover:text-gray-300">
           About
         </Link>
         <Link href="/services" className="hover:text-gray-300">
           Services
         </Link>
-      
+
         <Link href="/contactus" className="hover:text-gray-300">
           Contact Us
         </Link>
@@ -61,20 +58,20 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="absolute z-99  top-18 left-0 right-0 bg-[#1c1c1e] flex flex-col items-center space-y-4 py-4 md:hidden ">
-         <Link href="/" className="hover:text-gray-300">
-          Home
-        </Link>
-      
-        <Link href={"/about-us"} className="hover:text-gray-300">
-          About
-        </Link>
-        <Link href="/services" className="hover:text-gray-300">
-          Services
-        </Link>
-      
-        <Link href="/contactus" className="hover:text-gray-300">
-          Contact Us
-        </Link>
+          <Link href="/" className="hover:text-gray-300">
+            Home
+          </Link>
+
+          <Link href={"/about-us"} className="hover:text-gray-300">
+            About
+          </Link>
+          <Link href="/services" className="hover:text-gray-300">
+            Services
+          </Link>
+
+          <Link href="/contactus" className="hover:text-gray-300">
+            Contact Us
+          </Link>
         </div>
       )}
     </nav>
