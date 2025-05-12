@@ -45,7 +45,7 @@ export default function Hero() {
             Contact Us
           </button>
           <p className="mt-4 text-sm text-gray-600 max-w-sm">
-            Web Kutumb helps you grow your brand with expert services in web
+          SixthGenX helps you grow your brand with expert services in web
             design, development, video production, and digital marketing.
           </p>
         </div>

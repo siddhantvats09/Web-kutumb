@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="flex items-center space-x-2">
         <Link href={"/"}>
           <img
-            src={"/images/logo.png"}
+            src={"/images/logo22.png"}
             alt="logo"
             className="w-[150px] h-auto"
           ></img>

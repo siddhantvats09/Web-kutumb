@@ -4,7 +4,7 @@ export default function AboutUsPage() {
       {/* Hero Section */}
       <section className="bg-[#1a1a1a4c] relative z-1 text-white py-20 px-6 sm:px-8 text-center ">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
-          About <span className="text-gradient">Web Kutumb</span>
+          About <span className="text-gradient">SixthGenX</span>
         </h1>
         <p className="text-gray-300 max-w-2xl mx-auto text-lg sm:text-xl">
           We are a creative digital agency dedicated to delivering top-notch
@@ -24,7 +24,7 @@ export default function AboutUsPage() {
               Our Mission
             </h3>
             <p className="text-gray-400 text-lg">
-              At Web Kutumb, our mission is to empower businesses with
+              At SixthGenX, our mission is to empower businesses with
               cutting-edge design, development, and marketing solutions. We
               strive to create visually stunning and highly functional digital
               experiences that convert.
@@ -108,7 +108,7 @@ export default function AboutUsPage() {
           Ready to take your business to the next level?
         </h2>
         <p className="text-gray-400 mb-8 max-w-xl mx-auto text-lg">
-          Let’s discuss how Web Kutumb can help bring your vision to life
+          Let’s discuss how SixthGenX can help bring your vision to life
           through digital creativity and innovation.
         </p>
         <a

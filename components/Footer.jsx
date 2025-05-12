@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Company Info */}
         <div>
-          <h2 className="text-white text-2xl font-semibold mb-3">Web Kutumb</h2>
+          <h2 className="text-white text-2xl font-semibold mb-3">SixthGenX</h2>
           <p className="text-gray-400 text-sm">
             Building powerful digital experiences through web, design, video,
             and strategy. Let's grow your business together.
@@ -40,7 +40,7 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="mt-10 border-t border-gray-700 pt-6 text-sm text-center text-gray-500">
-        © {new Date().getFullYear()} Web Kutumb. All rights reserved.
+        © {new Date().getFullYear()} SixthGenX. All rights reserved.
       </div>
     </footer>
   );

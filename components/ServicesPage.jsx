@@ -44,7 +44,7 @@ export default function ServicesPage() {
   
         {/* Why Choose Us Section */}
         <section className="py-20 px-6 bg-gradient-to-r from-indigo-500/70 via-purple-500/60 to-blue-500/70 text-center">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-6 text-white">Why Choose Web Kutumb?</h2>
+          <h2 className="text-3xl sm:text-4xl font-semibold mb-6 text-white">Why Choose SixthGenX?</h2>
           <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10">
             <div className="bg-[#1c1c1c] p-8 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-white mb-4">Experience and Expertise</h3>
@@ -66,7 +66,7 @@ export default function ServicesPage() {
           <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-10">Client Testimonials</h2>
           <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-10">
             {[
-              { name: "John Doe", feedback: "Web Kutumb transformed our website and increased our conversions significantly!", position: "CEO, TechCo" },
+              { name: "John Doe", feedback: "SixthGenX transformed our website and increased our conversions significantly!", position: "CEO, TechCo" },
               { name: "Jane Smith", feedback: "The team created beautiful graphics and videos that elevated our brand presence.", position: "Marketing Manager, Retail Corp" },
             ].map((testimonial, index) => (
               <div key={index} className="bg-[#2a2a2a] p-8 rounded-xl shadow-lg w-full sm:w-1/2 lg:w-1/3">
