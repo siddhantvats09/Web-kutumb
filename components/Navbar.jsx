@@ -22,7 +22,7 @@ export default function Navbar() {
 
         {/* Logo text */}
         <Link href={"/"}>
-          <h1 className="text-3xl font-[cursive] text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-600 drop-shadow-[0_0_10px_rgba(147,51,234,0.4)] hover:scale-105 transition-all duration-300">
+          <h1 className="text-3xl cursor-pointer font-[cursive] text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-600 drop-shadow-[0_0_10px_rgba(147,51,234,0.4)] hover:scale-105 transition-all duration-300">
             SixthGenX
           </h1>
         </Link>
