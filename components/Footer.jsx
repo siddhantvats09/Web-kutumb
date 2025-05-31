@@ -32,8 +32,8 @@ const Footer = () => {
           <p className="text-gray-400 text-sm">Email: webkutumb81@gmail.com</p>
           <p className="text-gray-400 text-sm">Phone: +91 79881 80681</p>
           <div className="flex gap-4 mt-3 text-xl">
-            <a href="https://www.linkedin.com/in/web-kutumb-746129364?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-400 hover:text-white transition"><FaLinkedinIn /></a>
-            <a href="https://www.instagram.com/kutumb_rachna?igsh=MWo3emlvZmNha2hmbg==" className="text-gray-400 hover:text-white transition"><FaInstagram /></a>
+            <a  target="_blank" href="http://linkedin.com/in/sixthgenx-tech-746129364" className="text-gray-400 hover:text-white transition"><FaLinkedinIn /></a>
+            <a  target="_blank" href="https://www.instagram.com/sixthgenx?igsh=bndjbmdtNmo0d2xn&utm_source=qr" className="text-gray-400 hover:text-white transition"><FaInstagram /></a>
           </div>
         </div>
       </div>
