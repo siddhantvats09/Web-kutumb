@@ -18,22 +18,63 @@ const Footer = () => {
         <div className="space-y-3">
           <h3 className="text-white text-xl font-medium">Services</h3>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white transition">Web Design</a></li>
-            <li><a href="#" className="hover:text-white transition">Web Development</a></li>
-            <li><a href="#" className="hover:text-white transition">Graphic Design</a></li>
-            <li><a href="#" className="hover:text-white transition">Video Editing</a></li>
-            <li><a href="#" className="hover:text-white transition">Google Ads</a></li>
+            <li>
+              <a href="#" className="hover:text-white transition">
+                Web Design
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white transition">
+                Web Development
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white transition">
+                Graphic Design
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white transition">
+                Video Editing
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white transition">
+                Google Ads
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Contact */}
         <div className="space-y-3">
           <h3 className="text-white text-xl font-medium">Contact</h3>
-          <p className="text-gray-400 text-sm">Email: webkutumb81@gmail.com</p>
+          <p className="text-gray-400 text-sm">
+            Email:{" "}
+            <a
+              href="mailto:sixthgenxtech@gmail.com"
+              className="text-gray-300 hover:text-amber-400 transition-colors duration-300 underline decoration-transparent hover:decoration-amber-400 hover:underline-offset-4 animate-pulse"
+            >
+              sixthgenxtech@gmail.com
+            </a>
+          </p>
+
           <p className="text-gray-400 text-sm">Phone: +91 79881 80681</p>
           <div className="flex gap-4 mt-3 text-xl">
-            <a  target="_blank" href="http://linkedin.com/in/sixthgenx-tech-746129364" className="text-gray-400 hover:text-white transition"><FaLinkedinIn /></a>
-            <a  target="_blank" href="https://www.instagram.com/sixthgenx?igsh=bndjbmdtNmo0d2xn&utm_source=qr" className="text-gray-400 hover:text-white transition"><FaInstagram /></a>
+            <a
+              target="_blank"
+              href="http://linkedin.com/in/sixthgenx-tech-746129364"
+              className="text-gray-400 hover:text-white transition"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/sixthgenx?igsh=bndjbmdtNmo0d2xn&utm_source=qr"
+              className="text-gray-400 hover:text-white transition"
+            >
+              <FaInstagram />
+            </a>
           </div>
         </div>
       </div>

@@ -5,16 +5,18 @@ import Homes from "../../components/Home"
 import ServicesSection from "../../components/ServicesSection"
 import Contact from "../../components/Contact"
 import Footer from "../../components/Footer"
-
+import { Toaster } from "react-hot-toast"
 
 export default function Home() {
   return (
     <div>
-      <Homes></Homes>
-      <Hero></Hero>
-      <ServicesSection></ServicesSection>
-      <Contact></Contact>
-      <Footer></Footer>
+      <Toaster position="top-right" />
+      
+      <Homes />
+      <Hero />
+      <ServicesSection />
+      <Contact />
+      <Footer />
     </div>
   );
 }

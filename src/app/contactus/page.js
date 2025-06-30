@@ -14,7 +14,8 @@ const AboutUs = () => {
     <>
     
       <ContactUsPage></ContactUsPage>
-      {/* <Contact></Contact> */}
+      <Contact></Contact>
+
       <Footer></Footer>
     </>
   );
