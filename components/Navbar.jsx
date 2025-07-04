@@ -1,77 +1,70 @@
-"use client"; // for app directory or remove if using pages
+"use client";
 
 import { useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { FiSearch } from "react-icons/fi";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const navItems = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about-us" },
+    { label: "Services", href: "/services" },
+    { label: "Contact", href: "/contactus" },
+  ];
+
   return (
-    <nav className="bg-[#1c1c1e9d] relative z-2 text-white p-4 px-6 flex items-center justify-between">
-      {/* Logo */}
-      <div className="flex items-center space-x-2">
-        {/* <Link href={"/"}>
-          <img
-            src={"/images/logo22.png"}
-            alt="logo"
-            className="w-[150px] h-auto"
-          ></img>
-        </Link> */}
-
-        {/* Logo text */}
-        <Link href={"/"}>
-          <h1 className="text-3xl cursor-pointer font-[cursive] text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-600 drop-shadow-[0_0_10px_rgba(147,51,234,0.4)] hover:scale-105 transition-all duration-300">
-            SixthGenX
-          </h1>
+    <nav className="sticky top-0 z-50 text-white px-6 py-4 bg-black/30 backdrop-blur-lg border-b border-white/10">
+      <div className="flex items-center justify-between w-full">
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
+            src="/images/logos.png" // <-- Put your logo image here
+            alt="SixthGenX Logo"
+            width={140} // Adjust size as needed
+            height={40}
+            className="hover:scale-105 transition-transform duration-300"
+          />
         </Link>
+
+        {/* Desktop Links */}
+        <div className="hidden md:flex space-x-10 text-lg font-medium">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="relative transition duration-300 hover:text-indigo-300 group"
+            >
+              {item.label}
+              <span className="absolute left-1/4 bottom-0 w-1/2 h-[2px] bg-indigo-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-300" />
+            </Link>
+          ))}
+        </div>
+
+        {/* Mobile Menu Icon */}
+        <div className="md:hidden">
+          <HiOutlineMenuAlt3
+            className="text-3xl cursor-pointer"
+            onClick={() => setMenuOpen(!menuOpen)}
+          />
+        </div>
       </div>
 
-      {/* Links - Hidden on small screens */}
-      <div className="hidden md:flex space-x-16 text-[20px] font-medium pr-10">
-        <Link href="/" className="hover:text-gray-300">
-          Home
-        </Link>
-
-        <Link href={"/about-us"} className="hover:text-gray-300">
-          About
-        </Link>
-        <Link href="/services" className="hover:text-gray-300">
-          Services
-        </Link>
-
-        <Link href="/contactus" className="hover:text-gray-300">
-          Contact Us
-        </Link>
-      </div>
-
-      {/* Right side: Search & Menu */}
-      <div className="flex  md:hidden items-center space-x-4 md:space-x-2">
-        {/* <FiSearch className="text-lg cursor-pointer" /> */}
-        <HiOutlineMenuAlt3
-          className="text-2xl cursor-pointer md:hidden"
-          onClick={() => setMenuOpen(!menuOpen)}
-        />
-      </div>
-
-      {/* Mobile Menu */}
+      {/* Mobile Dropdown */}
       {menuOpen && (
-        <div className="absolute z-99  top-18 left-0 right-0 bg-[#1c1c1e] flex flex-col items-center space-y-4 py-4 md:hidden ">
-          <Link href="/" className="hover:text-gray-300">
-            Home
-          </Link>
-
-          <Link href={"/about-us"} className="hover:text-gray-300">
-            About
-          </Link>
-          <Link href="/services" className="hover:text-gray-300">
-            Services
-          </Link>
-
-          <Link href="/contactus" className="hover:text-gray-300">
-            Contact Us
-          </Link>
+        <div className="absolute top-full left-0 right-0 bg-black/90 backdrop-blur-md flex flex-col items-center space-y-4 py-4 md:hidden z-50 border-t border-white/10">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-lg hover:text-indigo-300 transition"
+              onClick={() => setMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
       )}
     </nav>

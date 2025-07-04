@@ -1,50 +1,68 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
+import Image from "next/image";
+
 export default function Homes() {
   return (
-    <main className="min-h-full bg-black text-white px-6 py-18 relative overflow-hidden">
-      {/* Hero Text */}
-      <div className="max-w-4xl mx-auto  text-center z-1 relative">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Everything you need <br />
-          to start and run your <span className="text-white">Business</span>
-        </h1>
-        <p className="text-gray-300 max-w-xl mx-auto mt-8">
-          The ideas that improve your products. Be among the first founders to
-          experience the easiest way to start and run a business.
-        </p>
-      </div>
+    <section className="relative bg-black text-white min-h-screen flex items-center justify-center px-6 md:px-20 py-24 overflow-hidden">
+      {/* Floating Gradient Blob */}
+      <motion.div
+        className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full blur-3xl z-0"
+        initial={{ opacity: 0.4, scale: 1 }}
+        animate={{ opacity: 0.3, scale: [1, 1.05, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        style={{
+          background: "linear-gradient(135deg, #6366f1, #a855f7, #3b82f6)",
+        }}
+      />
 
-      {/* View Demos Button */}
-      <div className="flex justify-center mt-16 z-10 relative">
-        <button className="flex items-center px-5 py-2 bg-gray-800 border border-gray-600 rounded-full hover:bg-gray-700 transition">
-          <div className="w-4 h-4 bg-gradient-to-tr from-purple-400 to-blue-400 rounded-full mr-2" />
-          View Demos and Highlights
-        </button>
-      </div>
-
-      {/* Abstract Background Shape */}
-      <div className="absolute top-50 left-1/2 transform -translate-x-1/2 z-0">
-        <div className="w-[500px] h-[500px] bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 opacity-40 rounded-full blur-3xl" />
-      </div>
-
-      {/* Project Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14 max-w-5xl mx-auto z-10 relative">
-        {[
-          { label: "Web Design", desc: "Modern, responsive interface design" },
-          { label: "Animation", desc: "Dynamic, engaging motion visuals" },
-          { label: "Photography", desc: "Professional brand-focused shoots" },
-          { label: "Graphics", desc: "Creative digital visual content" },
-        ].map((item, i) => (
-          <div
-            key={i}
-            className="w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-auto md:h-auto rounded-xl bg-gradient-to-br from-[#1c1c1c68] to-[#2a2a2a64] p-6 border border-[#5b5b5b7a] text-center hover:scale-105 transition transform shadow-lg flex flex-col justify-center items-center mx-auto"
+      <div className="relative z-10 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        {/* Left Side */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-center lg:text-left space-y-6 w-full lg:w-1/2"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            Elevate Your <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+              Digital Presence
+            </span>
+          </h1>
+          <p className="text-gray-300 text-lg">
+            We help businesses grow with premium web development, branding,
+            marketing, and visual storytelling.
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            className="mt-4 flex items-center gap-3 px-6 py-3 bg-gray-800 border border-gray-600 rounded-full hover:bg-gray-700 transition"
           >
-            <p className="text-base font-semibold mb-1">{item.label}</p>
-            <p className="text-sm text-gray-400">{item.desc}</p>
+            Let’s Get Started <FiArrowRight />
+          </motion.button>
+        </motion.div>
+
+        {/* Right Side Video or Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+          className="w-full lg:w-1/2 flex justify-center"
+        >
+          <div className="rounded-2xl overflow-hidden border border-gray-700 shadow-lg max-w-md w-full">
+            <video
+              src="/images/video.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
           </div>
-        ))}
+        </motion.div>
       </div>
-    </main>
+    </section>
   );
 }

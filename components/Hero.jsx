@@ -1,67 +1,65 @@
 "use client";
 
+import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
-import { FiArrowRight } from "react-icons/fi";
+import { Button } from "../components/ui/Button";
+import { FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-full  flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0 px-6 md:px-16 lg:py-20 py-14 bg-gradient-to-r from-white to-[#f5f3f2]">
-      {/* Left Content */}
-      {/* <div className="w-[60%] max-w-xl space-y-6">
-        <h1 className="text-4xl md:text-6xl font-semibold text-black leading-tight">
-          There is a<br />
-          <span className="inline-flex items-center gap-3">
-            <Image src="/stack-icon.svg" alt="icon" width={40} height={40} />
-            Better Way
-          </span><br />
-          to Secure.
+    <section className="relative mt-[-50px] min-h-screen flex items-center justify-center overflow-hidden px-4 md:px-12 bg-black">
+      {/* Full Background Video */}
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-80"
+      >
+        <source src="/images/bgvideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Purple Overlay */}
+
+      {/* Optional Floating Visuals (Commented for now) */}
+      {/* <Image src="/images/webdes.png" alt="Floating" width={120} height={120} className="absolute top-10 left-10 opacity-50 animate-float-slow z-10" />
+      <Image src="/images/graphic.png" alt="Floating" width={150} height={150} className="absolute bottom-10 right-10 opacity-50 animate-float-slow z-10" />
+      <Image src="/images/editing.png" alt="Floating" width={100} height={100} className="absolute top-20 right-1/3 opacity-50 animate-float-slow z-10" /> */}
+
+      {/* Main Content */}
+      <div className="relative z-20 text-center max-w-3xl">
+        <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <Typewriter
+            words={["Unlock the future of your brand"]}
+            loop={0}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
         </h1>
 
-        <div className="mt-6">
-          <button className="inline-flex items-center gap-2 border-b border-black text-black text-lg hover:opacity-70 transition">
-            <FiArrowRight size={20} />
-            Contact Us
-          </button>
-          <p className="mt-4 text-sm text-gray-600 max-w-sm">
-            FynSec is a vulnerability scanner that finds cybersecurity weaknesses in your digital infrastructure to avoid costly data breaches.
-          </p>
-        </div>
-      </div> */}
-      <div className="md:w-[60%] w-full max-w-xl space-y-6">
-        <h1 className="text-4xl md:text-6xl font-semibold text-black leading-tight">
-          Build Your
-          <br />
-          <span className="inline-flex items-center gap-3">
-            <Image src="/images/all.png" alt="icon" width={80} height={40} />
-            Digital Presence
-          </span>
-          <br />
-          the Smarter Way.
-        </h1>
+        <p className="text-gray-300 text-lg mt-20 md:text-xl mb-10">
+          We help businesses grow with cutting-edge design, development, and
+          marketing solutions.
+        </p>
 
-        <div className="mt-6">
-          <button className="inline-flex items-center gap-2 border-b border-black text-black text-lg hover:opacity-70 transition">
-            <FiArrowRight size={20} />
-            Contact Us
-          </button>
-          <p className="mt-4 text-sm text-gray-600 max-w-sm">
-          SixthGenX helps you grow your brand with expert services in web
-            design, development, video production, and digital marketing.
-          </p>
-        </div>
-      </div>
-
-      {/* Right Content */}
-      <div className="lg:w-[40%]  w-full md:flex justify-center items-center relative">
-        {/* Replace below with your video if needed */}
-        <video
-          src="/images/video.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-[90%] max-w-lg rounded-xl shadow-xl"
-        />
+        {/* Button with Smooth Scroll Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex justify-center"
+        >
+          <Button className="bg-gray-800 border border-gray-600 hover:bg-gray-700 px-8 py-4 text-white text-lg rounded-2xl flex items-center justify-center">
+            Explore Our Services <FaArrowRight className="ml-2" />
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

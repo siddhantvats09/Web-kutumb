@@ -2,6 +2,8 @@
 import Navbar from "../../components/Navbar"
 import Hero from "../../components/Hero"
 import Homes from "../../components/Home"
+import WhyUs from "../../components/WhyUs"
+import Portfolio from "../../components/Portfolio"
 import ServicesSection from "../../components/ServicesSection"
 import Contact from "../../components/Contact"
 import Footer from "../../components/Footer"
@@ -12,9 +14,11 @@ export default function Home() {
     <div>
       <Toaster position="top-right" />
       
-      <Homes />
       <Hero />
       <ServicesSection />
+      <WhyUs/>
+      <Portfolio></Portfolio>
+      <Homes />
       <Contact />
       <Footer />
     </div>

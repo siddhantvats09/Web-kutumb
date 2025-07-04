@@ -1,81 +1,86 @@
-const services = [
+"use client";
+
+import {
+  FaCode,
+  FaPaintBrush,
+  FaVideo,
+  FaBullhorn,
+  FaCamera,
+  FaChartLine,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
+
+export default function ServicesSection() {
+  const services = [
     {
-      title: "Web Design",
-      description: "Modern, responsive interface design",
-      image: "/images/webdes.png",
-    },
-    {
+      icon: <FaCode size={30} />,
       title: "Web Development",
-      description: "Smooth And SEO optimized Websites",
-      image: "/images/webdev.png",
+      desc: "Custom websites & apps built for performance.",
     },
     {
-      title: "Photography",
-      description: "Professional brand-focused shoots",
-      image: "/images/photo.png",
+      icon: <FaPaintBrush size={30} />,
+      title: "Web & Graphic Design",
+      desc: "Modern, eye-catching visuals for your brand.",
     },
     {
-      title: "Graphics",
-      description: "Creative digital visual content",
-      image: "/images/graphic.png",
+      icon: <FaVideo size={30} />,
+      title: "Animation & Video Editing",
+      desc: "Engaging animations & professional edits.",
     },
     {
-      title: "Video Editing",
-      description: "Crisp, compelling edited content",
-      image: "/images/editing.png",
+      icon: <FaBullhorn size={30} />,
+      title: "Marketing & Ads",
+      desc: "Targeted Google & Meta ad campaigns.",
     },
     {
-      title: "Google Ads",
-      description: "Targeted, optimized ad campaigns",
-      image: "/images/googleads.png",
+      icon: <FaCamera size={30} />,
+      title: "Photoshoots",
+      desc: "High-quality brand, product & commercial shoots.",
+    },
+    {
+      icon: <FaChartLine size={30} />,
+      title: "SEO & Optimization",
+      desc: "Boost your website ranking & visibility.",
     },
   ];
-  
-  export default function ServicesSection() {
-    return (
-      <section className="relative bg-[#f1f1f1] py-20 px-4 sm:px-6 lg:px-12 text-white overflow-hidden">
-        {/* 🔵 Background and gradient layers */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/images/bg-pattern.jpg"
-            alt="background"
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 backdrop-blur-sm" />
-          {/* <div className="absolute top-1/3 left-0 w-60 h-60 bg-purple-600/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-10 right-0 w-48 h-48 bg-pink-500/20 rounded-full blur-2xl animate-ping" /> */}
-        </div>
-  
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-            Our Services
-          </h2>
-  
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="relative group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-8 hover:scale-[1.03] transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.05)]"
-              >
-                {/* Gradient glow hover */}
-                <div className="absolute -inset-[1px] z-0 rounded-2xl bg-gradient-to-tr from-purple-600/50 to-pink-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
-  
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full max-w-[280px] mx-auto mb-6 object-contain rounded-xl z-10 relative drop-shadow-lg"
-                />
-                <h3 className="text-xl sm:text-2xl font-semibold mb-2 z-10 relative">
-                  {service.title}
-                </h3>
-                <p className="text-gray-300 text-base z-10 relative">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  }
-  
+
+  return (
+    <section
+      className="relative py-24 md:py-32 px-6 md:px-16 bg-amber-900  overflow-hidden"
+      style={{
+        backgroundImage: `url('/images/bg.jpg')`, // <-- Replace with your image path
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
+
+      <div className="relative z-10 max-w-6xl mx-auto text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-md">
+          Our Key Services
+        </h2>
+        <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+          Everything your business needs — all under one roof.
+        </p>
+      </div>
+
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="border border-white/10 bg-white/5 rounded-2xl p-8 text-center backdrop-blur-md shadow-lg hover:shadow-xl transition-all"
+          >
+            <div className="text-white mb-5 mx-auto">{service.icon}</div>
+            <h3 className="text-xl font-semibold text-white mb-3">
+              {service.title}
+            </h3>
+            <p className="text-gray-300 text-sm">{service.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
