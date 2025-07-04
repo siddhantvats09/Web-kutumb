@@ -135,7 +135,7 @@ export default function Portfolio() {
               alt={project.title}
               width={500}
               height={300}
-              className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full opacity-100 h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
             />
 
             {/* Title Initially Visible, Hidden on Hover */}
@@ -172,7 +172,19 @@ export default function Portfolio() {
         <div className="flex justify-center mt-10 relative z-10">
           <button
             onClick={handleSeeMore}
-            className="bg-gray-800 border border-gray-600 hover:bg-gray-700 px-6 py-3 text-white text-lg rounded-2xl transition-all"
+            className="
+    px-6 py-3 
+    text-white text-lg font-medium 
+    rounded-xl 
+    bg-transparent 
+    border border-white/20 
+    hover:border-[#494646] 
+    hover:bg-white/5 
+    hover:shadow-md 
+    hover:scale-105 
+    backdrop-blur-sm 
+    transition-all duration-300 ease-in-out
+  "
           >
             See More Work
           </button>

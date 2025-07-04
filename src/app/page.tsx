@@ -5,6 +5,7 @@ import Homes from "../../components/Home"
 import WhyUs from "../../components/WhyUs"
 import Portfolio from "../../components/Portfolio"
 import ServicesSection from "../../components/ServicesSection"
+import Testimonials from "../../components/Testimonials"
 import Contact from "../../components/Contact"
 import Footer from "../../components/Footer"
 import { Toaster } from "react-hot-toast"
@@ -18,6 +19,7 @@ export default function Home() {
       <ServicesSection />
       <WhyUs/>
       <Portfolio></Portfolio>
+      <Testimonials></Testimonials>
       <Homes />
       <Contact />
       <Footer />

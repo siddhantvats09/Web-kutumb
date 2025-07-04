@@ -30,7 +30,6 @@ export default function WhyChooseUs() {
 
   return (
     <section className="relative py-10 md:py-16 px-6 md:px-16 bg-black overflow-hidden z-10">
-      
       {/* Background Image */}
       <Image
         src="/images/bgwhy.jpg" // Replace with your actual image path

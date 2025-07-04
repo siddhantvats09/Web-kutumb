@@ -46,7 +46,7 @@ export default function ServicesSection() {
 
   return (
     <section
-      className="relative py-24 md:py-32 px-6 md:px-16 bg-amber-900  overflow-hidden"
+      className="relative py-14 md:py-20 px-6 md:px-16 bg-amber-900  overflow-hidden"
       style={{
         backgroundImage: `url('/images/bg.jpg')`, // <-- Replace with your image path
         backgroundSize: "cover",
