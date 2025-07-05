@@ -1,6 +1,6 @@
 "use client";
 
-export function Button({ children, className = '', ...props }) {
+export function Button({ children, className = "", ...props }) {
   return (
     <button
       {...props}

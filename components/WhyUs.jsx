@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             whileHover={{ scale: 1.03 }}
-            className="flex items-start gap-4 border border-[#5b5b5b7a] bg-gradient-to-tr from-[#1c1c1c68] to-[#2a2a2a64] backdrop-blur-md p-6 rounded-2xl transition-all group hover:border-purple-500"
+            className="flex items-start gap-4 border border-[#5b5b5b7a] bg-gradient-to-tr from-[#1c1c1c68] to-[#2a2a2a64] backdrop-blur-md p-6 rounded-2xl transition-all group hover:border-[#bf8eff]"
           >
             <div className="text-white group-hover:scale-110 transition-transform">
               {item.icon}

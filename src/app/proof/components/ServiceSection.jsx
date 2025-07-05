@@ -12,8 +12,17 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-export default function ProofOfWork() {
+export default function ServicesSection() {
   const [activeService, setActiveService] = useState(null);
+
+  const gradients = [
+    "bg-gradient-to-tr from-purple-300/20 to-pink-300/20",
+    "bg-gradient-to-tr from-blue-300/20 to-cyan-300/20",
+    "bg-gradient-to-tr from-green-300/20 to-emerald-300/20",
+    "bg-gradient-to-tr from-yellow-300/20 to-orange-300/20",
+    "bg-gradient-to-tr from-indigo-300/20 to-purple-300/20",
+    "bg-gradient-to-tr from-pink-300/20 to-rose-300/20",
+  ];
 
   const services = [
     {
@@ -21,8 +30,8 @@ export default function ProofOfWork() {
       title: "Web Development",
       desc: "Custom websites & apps built for performance.",
       samples: [
-        { image: "/images/work1.jpg", desc: "E-commerce Platform", link: "#" },
-        { image: "/images/work2.jpg", desc: "Portfolio Website", link: "#" },
+        { image: "/images/webdev.png", desc: "E-commerce Platform", link: "#" },
+        { image: "/images/webdev.png", desc: "Portfolio Website", link: "#" },
       ],
     },
     {
@@ -30,8 +39,8 @@ export default function ProofOfWork() {
       title: "Web & Graphic Design",
       desc: "Modern, eye-catching visuals for your brand.",
       samples: [
-        { image: "/images/design1.jpg", desc: "Brand Identity", link: "#" },
-        { image: "/images/design2.jpg", desc: "Product Packaging", link: "#" },
+        { image: "/images/webdes.png", desc: "Brand Identity", link: "#" },
+        { image: "/images/webdes.png", desc: "Product Packaging", link: "#" },
       ],
     },
     {
@@ -39,8 +48,8 @@ export default function ProofOfWork() {
       title: "Animation & Video Editing",
       desc: "Engaging animations & professional edits.",
       samples: [
-        { image: "/images/anim1.jpg", desc: "Explainer Video", link: "#" },
-        { image: "/images/anim2.jpg", desc: "Reel Edit", link: "#" },
+        { image: "/images/animation.jpg", desc: "Explainer Video", link: "#" },
+        { image: "/images/animation.jpg", desc: "Reel Edit", link: "#" },
       ],
     },
     {
@@ -48,8 +57,16 @@ export default function ProofOfWork() {
       title: "Marketing & Ads",
       desc: "Targeted Google & Meta ad campaigns.",
       samples: [
-        { image: "/images/ads1.jpg", desc: "Meta Ads Campaign", link: "#" },
-        { image: "/images/ads2.jpg", desc: "Google Search Ads", link: "#" },
+        {
+          image: "/images/googleads.png",
+          desc: "Meta Ads Campaign",
+          link: "#",
+        },
+        {
+          image: "/images/googleads.png",
+          desc: "Google Search Ads",
+          link: "#",
+        },
       ],
     },
     {
@@ -57,8 +74,8 @@ export default function ProofOfWork() {
       title: "Photoshoots",
       desc: "High-quality brand, product & commercial shoots.",
       samples: [
-        { image: "/images/photo1.jpg", desc: "Product Shoot", link: "#" },
-        { image: "/images/photo2.jpg", desc: "Lifestyle Shoot", link: "#" },
+        { image: "/images/photo.png", desc: "Product Shoot", link: "#" },
+        { image: "/images/photo.png", desc: "Lifestyle Shoot", link: "#" },
       ],
     },
     {
@@ -66,8 +83,8 @@ export default function ProofOfWork() {
       title: "SEO & Optimization",
       desc: "Boost your website ranking & visibility.",
       samples: [
-        { image: "/images/seo1.jpg", desc: "SEO Results Snapshot", link: "#" },
-        { image: "/images/seo2.jpg", desc: "Keyword Ranking Boost", link: "#" },
+        { image: "/images/seo.jpg", desc: "SEO Results Snapshot", link: "#" },
+        { image: "/images/seo.jpg", desc: "Keyword Ranking Boost", link: "#" },
       ],
     },
   ];
@@ -84,51 +101,58 @@ export default function ProofOfWork() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
 
+      {/* Heading */}
       <div className="relative z-10 max-w-6xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-md">
-          Our Key Services
+          Proof of Our Work
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-          Everything your business needs — all under one roof.
+          Real results. Real creativity. Here's a glimpse of what we’ve
+          delivered.
         </p>
       </div>
 
+      {/* Services Grid */}
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            className="border border-white/10 bg-white/5 rounded-2xl p-8 text-center backdrop-blur-md shadow-lg hover:shadow-xl transition-all cursor-pointer"
-            onClick={() => setActiveService(service)}
-          >
-            <div className="text-white mb-5 mx-auto">{service.icon}</div>
-            <h3 className="text-xl font-semibold text-white mb-3">
-              {service.title}
-            </h3>
-            <p className="text-gray-300 text-sm">{service.desc}</p>
-          </motion.div>
-        ))}
+        {services.map((service, index) => {
+          const randomGradient =
+            gradients[Math.floor(Math.random() * gradients.length)];
+          return (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className={`border border-white/10 ${randomGradient} rounded-2xl p-8 text-center backdrop-blur-md shadow-lg hover:shadow-xl transition-all cursor-pointer`}
+              onClick={() => setActiveService(service)}
+            >
+              <div className="text-white mb-5 mx-auto">{service.icon}</div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                {service.title}
+              </h3>
+              <p className="text-gray-300 text-sm">{service.desc}</p>
+            </motion.div>
+          );
+        })}
       </div>
 
       {/* Modal */}
       <AnimatePresence>
         {activeService && (
           <motion.div
+            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4"
           >
             <motion.div
+              className="bg-black rounded-2xl max-w-lg w-full p-6 text-white relative border border-white/20 overflow-hidden"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              className="bg-black rounded-2xl max-w-lg w-full p-6 text-white relative overflow-hidden border border-white/20"
             >
               <button
-                className="absolute top-4 right-4 text-gray-400 hover:text-white"
+                className="absolute top-4 right-4 text-gray-400 hover:text-white text-xl"
                 onClick={() => setActiveService(null)}
               >
                 ✕

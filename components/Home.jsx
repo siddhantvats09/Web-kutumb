@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Homes() {
   return (
@@ -44,6 +45,8 @@ export default function Homes() {
             engaging content, and powerful marketing — all designed to grow your
             business.
           </p>
+          <Link href={"/contactus"}>
+         
           <motion.button
             whileHover={{ scale: 1.05 }}
             className="
@@ -62,6 +65,7 @@ export default function Homes() {
           >
             Book a Free Consultation <FiArrowRight />
           </motion.button>
+           </Link>
         </motion.div>
 
         {/* Right Side Video or Image */}

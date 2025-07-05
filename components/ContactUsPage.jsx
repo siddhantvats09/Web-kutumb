@@ -14,9 +14,9 @@ export default function ContactUsPage() {
     <div className="relative bg-black  text-white min-h-[550px] px-6 py-12 overflow-hidden">
       {/* Background Image */}
       <img
-        src="/images/bgwhy.jpg"
+        src="/images/bg.jpg"
         alt="Background"
-        className="absolute inset-0 w-full h-full object-cover opacity-100 z-0"
+        className="absolute inset-0 w-full blur h-full object-cover opacity-50 z-0"
       />
 
       <div className="relative z-10 text-center mb-10">

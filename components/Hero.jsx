@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "../components/ui/Button";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -56,9 +57,11 @@ export default function Hero() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <Button className="bg-gray-800 border border-gray-600 hover:bg-gray-700 px-8 py-4 text-white text-lg rounded-2xl flex items-center justify-center">
-            Explore Our Services <FaArrowRight className="ml-2" />
-          </Button>
+          <Link href="/services">
+            <Button className="bg-gray-800 border border-gray-600 hover:bg-gray-700 px-8 py-4 text-white text-lg rounded-2xl flex items-center justify-center">
+              Explore Our Services <FaArrowRight className="ml-2" />
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>

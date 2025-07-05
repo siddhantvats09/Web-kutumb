@@ -9,6 +9,7 @@ import Testimonials from "../../components/Testimonials"
 import Contact from "../../components/Contact"
 import Footer from "../../components/Footer"
 import { Toaster } from "react-hot-toast"
+import FAQs from "./services/components/FAQs"
 
 export default function Home() {
   return (
@@ -16,11 +17,12 @@ export default function Home() {
       <Toaster position="top-right" />
       
       <Hero />
-      <ServicesSection />
-      <WhyUs/>
+      {/* <ServicesSection /> */}
       <Portfolio></Portfolio>
+      <WhyUs/>
       <Testimonials></Testimonials>
       <Homes />
+      <FAQs></FAQs>
       <Contact />
       <Footer />
     </div>

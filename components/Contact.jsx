@@ -92,7 +92,7 @@ const Contact = () => {
               placeholder="Your Name"
               value={formData.fullName}
               onChange={handleChange}
-              className="w-full bg-[#2b2b2e] text-white border border-gray-600 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full bg-[#2b2b2e] text-white border border-gray-600 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#bf8eff] outline-none"
               required
             />
           </div>
@@ -107,7 +107,7 @@ const Contact = () => {
               placeholder="you@example.com"
               value={formData.email}
               onChange={handleChange}
-              className="w-full bg-[#2b2b2e] text-white border border-gray-600 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full bg-[#2b2b2e] text-white border border-gray-600 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#bf8eff] outline-none"
               required
             />
           </div>
@@ -122,7 +122,7 @@ const Contact = () => {
               placeholder="+91 xxxxxxxxxx"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full bg-[#2b2b2e] text-white border border-gray-600 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full bg-[#2b2b2e] text-white border border-gray-600 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#bf8eff] outline-none"
               required
             />
           </div>
@@ -135,7 +135,7 @@ const Contact = () => {
               name="serviceNeeded"
               value={formData.serviceNeeded}
               onChange={handleChange}
-              className="w-full bg-[#2b2b2e] text-white border border-gray-600 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full bg-[#2b2b2e] text-white border border-gray-600 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#bf8eff] outline-none"
               required
             >
               <option value="">Select a service</option>
@@ -160,7 +160,7 @@ const Contact = () => {
               placeholder="Tell us about your project..."
               value={formData.message}
               onChange={handleChange}
-              className="w-full bg-[#2b2b2e] text-white border border-gray-600 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full bg-[#2b2b2e] text-white border border-gray-600 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#bf8eff] outline-none"
               required
             />
           </div>

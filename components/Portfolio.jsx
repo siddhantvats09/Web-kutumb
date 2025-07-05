@@ -129,7 +129,7 @@ export default function Portfolio() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-white mb-4"
           >
-            Our Work Speaks for Itself
+            Our Key Services
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -138,8 +138,7 @@ export default function Portfolio() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-gray-300 max-w-2xl mx-auto"
           >
-            Explore a glimpse of projects we've crafted with passion and
-            precision.
+            Everything your business needs — all under one roof
           </motion.p>
         </div>
 
@@ -233,7 +232,7 @@ export default function Portfolio() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-white mb-4"
           >
-            Our Work Speaks for Itself
+            Our Key Services
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -242,8 +241,7 @@ export default function Portfolio() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-gray-300 max-w-2xl mx-auto"
           >
-            Explore a glimpse of projects we've crafted with passion and
-            precision.
+            Everything your business needs — all under one roof
           </motion.p>
         </div>
 
