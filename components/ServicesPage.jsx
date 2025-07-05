@@ -1,93 +1,153 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
 export default function ServicesPage() {
-    return (
-      <div className="bg-[#0f0f0f] text-white font-sans">
-        {/* Hero Section */}
-        <section className="relative py-20 md:py-32 bg-gradient-to-r from-indigo-500/70 via-purple-500/60 to-blue-500/70 text-center px-6">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
-            Elevate Your Business with Our <span className="text-yellow-300">Creative Services</span>
-          </h1>
-          <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto mb-8">
-            We specialize in innovative web design, development, digital marketing, and multimedia services to transform your business.
-          </p>
-          <a href="#services" className="bg-yellow-300 text-black py-3 px-6 rounded-full text-lg font-medium hover:bg-yellow-400 transition-all">
-            Explore Our Services
-          </a>
-        </section>
-  
-        {/* Service Overview Section */}
-        <section className="py-20 px-6 bg-[#1d1d1d] text-center">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-8">Our Expertise in Various Digital Services</h2>
-          <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-            From web design to marketing campaigns, we offer a range of services to help your business grow and thrive in the digital world. Below is a glimpse of what we offer.
-          </p>
-        </section>
-  
-        {/* Detailed Services Section */}
-        <section id="services" className="py-20 px-6 md:px-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 bg-[#121212]">
-          {[
-            { title: "Web Design", description: "Create stunning, user-friendly websites that reflect your brand identity.", icon: "/images/webdes.png" },
-            { title: "Web Development", description: "Transform your business with custom websites, web apps, and e-commerce solutions.", icon: "/images/webdev.png" },
-            { title: "Graphic Design", description: "Designing logos, branding, and digital assets that make your business stand out.", icon: "/images/graphic.png" },
-            { title: "Video Editing", description: "Captivate your audience with engaging videos, crafted to perfection.", icon: "/images/editing.png" },
-            { title: "Video Shooting", description: "Professional video production services for your business or brand.", icon: "/images/photo.png" },
-            { title: "Google Ads", description: "Boost your business with targeted, high-performing Google Ads campaigns.", icon: "/images/googleads.png" },
-            { title: "Animation", description: "Bring your ideas to life with 2D/3D animation and motion graphics.", icon: "/images/all.png" },
-            { title: "Photography", description: "Capture stunning photos for your brand, products, and services.", icon: "/images/photo.png" },
-          ].map((service, index) => (
-            <div key={index} className="bg-[#2a2a2a] p-8 rounded-xl border border-gray-600 text-center hover:scale-105 transition-all transform shadow-lg">
-              <img src={service.icon} alt={service.title} className="w-16 rounded-[10px] h-16 mx-auto mb-4" />
-              <p className="text-2xl font-semibold text-white mb-4">{service.title}</p>
-              <p className="text-gray-400 text-sm">{service.description}</p>
-            </div>
-          ))}
-        </section>
-  
-        {/* Why Choose Us Section */}
-        <section className="py-20 px-6 bg-gradient-to-r from-indigo-500/70 via-purple-500/60 to-blue-500/70 text-center">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-6 text-white">Why Choose SixthGenX?</h2>
-          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10">
-            <div className="bg-[#1c1c1c] p-8 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-white mb-4">Experience and Expertise</h3>
-              <p className="text-gray-400">
-                With over 10 years of experience in the industry, we have the expertise to provide exceptional results across all of our services.
-              </p>
-            </div>
-            <div className="bg-[#1c1c1c] p-8 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-white mb-4">Tailored Solutions</h3>
-              <p className="text-gray-400">
-                We work closely with you to understand your unique needs and deliver personalized solutions that align with your goals.
-              </p>
-            </div>
-          </div>
-        </section>
-  
-        {/* Testimonials Section */}
-        <section className="py-20 px-6 bg-[#121212] text-center">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-10">Client Testimonials</h2>
-          <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-10">
-            {[
-              { name: "John Doe", feedback: "SixthGenX transformed our website and increased our conversions significantly!", position: "CEO, TechCo" },
-              { name: "Jane Smith", feedback: "The team created beautiful graphics and videos that elevated our brand presence.", position: "Marketing Manager, Retail Corp" },
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-[#2a2a2a] p-8 rounded-xl shadow-lg w-full sm:w-1/2 lg:w-1/3">
-                <p className="text-xl text-white mb-4">"{testimonial.feedback}"</p>
-                <p className="text-gray-400">{testimonial.name} - {testimonial.position}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-  
-        {/* Call to Action */}
-        <section className="py-20 px-6 text-center bg-gradient-to-r from-indigo-500/70 via-purple-500/60 to-blue-500/70">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6">Ready to Take Your Business to the Next Level?</h2>
-          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
-            Let's work together to bring your digital vision to life. Our team of experts is here to help you succeed.
-          </p>
-          <a href="/contactus" className="bg-yellow-300 text-black px-8 py-4 rounded-full text-lg font-medium hover:bg-yellow-400 transition-all">
-            Get Started Now
-          </a>
-        </section>
+  const services = [
+    "Web Development",
+    "Web Designing",
+    "Graphic Design",
+    "Animation",
+    "Video Editing",
+    "Commercial Reels",
+    "Social Media Marketing",
+    "Photoshoot",
+    "SEO",
+    "Google & Meta Ads",
+  ];
+
+  const positions = [
+    { top: "10%", left: "5%" },
+    { top: "20%", left: "60%" },
+    { top: "35%", left: "15%" },
+    { top: "40%", left: "70%" },
+    { top: "55%", left: "35%" },
+    { top: "65%", left: "10%" },
+    { top: "75%", left: "55%" },
+    { top: "15%", left: "80%" },
+    { top: "50%", left: "85%" },
+    { top: "80%", left: "30%" },
+  ];
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  return (
+    <section className="relative min-h-[70vh] md:min-h-[90vh] py-16 px-6 md:px-16 bg-black overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/images/bgwhy.jpg"
+        alt="Background"
+        layout="fill"
+        objectFit="cover"
+        className="absolute inset-0 opacity-100 z-0"
+      />
+
+      {/* Title */}
+      <div className="relative max-w-4xl mx-auto text-center mb-20 z-10">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-bold text-white mb-4"
+        >
+          Our Services
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-gray-300 max-w-2xl mx-auto"
+        >
+          Everything you need to grow your digital presence — scattered with creativity.
+        </motion.p>
       </div>
-    );
-  }
-  
+
+      {/* Connecting Lines for Desktop */}
+      {!isMobile && (
+        <svg className="absolute inset-0 w-full h-full z-[5] pointer-events-none">
+          {positions.map((pos, i) =>
+            i < positions.length - 1 ? (
+              <line
+                key={i}
+                x1={`calc(${positions[i].left})`}
+                y1={`calc(${positions[i].top})`}
+                x2={`calc(${positions[i + 1].left})`}
+                y2={`calc(${positions[i + 1].top})`}
+                stroke="#888"
+                strokeWidth="1"
+                strokeOpacity="0.4"
+              />
+            ) : null
+          )}
+        </svg>
+      )}
+
+      {/* Service Boxes */}
+      {isMobile ? (
+        <div className="relative z-10 grid grid-cols-2 gap-4 max-w-md mx-auto">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 10, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`p-4 rounded-xl backdrop-blur-md shadow-xl border border-white/20 bg-gradient-to-br ${
+                index % 3 === 0
+                  ? "from-[#ffffff14] to-[#ffffff0a]"
+                  : "from-[#1c1c1c68] to-[#2a2a2a64]"
+              } hover:scale-105 transition-transform duration-500 text-center`}
+            >
+              <h3 className="text-white text-sm font-medium">{service}</h3>
+            </motion.div>
+          ))}
+        </div>
+      ) : (
+        <div className="relative w-full h-[70vh] md:h-[80vh] z-10">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{
+                opacity: 1,
+                scale: [1, 1.05, 1],
+                y: ["0%", "4%", "0%"],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 8, // slower animation
+                ease: "easeInOut",
+                delay: index * 0.2,
+              }}
+              style={{
+                position: "absolute",
+                ...positions[index],
+                transform: "translate(-50%, -50%)",
+              }}
+              className={`p-4 md:p-6 rounded-xl backdrop-blur-md shadow-xl border border-white/20 bg-gradient-to-br ${
+                index % 3 === 0
+                  ? "from-[#ffffff14] to-[#ffffff0a]"
+                  : "from-[#1c1c1c68] to-[#2a2a2a64]"
+              } hover:scale-105 transition-transform duration-500 cursor-pointer text-center`}
+            >
+              <h3 className="text-white text-base md:text-lg font-semibold">
+                {service}
+              </h3>
+            </motion.div>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
