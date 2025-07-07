@@ -122,14 +122,19 @@ export default function ServicesSection() {
               key={index}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className={`border border-white/10 ${randomGradient} rounded-2xl p-8 text-center backdrop-blur-md shadow-lg hover:shadow-xl transition-all cursor-pointer`}
+              className={`relative border border-white/10 ${randomGradient} rounded-2xl p-8 text-center backdrop-blur-md shadow-lg hover:shadow-xl transition-all cursor-pointer`}
               onClick={() => setActiveService(service)}
             >
               <div className="text-white mb-5 mx-auto">{service.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-3">
                 {service.title}
               </h3>
-              <p className="text-gray-300 text-sm">{service.desc}</p>
+              <p className="text-gray-300 text-sm mb-5">{service.desc}</p>
+
+              {/* Click Me Text */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xs text-white bg-black/40 px-2 py-1 rounded-full backdrop-blur-sm">
+                Click Here
+              </div>
             </motion.div>
           );
         })}

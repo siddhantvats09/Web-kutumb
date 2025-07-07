@@ -40,7 +40,7 @@ export default function Hero() {
             cursorStyle="_"
             typeSpeed={70}
             deleteSpeed={50}
-            delaySpeed={1000}
+            delaySpeed={4000}
           />
         </h1>
 

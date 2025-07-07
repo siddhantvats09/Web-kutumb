@@ -25,10 +25,8 @@ export default function WorkGallery() {
     { image: "/images/webdes.png", title: "Corporate Video" },
     { image: "/images/webdes.png", title: "Digital Ads" },
     { image: "/images/webdes.png", title: "Instagram Reels" },
-    { image: "/images/webdes.png", title: "Packaging Design" },
-    { image: "/images/webdes.png", title: "Explainer Animation" },
     { image: "/images/webdes.png", title: "Interactive Website" },
-    { image: "/images/webdes.png", title: "Product Showcase" },
+    { image: "/images/webdes.png", title: "Explainer Animation" },
   ];
 
   const [visibleCount, setVisibleCount] = useState(8);
