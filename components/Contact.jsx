@@ -69,7 +69,7 @@ const Contact = () => {
 
       {/* Dark Overlay (Optional) */}
       <div className="absolute inset-0 bg-opacity-70 z-0"></div>
-      <div className="max-w-4xl relative z-10 mx-auto bg-[#000000] border border-[#2a2a2a] rounded-2xl shadow-xl p-10 md:p-14 backdrop-blur-md">
+      <div className="max-w-4xl relative z-10 mx-auto bg-[#000000] border border-[#2a2a2a] rounded-2xl shadow-xl p-3 py-7 lg:p-10 md:p-14 backdrop-blur-md">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
           Let's Work Together
         </h2>

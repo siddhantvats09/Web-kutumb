@@ -30,8 +30,8 @@ export default function ServicesSection() {
       title: "Web Development",
       desc: "Custom websites & apps built for performance.",
       samples: [
-        { image: "/images/webdev.png", desc: "E-commerce Platform", link: "#" },
-        { image: "/images/webdev.png", desc: "Portfolio Website", link: "#" },
+        { image: "/work/webdev.png", desc: "E-commerce Platform", link: "https://www.lightbeam.ai/" },
+        { image: "/work/webdev1.png", desc: "Portfolio Website", link: "https://shatamjeeva.life/" },
       ],
     },
     {
@@ -40,7 +40,7 @@ export default function ServicesSection() {
       desc: "Modern, eye-catching visuals for your brand.",
       samples: [
         { image: "/images/webdes.png", desc: "Brand Identity", link: "#" },
-        { image: "/images/webdes.png", desc: "Product Packaging", link: "#" },
+        { image: "/work/webdesign.png", desc: "Dashboard Design", link: "https://www.figma.com/design/Oa06AtZn2Gp3Qkbsi1Pkuj/Portfolio?node-id=0-1&p=f&t=DCzmpHpwwKwHDQkA-0" },
       ],
     },
     {

@@ -4,29 +4,107 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState as useStateReact } from "react";
+import Link from "next/link";
 
 export default function WorkGallery() {
   const gallery = [
-    { image: "/images/webdes.png", title: "Landing Page" },
-    { image: "/images/webdes.png", title: "Branding Design" },
-    { image: "/images/webdes.png", title: "Animation Project" },
-    { image: "/images/webdes.png", title: "Social Media Campaign" },
-    { image: "/images/webdes.png", title: "Product Photoshoot" },
-    { image: "/images/webdes.png", title: "Web App" },
-    { image: "/images/webdes.png", title: "E-commerce Store" },
-    { image: "/images/webdes.png", title: "SEO Campaign" },
-    { image: "/images/webdes.png", title: "Video Editing" },
-    { image: "/images/webdes.png", title: "Creative Posters" },
-    { image: "/images/webdes.png", title: "Business Website" },
-    { image: "/images/webdes.png", title: "Event Branding" },
-    { image: "/images/webdes.png", title: "UI/UX Design" },
-    { image: "/images/webdes.png", title: "Mobile App Design" },
-    { image: "/images/webdes.png", title: "Photography Project" },
-    { image: "/images/webdes.png", title: "Corporate Video" },
-    { image: "/images/webdes.png", title: "Digital Ads" },
-    { image: "/images/webdes.png", title: "Instagram Reels" },
-    { image: "/images/webdes.png", title: "Interactive Website" },
-    { image: "/images/webdes.png", title: "Explainer Animation" },
+    {
+      image: "/work/webdev2.png",
+      title: "Landing Page",
+      link: "https://bloomingbullls.netlify.app/",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "Branding Design",
+      link: "/projects/branding-design",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "Animation Project",
+      link: "/projects/animation",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "Social Media Campaign",
+      link: "/projects/social-media",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "Product Photoshoot",
+      link: "/projects/photoshoot",
+    },
+    { image: "/work/webdev1.png", title: "Web App", link: "https://www.shatamjeeva.life/about-us" },
+    {
+      image: "/work/webdev3.png",
+      title: "E-commerce Store",
+      link: "https://www.attero.in/",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "SEO Campaign",
+      link: "/projects/seo",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "Video Editing",
+      link: "/projects/video-editing",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "Creative Posters",
+      link: "/projects/posters",
+    },
+    {
+      image: "/work/webdev.png",
+      title: "Business Website",
+      link: "https://www.lightbeam.ai/",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "Event Branding",
+      link: "/projects/event-branding",
+    },
+    {
+      image: "/work/webdesign.png",
+      title: "UI/UX Design",
+      link: "https://www.figma.com/design/Oa06AtZn2Gp3Qkbsi1Pkuj/Portfolio?node-id=0-1&p=f&t=DCzmpHpwwKwHDQkA-0",
+    },
+   
+    {
+      image: "/images/webdes.png",
+      title: "Photography Project",
+      link: "/projects/photography",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "Corporate Video",
+      link: "/projects/corporate-video",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "Digital Ads",
+      link: "/projects/digital-ads",
+    },
+     {
+      image: "/work/webdesign1.png",
+      title: "Mobile App Design",
+      link: "https://www.figma.com/design/Oa06AtZn2Gp3Qkbsi1Pkuj/Portfolio?node-id=0-1&p=f&t=DCzmpHpwwKwHDQkA-0",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "Instagram Reels",
+      link: "/projects/insta-reels",
+    },
+    {
+      image: "/work/webdev4.png",
+      title: "Interactive Website",
+      link: "https://parallel-staging.dr7smkflnosxm.amplifyapp.com/",
+    },
+    {
+      image: "/images/webdes.png",
+      title: "Explainer Animation",
+      link: "/projects/explainer-animation",
+    },
   ];
 
   const [visibleCount, setVisibleCount] = useState(8);
@@ -95,11 +173,11 @@ export default function WorkGallery() {
               src={item.image}
               alt={item.title}
               fill
-              className="object-cover"
+              className="object-cover lg:opacity-80 "
             />
 
             {/* Always Visible Title */}
-            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-center text-sm font-medium py-2 backdrop-blur-sm">
+            <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white text-center text-sm font-medium py-2 backdrop-blur-sm">
               {item.title}
             </div>
 
@@ -111,9 +189,11 @@ export default function WorkGallery() {
                   : "opacity-0 group-hover:opacity-100 bg-black/50"
               }`}
             >
+              <Link href={item?.link} target="_blank">
               <button className="text-white cursor-pointer text-[16px] bg-[#242424d3] md:bg-green-500 px-3 py-1 md:px-4 md:py-2 rounded-lg font-semibold hover:bg-green-600 transition">
                 Check Live
               </button>
+              </Link>
             </div>
           </motion.div>
         ))}

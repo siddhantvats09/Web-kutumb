@@ -5,7 +5,6 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="relative bg-black text-gray-300 pt-16 pb-8 px-6 md:px-12 lg:px-24 overflow-hidden">
-      
       {/* Background Image */}
       <Image
         src="/images/bg.jpg"
@@ -16,12 +15,12 @@ const Footer = () => {
       />
 
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 z-10">
-        
         {/* Company Info */}
         <div>
           <h2 className="text-white text-2xl font-semibold mb-3">SixthGenX</h2>
           <p className="text-gray-400 text-sm">
-            Building powerful digital experiences through web, design, video, and strategy. Let's grow your business together.
+            Building powerful digital experiences through web, design, video,
+            and strategy. Let's grow your business together.
           </p>
         </div>
 
@@ -29,11 +28,16 @@ const Footer = () => {
         <div className="space-y-3">
           <h3 className="text-white text-xl font-medium">Services</h3>
           <ul className="space-y-2 text-sm text-gray-400">
-            {["Web Design", "Web Development", "Graphic Design", "Video Editing", "Google Ads"].map((service, idx) => (
+            {[
+              "Web Dev/Design",
+              "Graphic Design",
+              "Video/Photo Editing",
+              "Google/Meta Ads",
+              "Animations 2D/3D",
+              "SEO Optimization",
+            ].map((service, idx) => (
               <li key={idx}>
-                <a href="#" className="hover:text-white transition">
-                  {service}
-                </a>
+                <p className="hover:text-white transition">{service}</p>
               </li>
             ))}
           </ul>
