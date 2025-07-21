@@ -112,7 +112,7 @@ export default function AboutUsPage() {
           through digital creativity and innovation.
         </p>
         <a
-          href="https://wa.me/7988180681" // Replace with your number
+          href="https://wa.me/9817612848" // Replace with your number
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gradient-to-tr from-[#25D366] to-[#128C7E] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-opacity-90 transition-all"

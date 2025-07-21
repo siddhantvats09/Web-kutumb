@@ -55,7 +55,7 @@ const Footer = () => {
               sixthgenxtech@gmail.com
             </a>
           </p>
-          <p className="text-gray-400 text-sm">Phone: +91 79881 80681</p>
+          <p className="text-gray-400 text-sm">Phone: +91 9817612848</p>
 
           <div className="flex gap-4 mt-3 text-xl">
             <a

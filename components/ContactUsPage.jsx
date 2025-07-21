@@ -56,12 +56,12 @@ export default function ContactUsPage() {
           </div>
           <div className="mb-6">
             <h3 className="text-base font-medium text-[#9f9aff] mb-1">Phone</h3>
-            <a
+            {/* <a
               href="tel:+917988180681"
               className="text-gray-200 hover:text-[#9f9aff] block hover:underline hover:underline-offset-4 transition"
             >
               +91 7988180681
-            </a>
+            </a> */}
             <a
               href="tel:+919817612848"
               className="text-gray-200 hover:text-[#9f9aff] block hover:underline hover:underline-offset-4 transition"
@@ -77,7 +77,7 @@ export default function ContactUsPage() {
           </div>
 
           <a
-            href="https://wa.me/7988180681"
+            href="https://wa.me/9817612848"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-flex justify-center items-center px-5 py-2 bg-transparent border border-white/20 hover:border-[#494646] hover:bg-white/5 hover:shadow-md hover:scale-105 backdrop-blur-sm rounded-xl text-white text-base font-medium transition-all duration-300 ease-in-out"
