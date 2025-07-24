@@ -9,11 +9,11 @@ export default function Hero() {
       
       {/* Background Image */}
       <Image
-        src="/images/workhero.jpg" // Replace with your preferred proof/work background
+        src="/images/work2.jpg" // Replace with your preferred proof/work background
         alt="Our Work Background"
         layout="fill"
         objectFit="cover"
-        className="absolute inset-0 w-full h-full blur opacity-30 z-0"
+        className="absolute inset-0 w-full h-full blur-[5px] opacity-50 z-0"
       />
 
 
