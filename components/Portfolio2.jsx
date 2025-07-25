@@ -197,7 +197,7 @@ export default function Portfolio() {
       </section>
 
       {/* Mobile Section */}
-      <section className="relative py-8 md:py-16 px-6 md:px-16 block md:hidden bg-black overflow-hidden">
+      <section className="relative py-8 md:py-16 px-6 md:px-16 block md:hidden  overflow-hidden">
         <Image
           src="/images/bgwhy.jpg"
           alt="Background"
