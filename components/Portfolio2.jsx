@@ -12,7 +12,6 @@ export default function Portfolio() {
       desc: "Modern, user-focused web design for your brand.",
       points: ["UI/UX focused", "Brand consistency", "Creative layouts"],
     },
-
     {
       media: "/images/graphic2.jpg",
       title: "Graphic Design",
@@ -43,7 +42,6 @@ export default function Portfolio() {
       desc: "Eye-catching short reels for brand promotion.",
       points: ["High engagement", "Social media ready", "Creative shots"],
     },
-
     {
       media: "/images/seo3.jpg",
       title: "SEO",
@@ -94,18 +92,38 @@ export default function Portfolio() {
     }
   };
 
+  // Helper: detect video
   const isVideo = (file) => /\.(mp4|webm|ogg)$/i.test(file);
+
+  // Helper: render video with fallback
+  const renderVideo = (media, title) => {
+    const basePath = media.replace(/\.\w+$/, ""); // remove extension
+    return (
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="none"
+        poster="/images/video-placeholder.jpg"
+        className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
+      >
+        <source src={`${basePath}.webm`} type="video/webm" />
+        <source src={`${basePath}.mp4`} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    );
+  };
 
   return (
     <>
       {/* Desktop Section */}
-      <section className="relative py-8 md:py-16 px-6 md:px-16 hidden md:block bg-black overflow-hidden">
+      <section className="relative py-8 md:py-12 px-6 md:px-16 hidden md:block bg-black overflow-hidden">
         <Image
           src="/images/bgwhy.jpg"
           alt="Background"
-          layout="fill"
-          objectFit="cover"
-          className="absolute inset-0 opacity-100 z-0"
+          fill
+          className="absolute inset-0 opacity-100 z-0 object-cover"
         />
         <div className="relative max-w-6xl mx-auto text-center mb-12 z-10">
           <motion.h2
@@ -138,31 +156,26 @@ export default function Portfolio() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="relative group overflow-hidden rounded-2xl border border-[#5b5b5b7a] bg-gradient-to-tr from-[#1c1c1c68] to-[#2a2a2a64] backdrop-blur-md shadow-xl"
             >
-              {isVideo(project.media) ? (
-                <video
-                  src={project.media}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              ) : (
-                <Image
-                  src={project.media}
-                  alt={project.title}
-                  width={500}
-                  height={300}
-                  className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              )}
+              {isVideo(project.media)
+                ? renderVideo(project.media, project.title)
+                : (
+                  <Image
+                    src={project.media}
+                    alt={project.title}
+                    width={500}
+                    height={300}
+                    className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                )}
 
+              {/* Hover title */}
               <div className="absolute inset-0 flex justify-center pb-3 lg:pb-1 items-end transition-opacity duration-500 group-hover:opacity-0">
                 <h3 className="text-white text-[16px] bg-[#1414146b] py-1 px-2 rounded-t-[10px] font-medium border-b-[2px] border-[#ffffffb3] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
                   {project.title}
                 </h3>
               </div>
 
+              {/* Hover overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <h3 className="text-white text-xl font-semibold mb-2">
                   {project.title}
@@ -170,10 +183,7 @@ export default function Portfolio() {
                 <p className="text-gray-400 mb-4">{project.desc}</p>
                 <ul className="text-gray-300 text-sm space-y-1">
                   {project.points.map((point, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center justify-start gap-2"
-                    >
+                    <li key={idx} className="flex items-center gap-2">
                       <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 animate-pulse"></span>
                       {point}
                     </li>
@@ -197,13 +207,12 @@ export default function Portfolio() {
       </section>
 
       {/* Mobile Section */}
-      <section className="relative py-8 md:py-16 px-6 md:px-16 block md:hidden  overflow-hidden">
+      <section className="relative py-8 md:py-16 px-6 md:px-16 block md:hidden overflow-hidden">
         <Image
           src="/images/bgwhy.jpg"
           alt="Background"
-          layout="fill"
-          objectFit="cover"
-          className="absolute inset-0 opacity-100 z-0"
+          fill
+          className="absolute inset-0 opacity-100 z-0 object-cover"
         />
         <div className="relative max-w-6xl mx-auto text-center mb-12 z-10">
           <motion.h2
@@ -226,10 +235,9 @@ export default function Portfolio() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto relative z-10">
           {allProjects.slice(0, visibleProjects).map((project, index) => {
             const isActive = activeCardIndex === index;
-
             return (
               <motion.div
                 key={index}
@@ -240,25 +248,19 @@ export default function Portfolio() {
                 className="relative group overflow-hidden rounded-2xl border border-[#5b5b5b7a] bg-gradient-to-tr from-[#1c1c1c68] to-[#2a2a2a64] backdrop-blur-md shadow-xl"
                 onClick={() => handleCardClick(index)}
               >
-                {isVideo(project.media) ? (
-                  <video
-                    src={project.media}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <Image
-                    src={project.media}
-                    alt={project.title}
-                    width={500}
-                    height={300}
-                    className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                )}
+                {isVideo(project.media)
+                  ? renderVideo(project.media, project.title)
+                  : (
+                    <Image
+                      src={project.media}
+                      alt={project.title}
+                      width={500}
+                      height={300}
+                      className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  )}
 
+                {/* Title */}
                 <div
                   className={`absolute inset-0 flex justify-center pb-6 items-end transition-opacity duration-500 ${
                     (isMobile && isActive) ||
@@ -267,11 +269,12 @@ export default function Portfolio() {
                       : "opacity-100"
                   }`}
                 >
-                  <h3 className="text-white text-[12px]  bg-[#1414146b] py-1 px-2 rounded-t-[10px] font-semibold border-b-[2px] border-[#ffffffb3] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+                  <h3 className="text-white text-[12px] bg-[#1414146b] py-1 px-2 rounded-t-[10px] font-semibold border-b-[2px] border-[#ffffffb3] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
                     {project.title}
                   </h3>
                 </div>
 
+                {/* Overlay */}
                 <div
                   className={`absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center text-center px-4 transition-opacity duration-500 ${
                     (isMobile && isActive) ||
@@ -286,10 +289,7 @@ export default function Portfolio() {
                   <p className="text-gray-400 mb-4">{project.desc}</p>
                   <ul className="text-gray-300 text-sm space-y-1">
                     {project.points.map((point, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-center justify-start gap-2"
-                      >
+                      <li key={idx} className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 animate-pulse"></span>
                         {point}
                       </li>

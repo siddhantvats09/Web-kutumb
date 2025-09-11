@@ -17,8 +17,11 @@ export default function Hero() {
         muted
         loop
         playsInline
+        preload="none"
+        poster="/images/bgvideo.jpg"
         className="absolute inset-0 w-full h-full object-cover z-0 opacity-80"
       >
+        <source src="/images/bgvideo.webm" type="video/webm" />
         <source src="/images/bgvideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
