@@ -32,7 +32,7 @@ export default function Metrics() {
   ];
 
   return (
-    <section className="relative py-24 px-6 md:px-16 bg-black overflow-hidden">
+    <section className="relative py-8 md:py-16 px-6 md:px-16 bg-black overflow-hidden">
       {/* Background Image */}
       <Image
         src="/images/bgwhy.jpg"
@@ -43,7 +43,7 @@ export default function Metrics() {
       />
 
       {/* Metrics Section */}
-      <div className="relative z-10 max-w-6xl mx-auto text-center mb-20">
+      <div className="relative z-10 max-w-6xl mx-auto text-center ">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function Metrics() {
       </div>
 
       {/* Case Studies Section */}
-      <div className="relative z-10 max-w-6xl mx-auto text-center">
+      {/* <div className="relative z-10 max-w-6xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +115,7 @@ export default function Metrics() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

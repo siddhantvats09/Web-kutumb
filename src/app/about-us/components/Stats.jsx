@@ -7,13 +7,13 @@ import { useInView } from "react-intersection-observer";
 
 export default function Stats() {
   const stats = [
-    { number: 5, label: "Years in Business", suffix: "+" },
-    { number: 200, label: "Projects Completed", suffix: "+" },
-    { number: 150, label: "Happy Clients", suffix: "+" },
+    { number: 1, label: "Years in Business", suffix: "+" },
+    { number: 47, label: "Projects Completed", suffix: "+" },
+    { number: 47, label: "Happy Clients", suffix: "+" },
   ];
 
   return (
-    <section className="relative py-24 px-6 md:px-16 bg-black overflow-hidden">
+    <section className="relative py-14 px-6 md:px-16 bg-black overflow-hidden">
       {/* Background Image */}
       <Image
         src="/images/bgwhy.jpg"
@@ -32,7 +32,7 @@ export default function Stats() {
           transition={{ duration: 0.7 }}
           className="text-3xl md:text-5xl font-bold text-white mb-10"
         >
-          Fun Facts & Milestones 🚀
+          Fun Facts & Milestones 
         </motion.h2>
 
         {/* Stats Grid */}

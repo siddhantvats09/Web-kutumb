@@ -8,27 +8,27 @@ export default function Values() {
     {
       title: "Quality",
       desc: "We deliver excellence with pixel-perfect precision.",
-      icon: <ShieldCheckIcon className="w-10 h-10 text-green-400" />,
+      icon: <ShieldCheckIcon className="w-10 h-10 text-green-700" />,
     },
     {
       title: "Innovation",
       desc: "We think beyond boundaries and embrace new ideas.",
-      icon: <LightBulbIcon className="w-10 h-10 text-purple-400" />,
+      icon: <LightBulbIcon className="w-10 h-10 text-green-700" />,
     },
     {
       title: "Integrity",
       desc: "We believe in transparency, honesty, and trust.",
-      icon: <SparklesIcon className="w-10 h-10 text-yellow-400" />,
+      icon: <SparklesIcon className="w-10 h-10 text-green-700" />,
     },
     {
       title: "Results",
       desc: "We focus on impact, growth, and measurable success.",
-      icon: <ChartBarIcon className="w-10 h-10 text-blue-400" />,
+      icon: <ChartBarIcon className="w-10 h-10 text-green-700" />,
     },
   ];
 
   return (
-    <section className="py-20 px-6 md:px-16 bg-black overflow-hidden relative">
+    <section className="py-14 px-6 md:px-16 bg-black overflow-hidden relative">
       <div className="absolute inset-0 opacity-100 z-0 bg-[url('/images/bgwhy.jpg')] bg-cover bg-center"></div>
 
       <div className="relative max-w-5xl mx-auto text-center mb-12 z-10">

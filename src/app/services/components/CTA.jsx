@@ -8,7 +8,7 @@ export default function CTA() {
   const router = useRouter();
 
   return (
-    <section className="relative py-14 px-6 md:px-16 bg-black overflow-hidden">
+    <section className="relative py-3 md:py-12 px-6 md:px-16 bg-black overflow-hidden">
       
       {/* Background Overlay */}
       <img

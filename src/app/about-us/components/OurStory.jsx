@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function OurStory() {
   return (
-    <section className="relative py-24 px-6 md:px-16 bg-black overflow-hidden">
+    <section className="relative py-12 md:py-18 px-6 md:px-16 bg-black overflow-hidden">
       
       {/* Background Image */}
       <Image
@@ -27,7 +27,7 @@ export default function OurStory() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-5xl font-bold text-white mb-8"
         >
-          Our Story ✨
+          Our Story 
         </motion.h2>
 
         <motion.p
@@ -56,7 +56,7 @@ export default function OurStory() {
                 src="/images/mission.jpg"
                 alt="Our Mission"
                 fill
-                className="object-cover"
+                className="object-cover opacity-60"
               />
             </div>
             <h3 className="text-white text-2xl font-semibold mb-3">Our Mission</h3>
@@ -78,7 +78,7 @@ export default function OurStory() {
                 src="/images/vision.jpg"
                 alt="Our Vision"
                 fill
-                className="object-cover"
+                className="object-cover opacity-60"
               />
             </div>
             <h3 className="text-white text-2xl font-semibold mb-3">Our Vision</h3>

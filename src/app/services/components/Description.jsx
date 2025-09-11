@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 
 export default function Description() {
   const points = [
-    "⚡ We build websites faster than your coffee brews.",
-    "🎨 Designs so fresh they belong in a gallery.",
-    "🔥 Graphics that make your competitors sweat.",
-    "🎬 Animations that keep eyeballs glued.",
-    "🎥 Video edits crisp enough to slice through the noise.",
-    "📢 Reels so catchy you'll replay them yourself.",
-    "📈 Social campaigns that actually work (no empty promises).",
-    "📸 Photos so clean your Instagram will bow down.",
-    "🚀 SEO that pushes you past your rivals on Google.",
-    "🎯 Ads that hit the bullseye—every single time.",
+    "We build websites faster than your coffee brews.",
+    "Designs so fresh they belong in a gallery.",
+    "Graphics that make your competitors sweat.",
+    "Animations that keep eyeballs glued.",
+    "Video edits crisp enough to slice through the noise.",
+    "Reels so catchy you'll replay them yourself.",
+    "Social campaigns that actually work (no empty promises).",
+    "Photos so clean your Instagram will bow down.",
+    "SEO that pushes you past your rivals on Google.",
+    "Ads that hit the bullseye—every single time.",
   ];
 
   return (
-   <section className="relative py-20 px-6 md:px-16 bg-black overflow-hidden">
+   <section className="relative py-8 md:py-16 px-6 md:px-16 bg-black overflow-hidden">
   
   {/* Background Image */}
   <img
@@ -35,7 +35,7 @@ export default function Description() {
       transition={{ duration: 0.6 }}
       className="text-3xl md:text-4xl font-bold text-white mb-4"
     >
-      We Don't Just Work... We Make Magic 💫
+      We Don't Just Work... We Make Magic 
     </motion.h2>
     <motion.p
       initial={{ opacity: 0, y: 20 }}

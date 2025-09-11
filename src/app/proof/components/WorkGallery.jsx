@@ -14,25 +14,25 @@ export default function WorkGallery() {
       link: "https://bloomingbullls.netlify.app/",
     },
     {
-      image: "/images/webdes.png",
-      title: "Branding Design",
-      link: "/projects/branding-design",
+      image: "/work/lux.png",
+      title: "Branding (Logo Design)",
+      link: "#",
     },
     {
-      image: "/images/webdes.png",
-      title: "Animation Project",
-      link: "/projects/animation",
+      image: "/work/lux1.png",
+      title: "Travel Agency Website",
+      link: "https://luxblackone.com/",
     },
-    {
-      image: "/images/webdes.png",
-      title: "Social Media Campaign",
-      link: "/projects/social-media",
-    },
-    {
-      image: "/images/webdes.png",
-      title: "Product Photoshoot",
-      link: "/projects/photoshoot",
-    },
+    // {
+    //   image: "/images/webdes.png",
+    //   title: "Social Media Campaign",
+    //   link: "/projects/social-media",
+    // },
+    // {
+    //   image: "/images/webdes.png",
+    //   title: "Product Photoshoot",
+    //   link: "/projects/photoshoot",
+    // },
     { image: "/work/webdev1.png", title: "Web App", link: "https://www.shatamjeeva.life/about-us" },
     {
       image: "/work/webdev3.png",
@@ -40,74 +40,74 @@ export default function WorkGallery() {
       link: "https://www.attero.in/",
     },
     {
-      image: "/images/webdes.png",
-      title: "SEO Campaign",
-      link: "/projects/seo",
+      image: "/work/ps.png",
+      title: "School Web + Custom Software",
+      link: "https://www.pspublicschool.com/",
     },
-    {
-      image: "/images/webdes.png",
-      title: "Video Editing",
-      link: "/projects/video-editing",
-    },
-    {
-      image: "/images/webdes.png",
-      title: "Creative Posters",
-      link: "/projects/posters",
-    },
+    // {
+    //   image: "/images/webdes.png",
+    //   title: "Video Editing",
+    //   link: "/projects/video-editing",
+    // },
+    // {
+    //   image: "/images/webdes.png",
+    //   title: "Creative Posters",
+    //   link: "/projects/posters",
+    // },
     {
       image: "/work/webdev.png",
       title: "Business Website",
       link: "https://www.lightbeam.ai/",
     },
-    {
-      image: "/images/webdes.png",
-      title: "Event Branding",
-      link: "/projects/event-branding",
-    },
+    // {
+    //   image: "/images/webdes.png",
+    //   title: "Event Branding",
+    //   link: "/projects/event-branding",
+    // },
     {
       image: "/work/webdesign.png",
       title: "UI/UX Design",
       link: "https://www.figma.com/design/Oa06AtZn2Gp3Qkbsi1Pkuj/Portfolio?node-id=0-1&p=f&t=DCzmpHpwwKwHDQkA-0",
     },
    
-    {
-      image: "/images/webdes.png",
-      title: "Photography Project",
-      link: "/projects/photography",
-    },
-    {
-      image: "/images/webdes.png",
-      title: "Corporate Video",
-      link: "/projects/corporate-video",
-    },
-    {
-      image: "/images/webdes.png",
-      title: "Digital Ads",
-      link: "/projects/digital-ads",
-    },
+    // {
+    //   image: "/images/webdes.png",
+    //   title: "Photography Project",
+    //   link: "/projects/photography",
+    // },
+    // {
+    //   image: "/images/webdes.png",
+    //   title: "Corporate Video",
+    //   link: "/projects/corporate-video",
+    // },
+    // {
+    //   image: "/images/webdes.png",
+    //   title: "Digital Ads",
+    //   link: "/projects/digital-ads",
+    // },
      {
       image: "/work/webdesign1.png",
       title: "Mobile App Design",
       link: "https://www.figma.com/design/Oa06AtZn2Gp3Qkbsi1Pkuj/Portfolio?node-id=0-1&p=f&t=DCzmpHpwwKwHDQkA-0",
     },
-    {
-      image: "/images/webdes.png",
-      title: "Instagram Reels",
-      link: "/projects/insta-reels",
-    },
+    // {
+    //   image: "/images/webdes.png",
+    //   title: "Instagram Reels",
+    //   link: "/projects/insta-reels",
+    // },
     {
       image: "/work/webdev4.png",
       title: "Interactive Website",
       link: "https://parallel-staging.dr7smkflnosxm.amplifyapp.com/",
     },
-    {
-      image: "/images/webdes.png",
-      title: "Explainer Animation",
-      link: "/projects/explainer-animation",
-    },
+    // {
+    //   image: "/images/webdes.png",
+    //   title: "Explainer Animation",
+    //   link: "/projects/explainer-animation",
+    // },
   ];
 
-  const [visibleCount, setVisibleCount] = useState(8);
+  const [visibleCount, setVisibleCount] = useState(10);
   const [isMobile, setIsMobile] = useStateReact(false);
 
   useEffect(() => {
@@ -124,7 +124,7 @@ export default function WorkGallery() {
   };
 
   return (
-    <section className="relative py-20 px-6 md:px-16 bg-black overflow-hidden">
+    <section className="relative py-10 md:py-16 px-6 md:px-16 bg-black overflow-hidden">
       {/* Background */}
       <Image
         src="/images/bgwhy.jpg"
@@ -143,7 +143,7 @@ export default function WorkGallery() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-5xl font-bold text-white mb-4"
         >
-          Work Gallery ✨
+          Work Gallery 
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -165,7 +165,7 @@ export default function WorkGallery() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.05 }}
-            className={`relative group overflow-hidden rounded-xl shadow-2xl border border-white/20 backdrop-blur-md ${
+            className={`relative group overflow-hidden rounded-xl shadow-2xl border border-white/90 backdrop-blur-md ${
               index % 5 === 0 ? "row-span-2" : "row-span-1"
             }`}
           >

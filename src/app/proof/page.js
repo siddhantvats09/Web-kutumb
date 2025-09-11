@@ -18,7 +18,7 @@ const page = () => {
   return (
     <>
       <Hero></Hero>
-      <ServicesSection></ServicesSection>
+      {/* <ServicesSection></ServicesSection> */}
       <WorkGallery></WorkGallery>
       <Metrics></Metrics>
       <Testimonials></Testimonials>

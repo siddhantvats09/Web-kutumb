@@ -58,7 +58,7 @@ export default function Testimonials() {
   }, [current]);
 
   return (
-    <section className="relative py-20 px-6 md:px-16 bg-black overflow-hidden">
+    <section className="relative py-12 md:py-16 px-6 md:px-16 bg-black overflow-hidden">
       {/* Background Image */}
       <Image
         src="/images/testi.jpg"

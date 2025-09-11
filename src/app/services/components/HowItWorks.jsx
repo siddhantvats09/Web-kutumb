@@ -20,7 +20,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="relative py-20 px-6 md:px-16 bg-black overflow-hidden">
+    <section className="relative py-8 md:py-16 px-6 md:px-16 bg-black overflow-hidden">
       
       {/* Background Image */}
       <img
@@ -38,7 +38,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-white mb-4"
         >
-          Our Simple, Elegant Process ✨
+          Our Simple, Elegant Process 
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

@@ -40,7 +40,7 @@ export default function FAQs() {
   };
 
   return (
-    <section className="relative py-20 px-6 md:px-16 h-[780px] md:h-[780px] bg-black overflow-hidden">
+    <section className="relative py-8 md:py-16 px-6 md:px-16 h-[790px] md:h-[770px] bg-black overflow-hidden">
       
       {/* Background Image */}
       <img
@@ -58,7 +58,7 @@ export default function FAQs() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-white mb-4"
         >
-          Frequently Asked Questions 💡
+          Frequently Asked Questions 
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

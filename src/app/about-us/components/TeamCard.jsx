@@ -7,17 +7,17 @@ import { UserIcon } from "@heroicons/react/24/solid";
 export default function TeamCard() {
   const team = [
     { name: "Nidhi Sharma", role: "Co-Founder", image: "" },
-    { name: "Siddhant Vats", role: "Tech Lead", image: "" }, // No image provided
+    { name: "Siddhant Vats", role: "Technical Lead", image: "" }, // No image provided
     {
       name: "Atulya Garg",
-      role: "Google/Meta Ads Expert",
+      role: "Media & Marketing Expert",
       image: "",
     },
     
   ];
 
   return (
-    <section className="py-20 px-6 md:px-16 bg-black overflow-hidden relative">
+    <section className="md:py-14 py-8 px-6 md:px-16 bg-black overflow-hidden relative">
       <Image
         src="/images/bg.jpg" // Change to your background image path
         alt="Background"
@@ -33,7 +33,7 @@ export default function TeamCard() {
       </div> */}
 
       {/* Title */}
-      <div className="relative max-w-4xl mx-auto text-center mb-12 z-10">
+      <div className="relative max-w-4xl mx-auto text-center mb-6 md:mb-12 z-10">
         <motion.h2
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -65,7 +65,7 @@ export default function TeamCard() {
             transition={{ duration: 0.6, delay: index * 0.2 }}
             className="flex flex-col items-center text-center p-6 backdrop-blur-md border border-white/20 rounded-2xl bg-gradient-to-br from-[#1c1c1c50] to-[#2a2a2a50] shadow-[0_0_20px_#00000066] hover:scale-105 transition-transform duration-500 hover:shadow-[0_0_30px_#ffffff33]"
           >
-            <div className="relative w-28 h-28 md:w-36 md:h-36 mb-4 shadow-inner rounded-full overflow-hidden border border-white/10">
+            <div className="relative w-20 h-20 md:w-30 md:h-30 mb-4 shadow-inner rounded-full overflow-hidden border border-white/10">
               {member.image ? (
                 <Image
                   src={member.image}
