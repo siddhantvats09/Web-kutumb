@@ -6,38 +6,40 @@ import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      quote: "SixthGenX completely transformed our online presence. Their work exceeded expectations!",
-      name: "Amit Patel",
-      company: "Founder, BrightTech",
-    },
-    {
-      quote: "From branding to website — they nailed every detail. Highly recommend their creative team.",
-      name: "Priya Mehra",
-      company: "CEO, EcoGlow",
-    },
-    {
-      quote: "The video production and marketing strategy brought amazing results. Great partnership!",
-      name: "Rahul Sharma",
-      company: "CMO, SkyNest",
-    },
-    {
-      quote: "Their SEO and Google Ads brought incredible traffic growth to our website. Truly impressive!",
-      name: "Sneha Verma",
-      company: "Marketing Head, TechNova",
-    },
-    {
-      quote: "Professional, creative, and results-driven. I couldn’t have asked for a better team.",
-      name: "Karan Joshi",
-      company: "Founder, UrbanLens",
-    },
-    {
-      quote: "Excellent work on our social media campaigns. We saw great engagement and conversions.",
-      name: "Megha Kapoor",
-      company: "Social Media Manager, GreenPlanet",
-    },
-  ];
+const testimonials = [
+  {
+    quote: "We build a travel agency website with SixthGenX. The design and functionality really helped us grow.",
+    name: "Shree Ram Rajkumar",
+    company: "CEO, LuxBlack",
+  },
+  {
+    quote: "They built a school website and custom management software for us. It has simplified everything for our staff and students.",
+    name: "Sanjeev Kumar",
+    company: "Director, PS Public School",
+  },
+  {
+    quote: "SixthGenX created a professional travel agency logo for us. It gave our brand a premium look.",
+    name: "Shree Ram Rajkumar",
+    company: "CEO, LuxBlack",
+  },
+  {
+    quote: "We ran performance marketing campaigns with them, and the results were outstanding in terms of leads and engagement.",
+    name: "Ram Mohan Khanna",
+    company: "Sales Executive, Shapoorji Pallonji",
+  },
+  {
+    quote: "They handled our corporate website project from scratch. It’s modern, responsive, and aligns perfectly with our goals.",
+    name: "Sumit Verma",
+    company: "Website Manager, Shatam Jeeva",
+  },
+  {
+    quote: "As project manager, I was impressed by how smoothly they delivered our website project — on time and with great quality.",
+    name: "Aman Patel",
+    company: "Project Manager, SINE",
+  },
+];
+
+
 
   const [current, setCurrent] = useState(0);
 
