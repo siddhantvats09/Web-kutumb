@@ -23,16 +23,27 @@ export default function WorkGallery() {
       title: "Travel Agency Website",
       link: "https://luxblackone.com/",
     },
-    // {
-    //   image: "/images/webdes.png",
-    //   title: "Social Media Campaign",
-    //   link: "/projects/social-media",
-    // },
-    // {
-    //   image: "/images/webdes.png",
-    //   title: "Product Photoshoot",
-    //   link: "/projects/photoshoot",
-    // },
+    {
+      image: "/images/reel1.png",
+      title: "Instagram Campaign Reel",
+      link: "https://www.instagram.com/reel/DHPyQF_h3TX/?igsh=ZGhqdHk2bDB2b2Q0",
+    },
+    {
+      image: "/images/packeg.png",
+      title: "Packeging Design Samples",
+      link: "https://docs.google.com/presentation/d/1EB_pJKVHCfoFVQT6XijMYdLhAn4crpJL/edit?usp=drive_link&ouid=115519480901389398327&rtpof=true&sd=true",
+    },
+  
+    {
+      image: "/images/reel2.png",
+      title: "Instagram Campaign Reel",
+      link: "https://www.instagram.com/reel/C4GCXD6JzEJ/?igsh=MTdlbDkwcGRmNTZ4bg%3D%3D",
+    },
+      {
+      image: "/images/packeg2.png",
+      title: "Graphic Design Samples",
+      link: "https://drive.google.com/file/d/1-63mSVhNKKahnnlKyE6Mn2_jMxa5R6PG/view?usp=drive_link",
+    },
     { image: "/work/webdev1.png", title: "Web App", link: "https://www.shatamjeeva.life/about-us" },
     {
       image: "/work/webdev3.png",
@@ -44,16 +55,21 @@ export default function WorkGallery() {
       title: "School Web + Custom Software",
       link: "https://www.pspublicschool.com/",
     },
-    // {
-    //   image: "/images/webdes.png",
-    //   title: "Video Editing",
-    //   link: "/projects/video-editing",
-    // },
-    // {
-    //   image: "/images/webdes.png",
-    //   title: "Creative Posters",
-    //   link: "/projects/posters",
-    // },
+      {
+      image: "/images/ads2.jpg",
+      title: "Google/Meta Ads Analysis",
+      link: "/images/ads2.jpg",
+    },
+    {
+      image: "/images/reel3.png",
+      title: "VideoEditing Reel",
+      link: "https://www.instagram.com/reel/DHitEx9JjHa/?igsh=MWJ4N3AwOTJwcmV6cg%3D%3D",
+    },
+     {
+      image: "/images/reel4.png",
+      title: "Commertial Reel for Travel Agency",
+      link: "https://www.instagram.com/reel/DIag0gVypKU/?igsh=YmxyYzgxdDN2NjN1",
+    },
     {
       image: "/work/webdev.png",
       title: "Business Website",
@@ -64,22 +80,18 @@ export default function WorkGallery() {
     //   title: "Event Branding",
     //   link: "/projects/event-branding",
     // },
-    {
-      image: "/work/webdesign.png",
-      title: "UI/UX Design",
-      link: "https://www.figma.com/design/Oa06AtZn2Gp3Qkbsi1Pkuj/Portfolio?node-id=0-1&p=f&t=DCzmpHpwwKwHDQkA-0",
-    },
+  
    
-    // {
-    //   image: "/images/webdes.png",
-    //   title: "Photography Project",
-    //   link: "/projects/photography",
-    // },
-    // {
-    //   image: "/images/webdes.png",
-    //   title: "Corporate Video",
-    //   link: "/projects/corporate-video",
-    // },
+    {
+      image: "/images/ads1.jpg",
+      title: "Google Ads Analysis",
+      link: "/images/ads1.jpg",
+    },
+    {
+      image: "/images/webdev2.jpg",
+      title: "All Websites Samples",
+      link: "https://docs.google.com/presentation/d/1n7nAw8lf1Rpkn7-9bEcD36LGo2JRXGuj/edit?usp=drive_link&ouid=115519480901389398327&rtpof=true&sd=true",
+    },
     // {
     //   image: "/images/webdes.png",
     //   title: "Digital Ads",
@@ -90,21 +102,37 @@ export default function WorkGallery() {
       title: "Mobile App Design",
       link: "https://www.figma.com/design/Oa06AtZn2Gp3Qkbsi1Pkuj/Portfolio?node-id=0-1&p=f&t=DCzmpHpwwKwHDQkA-0",
     },
-    // {
-    //   image: "/images/webdes.png",
-    //   title: "Instagram Reels",
-    //   link: "/projects/insta-reels",
-    // },
+ {
+      image: "/images/reel5.png",
+      title: "Drive Link for more reels Samples",
+      link: "https://drive.google.com/drive/folders/1FDMU8tDrmiaAVoqADnrczkILWF8uOJCn",
+    },
     {
       image: "/work/webdev4.png",
       title: "Interactive Website",
-      link: "https://parallel-staging.dr7smkflnosxm.amplifyapp.com/",
+      link: "https://sineiitb.org/",
     },
-    // {
-    //   image: "/images/webdes.png",
-    //   title: "Explainer Animation",
-    //   link: "/projects/explainer-animation",
-    // },
+    {
+      image: "/images/ritik3.png",
+      title: "SocialMedia Creatives ",
+      link: "https://drive.google.com/drive/folders/1nbAFIGmHa84tmrLaWoChDdptgoHAfNz6",
+    },
+    {
+      image: "/images/ritik2.png",
+      title: "Animation",
+      link: "https://drive.google.com/drive/folders/1uiFzu1Q908VykjVCFJIY0z2HxPZE4YKx",
+    },
+      {
+      image: "/work/webdesign.png",
+      title: "UI/UX Design",
+      link: "https://www.figma.com/design/Oa06AtZn2Gp3Qkbsi1Pkuj/Portfolio?node-id=0-1&p=f&t=DCzmpHpwwKwHDQkA-0",
+    },
+    {
+      image: "/images/ritik1.png",
+      title: "PhotoShoot",
+      link: "https://drive.google.com/drive/folders/1mzRjKfhwXpy4o54VLycLPYMV3GL-lpCW",
+    },
+   
   ];
 
   const [visibleCount, setVisibleCount] = useState(10);
@@ -120,7 +148,7 @@ export default function WorkGallery() {
   }, []);
 
   const handleSeeMore = () => {
-    setVisibleCount((prev) => prev + 6);
+    setVisibleCount((prev) => prev + 10);
   };
 
   return (
