@@ -243,6 +243,16 @@ export default function Portfolio() {
             </motion.div>
           ))}
         </div>
+        {visibleProjects < allProjects.length && (
+          <div className="flex justify-center mt-10 relative z-10">
+            <button
+              onClick={handleSeeMore}
+              className="px-6 py-3 text-white rounded-xl border border-white/20 hover:bg-white/5 transition"
+            >
+              See More Work
+            </button>
+          </div>
+        )}
       </section>
     </>
   );
