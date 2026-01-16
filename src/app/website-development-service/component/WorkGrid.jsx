@@ -227,7 +227,7 @@ export default function WorkGrid() {
         </div>
 
         {/* GRID */}
-        <div className="mt-10 grid gap-5 grid-cols-1 md:grid-cols-12 auto-rows-[90px] md:auto-rows-[110px]">
+        <div className="mt-10 grid gap-10 grid-cols-1 md:grid-cols-12 auto-rows-[90px] md:auto-rows-[110px]">
           {allProjects.slice(0, visible).map((p, idx) => {
             const span = getSpanClasses(idx);
 

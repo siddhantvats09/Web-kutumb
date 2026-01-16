@@ -196,21 +196,19 @@ export default function Home() {
         {/* HERO */}
         <section className="relative isolate min-h-[95vh] flex items-center justify-center overflow-hidden bg-white">
           {/* Background Image */}
-         <div className="absolute inset-0 z-0">
-  <video
-    className="h-full w-full object-cover object-center"
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="metadata"
-  >
-    <source src="/videos/bg2.webm" type="video/webm" />
-    <source src="/videos/bg3.mp4" type="video/mp4" />
-  </video>
-
- </div>
-
+          <div className="absolute inset-0 z-0">
+            <video
+              className="h-full w-full object-cover blur-[10px] object-center"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            >
+              <source src="/videos/bg2.webm" type="video/webm" />
+              <source src="/videos/bg3.mp4" type="video/mp4" />
+            </video>
+          </div>
 
           {/* Accent Glow */}
           <div className="absolute inset-0 z-[1] pointer-events-none bg-[radial-gradient(circle_at_50%_45%,rgba(55,19,236,0.14)_0%,rgba(55,19,236,0.06)_30%,transparent_70%)]" />
