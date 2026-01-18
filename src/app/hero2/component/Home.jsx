@@ -8,6 +8,7 @@ import Section2 from "./Section2";
 import Image from "next/image";
 import Testimonial from "./Testimonial";
 import ContactSection from "../../../../components/ContactSection";
+import Link from "next/link";
 
 export default function Home() {
   const allServices = useMemo(
@@ -233,18 +234,19 @@ export default function Home() {
               sales, and visibility.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button className="w-full sm:w-auto px-10 py-5 bg-black text-white rounded-2xl font-bold text-lg shadow-2xl hover:opacity-95 transition-all flex items-center justify-center gap-3">
-                Explore Services <span className="text-xl leading-none">↓</span>
+            <div className="mt-8 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-6">
+              <button className="w-full sm:w-auto rounded-2xl bg-black px-6 py-4 text-base font-bold text-white shadow-xl transition hover:opacity-95 sm:px-10 sm:py-5 sm:text-lg flex items-center justify-center gap-3">
+                Explore Services
+                <span className="text-lg sm:text-xl leading-none">↓</span>
               </button>
 
-              <a
-                href="#contact"
-                className="w-full sm:w-auto px-10 py-5 rounded-2xl font-bold text-lg border border-[#eeeeee] bg-white/70 backdrop-blur hover:bg-[#f8f9fa] transition-all flex items-center justify-center gap-3"
+              <Link
+                href="/contactus"
+                className="w-full sm:w-auto rounded-2xl border border-[#eeeeee] bg-white/70 px-6 py-4 text-base font-bold text-black backdrop-blur transition hover:bg-[#f8f9fa] sm:px-10 sm:py-5 sm:text-lg flex items-center justify-center gap-3"
               >
-                Book Consultation{" "}
-                <span className="text-xl leading-none">→</span>
-              </a>
+                Book Consultation
+                <span className="text-lg sm:text-xl leading-none">→</span>
+              </Link>
             </div>
           </div>
         </section>
@@ -254,7 +256,7 @@ export default function Home() {
         {/* PHILOSOPHY */}
         <section
           id="philosophy"
-          className="relative isolate overflow-hidden py-28 px-6 bg-[#ffffff]"
+          className="relative isolate overflow-hidden md:py-24 py-16 px-6 bg-[#ffffff]"
         >
           {/* Background Image */}
           <div className="absolute inset-0 -z-10">
@@ -271,7 +273,7 @@ export default function Home() {
 
           <div className="max-w-7xl mx-auto">
             {/* Top Row */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end mb-8 md:mb-16">
               <div className="lg:col-span-7">
                 <span className="text-[#3713ec] font-bold text-xs uppercase tracking-[0.28em] mb-4 block">
                   Our Core Pillars
@@ -324,7 +326,7 @@ export default function Home() {
               ].map((card) => (
                 <div
                   key={card.title}
-                  className="group relative overflow-hidden rounded-[32px] border border-[#eeeeee] bg-white/70 backdrop-blur-xl p-10 shadow-[0_18px_55px_rgba(0,0,0,0.06)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_22px_70px_rgba(0,0,0,0.10)] hover:border-[#3713ec]/30"
+                  className="group relative overflow-hidden rounded-[32px] border border-[#eeeeee] bg-white/70 backdrop-blur-xl p-7 md:p-10 shadow-[0_18px_55px_rgba(0,0,0,0.06)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_22px_70px_rgba(0,0,0,0.10)] hover:border-[#3713ec]/30"
                 >
                   {/* card glow */}
                   <div className="absolute -top-24 -right-24 h-56 w-56 rounded-full blur-3xl bg-[#3713ec]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -350,7 +352,7 @@ export default function Home() {
                   </ul> */}
 
                   {/* footer */}
-                  <div className="relative mt-7 pt-6 border-t border-[#eeeeee] flex items-center justify-between">
+                  <div className="relative mt-4 md:mt-7 pt-6 border-t border-[#eeeeee] flex items-center justify-between">
                     <span className="text-[10px] font-black uppercase tracking-[0.28em] text-[#0f172a]/40">
                       Growth pillar
                     </span>
@@ -390,7 +392,7 @@ export default function Home() {
               {allServices.slice(0, visible).map((s) => (
                 <article
                   key={s.title}
-                  className="group relative overflow-hidden rounded-[30px] border border-[#eeeeee] bg-[#00000011] transition-all duration-500 hover:-translate-y-1 hover:border-[#1d1d1e] hover:shadow-[0_22px_70px_rgba(0,0,0,0.10)]"
+                  className="group relative overflow-hidden rounded-[30px] border border-[#eeeeee] bg-[#00000009] transition-all duration-500 hover:-translate-y-1 hover:border-[#1d1d1e] hover:shadow-[0_22px_70px_rgba(0,0,0,0.10)]"
                 >
                   {/* Media */}
                   <div className="relative h-56 w-full overflow-hidden bg-[#f8f9fa]">

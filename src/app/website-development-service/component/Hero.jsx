@@ -59,7 +59,7 @@ export default function Hero() {
          </div> */}
      
 
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-4  md:py-10 md:pb-16">
+      <div className="mx-auto max-w-7xl px-6 md:px-8 pb-8 pt-4  md:py-10 md:pb-16">
         <div className="grid items-center gap-10 md:grid-cols-2">
           {/* LEFT */}
           <div>

@@ -124,7 +124,7 @@ export default function Navbar2() {
   ];
 
   return (
-    <header className="sticky top-0 z-[200] border-b border-[#eeeeee] bg-white/95 backdrop-blur-2xl">
+    <header className="sticky top-0 z-[200] border-b border-[#eeeeee] bg-white backdrop-blur-2xl">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3 select-none">
@@ -132,9 +132,11 @@ export default function Navbar2() {
             <span className="text-sm font-black">6X</span>
           </div>
           <div className="leading-tight">
+            <Link href="/hero2">
             <p className="text-base font-black tracking-tight text-black">
               SixthGenX
             </p>
+            </Link>
             <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-black/45">
               Web • SEO • Growth
             </p>
