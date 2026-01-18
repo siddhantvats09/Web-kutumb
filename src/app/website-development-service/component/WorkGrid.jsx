@@ -194,7 +194,7 @@ export default function WorkGrid() {
   const isVideo = (file) => /\.(mp4|webm|ogg)$/i.test(file);
 
   return (
-    <section id="work" className="relative bg-[#4931c3] py-14 md:py-20">
+    <section id="work" className="relative bg-[#0D0634] py-14 md:py-20">
       {/* soft background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(55,19,236,0.08)_0%,transparent_60%)]" />
@@ -218,67 +218,71 @@ export default function WorkGrid() {
             </p>
           </div>
 
-          <a
+          {/* <a
             href="/work"
             className="hidden md:inline-flex text-sm font-bold text-[#3713ec] hover:underline"
           >
             View All Work →
-          </a>
+          </a> */}
         </div>
 
         {/* GRID */}
-        <div className="mt-10 grid gap-10 grid-cols-1 md:grid-cols-12 auto-rows-[90px] md:auto-rows-[110px]">
-          {allProjects.slice(0, visible).map((p, idx) => {
-            const span = getSpanClasses(idx);
+        <div className="mt-10 grid gap-4 grid-cols-1 md:grid-cols-12 auto-rows-[70px] md:auto-rows-[90px]">
+  {allProjects.slice(0, visible).map((p, idx) => {
+    const span = getSpanClasses(idx);
 
-            return (
-              <motion.article
-                key={`${p.title}-${idx}`}
-                initial={{ opacity: 0, y: 14 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: Math.min(idx * 0.04, 0.25),
-                }}
-                className={[
-                  "group relative overflow-hidden border-[4px] border-[#ffffff] rounded-[24px]   bg-white shadow-sm",
-                  "hover:shadow-[0_18px_55px_rgba(0,0,0,0.10)] transition-all duration-500",
-                  "hover:-translate-y-[2px]",
-                  span,
-                ].join(" ")}
-              >
-                {/* media */}
-                <div className="absolute inset-0 bg-[#f8f9fa]">
-                  {isVideo(p.media) ? (
-                    <AutoPlayVideo src={p.media} title={p.title} />
-                  ) : (
-                    <img
-                      src={p.media}
-                      alt={p.title}
-                      className="absolute  inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                      loading="lazy"
-                    />
-                  )}
+    return (
+      <motion.article
+        key={`${p.title}-${idx}`}
+        initial={{ opacity: 0, y: 14 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          delay: Math.min(idx * 0.04, 0.25),
+        }}
+        className={[
+          "group relative overflow-hidden border-2 border-[#ffffff] rounded-[18px] bg-white shadow-sm",
+          "hover:shadow-[0_14px_40px_rgba(0,0,0,0.12)] transition-all duration-500",
+          "hover:-translate-y-[2px]",
+          span,
+        ].join(" ")}
+      >
+        {/* media */}
+        <div className="absolute inset-0 bg-[#f8f9fa]">
+          {isVideo(p.media) ? (
+            <AutoPlayVideo src={p.media} title={p.title} />
+          ) : (
+            <img
+              src={p.media}
+              alt={p.title}
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              loading="lazy"
+            />
+          )}
 
-                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.35),transparent_55%)]" />
-                </div>
-
-                {/* title */}
-                <Link href={p.badge} target="_blank" rel="noopener noreferrer">
-                <div className="relative flex h-full flex-col justify-end p-5 md:p-6">
-                  <div className="w-fit max-w-[90%] rounded-2xl border border-white/20 bg-black/45 px-4 py-3 backdrop-blur-md shadow-[0_12px_35px_rgba(0,0,0,0.25)]">
-                    <h3 className="text-lg md:text-xl font-bold text-white leading-snug">
-                      {p.title}
-                      <p className="text-center md:text-[14px] text-[10px] mt-1 md:font-normal font-thin text-[#29fe4d] " >Click to View</p>
-                    </h3>
-                  </div>
-                </div>
-                </Link>
-              </motion.article>
-            );
-          })}
+          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.32),transparent_55%)]" />
         </div>
+
+        {/* title */}
+        <Link href={p.badge} target="_blank" rel="noopener noreferrer">
+          <div className="relative flex h-full flex-col justify-end p-3 md:p-4">
+            <div className="w-fit max-w-[88%] rounded-xl border border-white/15 bg-black/45 px-3 py-2 backdrop-blur-md shadow-[0_10px_28px_rgba(0,0,0,0.22)]">
+              <h3 className="text-[13px] md:text-[15px] font-bold text-white leading-snug">
+                {p.title}
+              </h3>
+
+              <p className="text-[9px] md:text-[11px] mt-1 font-medium text-[#29fe4d]">
+                Click to View
+              </p>
+            </div>
+          </div>
+        </Link>
+      </motion.article>
+    );
+  })}
+</div>
+
 
         {/* See more */}
         <div className="mt-10 flex flex-col items-center gap-4">

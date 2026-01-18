@@ -6,6 +6,8 @@ import DevProcessTimeline from "./DevProcessTimeline";
 import TechStackLogos from "./TechStackLogos";
 import WorkGrid from "./WorkGrid";
 import ContactSection from "../../../../components/ContactSection";
+import Navbar2 from "../../../../components/Navbar2";
+import Hero from "./Hero";
 
 export default function WebsiteDevelopmentPage() {
   const coreServices = [
@@ -93,102 +95,12 @@ export default function WebsiteDevelopmentPage() {
   ];
 
   return (
-    <main className=" bg-white text-[#0f172a]">
+    <main className=" bg-white  text-[#0f172a]">
+
+    <Navbar2></Navbar2>
+
       {/* HERO */}
-      <section className="relative overflow-hidden">
-        {/* bg video */}
-        {/* <div className="absolute inset-0 z-10">
-          <video
-            className="h-full w-full object-cover opacity-25"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-          >
-            <source src="/videos/bg3.webm" type="video/webm" />
-            <source src="/videos/bg3.mp4" type="video/mp4" />
-          </video>
-
-         </div> */}
-
-        <div className="mx-auto z-11 max-w-7xl px-6 py-8 md:py-18">
-          <div className="grid items-center gap-10 md:grid-cols-2">
-            <div>
-              <div className="hidden md:block">
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#eeeeee] bg-white/70 px-4 py-2 text-[10px] font-black uppercase tracking-[0.28em] text-[#3713ec]">
-                  <span className="h-2 w-2 rounded-full bg-[#3713ec] animate-pulse" />
-                  Website Development Services
-                </div>
-              </div>
-
-              {/* SINGLE H1 */}
-              <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-[var(--font-playfair)] font-bold leading-[1.05] tracking-tight text-black">
-                Custom Website Development
-                <br />
-                <span className="italic font-medium text-[#3713ec]">
-                  Built for Performance & SEO.
-                </span>
-              </h1>
-
-              <p className="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-[#0f172a]/80">
-                We build modern websites that load fast, rank on Google, and
-                convert visitors into leads. Our development process includes{" "}
-                <strong>technical SEO</strong>, <strong>Core Web Vitals</strong>
-                , and a conversion-first UI system.
-              </p>
-
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a
-                  href="#contact"
-                  className="inline-flex h-12 items-center justify-center rounded-2xl bg-black px-7 text-sm font-bold text-white shadow-xl hover:opacity-95 transition"
-                >
-                  Start Your Website Project →
-                </a>
-
-                <a
-                  href="#work"
-                  className="inline-flex h-12 items-center justify-center rounded-2xl border border-[#eeeeee] bg-white/70 px-7 text-sm font-bold text-black hover:bg-[#f8f9fa] transition"
-                >
-                  View Website Work
-                </a>
-              </div>
-
-              {/* Social proof micro */}
-              <div className="mt-8 flex items-center gap-4">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="h-9 w-9 rounded-full border-2 border-white bg-[#eeeeee]"
-                    />
-                  ))}
-                </div>
-                <p className="text-sm text-[#0f172a]/60 font-semibold">
-                  Trusted by 100+ businesses for development & growth
-                </p>
-              </div>
-            </div>
-
-            {/* Right visual */}
-            <div className="relative z-11">
-              <div className="absolute -inset-1 rounded-[28px] bg-gradient-to-r from-[#3713ec]/25 to-black/10 blur opacity-60" />
-              <div className="relative overflow-hidden rounded-[28px] border border-[#eeeeee] bg-white shadow-[0_18px_60px_rgba(0,0,0,0.10)]">
-                <img
-                  src="/samples/web1.jpg"
-                  alt="Website development preview"
-                  className="h-[360px] w-full object-cover md:h-[440px]"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                <div className="absolute bottom-5 left-5 rounded-full bg-white/90 px-4 py-2 text-[10px] font-black uppercase tracking-[0.28em] text-black backdrop-blur">
-                  Speed • SEO • Conversion
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero></Hero>
 
       {/* TECH STRIP */}
 
@@ -315,8 +227,7 @@ export default function WebsiteDevelopmentPage() {
         </div>
       </section> */}
 
-<WorkGrid id="work"></WorkGrid>
-
+      <WorkGrid id="work"></WorkGrid>
 
       {/* REVIEWS */}
       <section className="md:py-18 py-14 bg-[#f8f9fa] border-y border-[#eeeeee]">
@@ -353,7 +264,7 @@ export default function WebsiteDevelopmentPage() {
       </section>
 
       {/* CTA */}
-      <section id="contact" className="py-20">
+      {/* <section id="contact" className="py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="relative overflow-hidden rounded-[32px] bg-[#3713ec] px-8 py-14 text-center shadow-xl shadow-[#3713ec]/25">
             <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:22px_22px]" />
@@ -384,7 +295,7 @@ export default function WebsiteDevelopmentPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <ContactSection />
     </main>
   );

@@ -1,6 +1,8 @@
 // components/sections/TechStackLogos.jsx
 "use client";
 
+import { motion } from "framer-motion";
+
 export default function TechStackLogos() {
   const categories = [
     {
@@ -47,45 +49,73 @@ export default function TechStackLogos() {
   ];
 
   return (
-    <section className="relative overflow-hidden border-y border-[#0f075f] bg-[#6a4cff] md:bg-[#4931c3]">
+    <section className="relative overflow-hidden border-y border-[#0f075f] bg-[#080130]">
       {/* background glow */}
-      <div className="pointer-events-none absolute inset-0">
+      <div className="pointer-events-none  absolute inset-0">
         <div className="absolute -top-44 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full blur-3xl opacity-30 bg-[radial-gradient(circle_at_center,rgba(55,19,236,0.35),transparent_60%)]" />
         <div className="absolute -bottom-60 right-[-10%] h-[520px] w-[520px] rounded-full blur-3xl opacity-25 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_65%)]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20">
-        {/* Heading */}
-        <div className="text-center">
-          <p className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.3em] text-white/100">
+        {/* Heading (scroll animation) */}
+        <motion.div
+          variants={headingVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.5 }}
+          className="text-center"
+        >
+          {/* <motion.p
+            variants={fadeUp}
+            className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.3em] text-white/90"
+          >
             Platforms & Technologies We Build With
-          </p>
+          </motion.p> */}
 
-          <h2 className="my-6 md:my-4 text-2xl sm:text-3xl md:text-5xl font-[var(--font-playfair)] font-bold text-white leading-[1.05]">
+          <motion.h2
+            variants={fadeUp}
+            className="my-6 md:my-4 text-2xl sm:text-3xl md:text-5xl font-[var(--font-playfair)] font-bold text-white leading-[1.05]"
+          >
             Built On Reliable, Modern Stacks
-          </h2>
+          </motion.h2>
 
-          <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-white/100 leading-relaxed">
+          <motion.p
+            variants={fadeUp}
+            className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-white/80 leading-relaxed"
+          >
             We build websites using the right platform — Next.js code builds,
             WordPress CMS, Shopify/WooCommerce stores — with tracking + performance.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        {/* Responsive grid */}
-        <div className="mt-10 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {categories.map((cat) => (
+        {/* Cards grid with stagger scroll reveal */}
+        <motion.div
+          variants={gridVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="mt-10 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          {categories.map((cat, i) => (
             <TechCard
               key={cat.title}
               title={cat.title}
               subtitle={cat.subtitle}
               items={cat.items}
+              index={i}
             />
           ))}
-        </div>
+        </motion.div>
 
-        <p className="mt-10 text-center text-[10px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-white/100">
+        <motion.p
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mt-10 text-center text-[10px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-white/80"
+        >
           Engineered for Speed • SEO • Tracking • Conversion
-        </p>
+        </motion.p>
       </div>
     </section>
   );
@@ -95,39 +125,98 @@ export default function TechStackLogos() {
 
 function TechCard({ title, subtitle, items }) {
   return (
-    <div className="group relative overflow-hidden rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-xl p-5 sm:p-6 shadow-[0_18px_45px_rgba(0,0,0,0.40)] transition-all duration-500 hover:-translate-y-1 hover:bg-white/10">
+    <motion.div
+      variants={cardVariants}
+      className="group relative overflow-hidden rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-xl p-5 sm:p-6 shadow-[0_18px_45px_rgba(0,0,0,0.40)] transition-all duration-500 hover:-translate-y-1 hover:bg-white/10"
+    >
       {/* glow */}
       <div className="absolute -top-24 -right-24 h-56 w-56 rounded-full blur-3xl bg-[#3713ec]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <h3 className="relative text-base sm:text-lg font-bold text-white">
         {title}
       </h3>
-      <p className="relative mt-1 text-xs sm:text-sm text-white/90 leading-relaxed">
+      <p className="relative mt-1 text-xs sm:text-sm text-white/75 leading-relaxed">
         {subtitle}
       </p>
 
-      {/* Compact tech pills */}
-      <div className="relative mt-4 flex flex-wrap gap-2">
+      {/* Tech Pills (micro pop animation) */}
+      <motion.div
+        variants={pillContainer}
+        className="relative mt-4 flex flex-wrap gap-2"
+      >
         {items.map((it) => (
-          <div
+          <motion.div
             key={it.name}
+            variants={pillItem}
             className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/25 px-4 py-2 hover:border-[#3713ec]/35 transition-all"
           >
             <span className="h-4 w-4 text-white/90">{it.icon}</span>
             <span className="text-[11px] sm:text-xs font-bold text-white/80 whitespace-nowrap">
               {it.name}
             </span>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
+
+/* -------------------- Framer Motion Variants -------------------- */
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 18, filter: "blur(6px)" },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const headingVariants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12 } },
+};
+
+const gridVariants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12, delayChildren: 0.08 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.97, filter: "blur(8px)" },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    filter: "blur(0px)",
+    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const pillContainer = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.06, delayChildren: 0.08 } },
+};
+
+const pillItem = {
+  hidden: { opacity: 0, y: 8, scale: 0.96 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+  },
+};
 
 /* -------------------- Icon wrapper -------------------- */
 
 function IconWrap({ children }) {
-  return <span className="inline-flex h-full w-full items-center justify-center">{children}</span>;
+  return (
+    <span className="inline-flex h-full w-full items-center justify-center">
+      {children}
+    </span>
+  );
 }
 
 /* -------------------- Logos -------------------- */
@@ -151,8 +240,20 @@ function LogoReact() {
       <svg viewBox="0 0 128 128" className="h-4 w-4">
         <g fill="none" stroke="currentColor" strokeWidth="8">
           <ellipse cx="64" cy="64" rx="50" ry="20" />
-          <ellipse cx="64" cy="64" rx="20" ry="50" transform="rotate(60 64 64)" />
-          <ellipse cx="64" cy="64" rx="20" ry="50" transform="rotate(120 64 64)" />
+          <ellipse
+            cx="64"
+            cy="64"
+            rx="20"
+            ry="50"
+            transform="rotate(60 64 64)"
+          />
+          <ellipse
+            cx="64"
+            cy="64"
+            rx="20"
+            ry="50"
+            transform="rotate(120 64 64)"
+          />
         </g>
         <circle cx="64" cy="64" r="8" fill="currentColor" />
       </svg>
@@ -203,7 +304,10 @@ function LogoWebflow() {
   return (
     <IconWrap>
       <svg viewBox="0 0 128 128" className="h-4 w-4">
-        <path fill="currentColor" d="M20 34h20l12 32 12-32h18L60 94H44L20 34Z" />
+        <path
+          fill="currentColor"
+          d="M20 34h20l12 32 12-32h18L60 94H44L20 34Z"
+        />
       </svg>
     </IconWrap>
   );
@@ -213,7 +317,10 @@ function LogoCMS() {
   return (
     <IconWrap>
       <svg viewBox="0 0 24 24" className="h-4 w-4">
-        <path fill="currentColor" d="M4 5h16v14H4V5Zm2 2v10h12V7H6Z" />
+        <path
+          fill="currentColor"
+          d="M4 5h16v14H4V5Zm2 2v10h12V7H6Z"
+        />
       </svg>
     </IconWrap>
   );
@@ -233,7 +340,10 @@ function LogoShopify() {
   return (
     <IconWrap>
       <svg viewBox="0 0 128 128" className="h-4 w-4">
-        <path fill="currentColor" d="M42 28c4-8 10-14 18-14 9 0 13 6 15 10 6 1 12 3 17 6l-8 82H36L24 34c6-3 12-5 18-6Z" />
+        <path
+          fill="currentColor"
+          d="M42 28c4-8 10-14 18-14 9 0 13 6 15 10 6 1 12 3 17 6l-8 82H36L24 34c6-3 12-5 18-6Z"
+        />
       </svg>
     </IconWrap>
   );
@@ -243,7 +353,10 @@ function LogoWoo() {
   return (
     <IconWrap>
       <svg viewBox="0 0 24 24" className="h-4 w-4">
-        <path fill="currentColor" d="M4 7c0-2 2-3 4-3h8c2 0 4 1 4 3v10c0 2-2 3-4 3H8c-2 0-4-1-4-3V7Z" />
+        <path
+          fill="currentColor"
+          d="M4 7c0-2 2-3 4-3h8c2 0 4 1 4 3v10c0 2-2 3-4 3H8c-2 0-4-1-4-3V7Z"
+        />
       </svg>
     </IconWrap>
   );
@@ -253,7 +366,10 @@ function LogoStripe() {
   return (
     <IconWrap>
       <svg viewBox="0 0 128 128" className="h-4 w-4">
-        <path fill="currentColor" d="M72 52c0-4-4-6-10-6-6 0-14 2-20 5V36c6-3 14-5 24-5 16 0 26 7 26 19 0 22-30 18-30 28 0 3 3 5 8 5 8 0 15-2 22-6v15c-6 3-14 5-24 5-16 0-26-7-26-19 0-23 30-19 30-28Z" />
+        <path
+          fill="currentColor"
+          d="M72 52c0-4-4-6-10-6-6 0-14 2-20 5V36c6-3 14-5 24-5 16 0 26 7 26 19 0 22-30 18-30 28 0 3 3 5 8 5 8 0 15-2 22-6v15c-6 3-14 5-24 5-16 0-26-7-26-19 0-23 30-19 30-28Z"
+        />
       </svg>
     </IconWrap>
   );
