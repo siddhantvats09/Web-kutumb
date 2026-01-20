@@ -124,20 +124,21 @@ export default function Navbar2() {
   ];
 
   return (
-    <header className="sticky top-0 z-[200] border-b border-[#eeeeee] bg-white backdrop-blur-2xl">
+    <header className="sticky top-0 z-[200] border-b border-white/10 bg-[#0a0a0a]/85 backdrop-blur-2xl">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3 select-none">
-          <div className="h-10 w-10 rounded-2xl bg-black text-white flex items-center justify-center shadow-[0_14px_35px_rgba(0,0,0,0.18)]">
+          <div className="h-10 w-10 rounded-2xl bg-[#c8a95f] text-black flex items-center justify-center shadow-[0_0_18px_rgba(200,169,95,0.22)]">
             <span className="text-sm font-black">6X</span>
           </div>
+
           <div className="leading-tight">
             <Link href="/hero2">
-            <p className="text-base font-black tracking-tight text-black">
-              SixthGenX
-            </p>
+              <p className="text-base font-black tracking-tight text-white">
+                SixthGenX
+              </p>
             </Link>
-            <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-black/45">
+            <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-white/45">
               Web • SEO • Growth
             </p>
           </div>
@@ -146,14 +147,14 @@ export default function Navbar2() {
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">
           <a
-            className="text-sm font-bold text-black/70 hover:text-black transition"
+            className="text-sm font-bold text-white/80 hover:text-white transition"
             href="#work"
           >
             Work
           </a>
 
           <a
-            className="text-sm font-bold text-black/70 hover:text-black transition"
+            className="text-sm font-bold text-white/80 hover:text-white transition"
             href="#process"
           >
             Process
@@ -165,8 +166,8 @@ export default function Navbar2() {
               onClick={() => setOpenServices((s) => !s)}
               className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-black transition ${
                 openServices
-                  ? "bg-[#3713ec]/10 text-[#3713ec]"
-                  : "text-black/70 hover:text-black hover:bg-black/5"
+                  ? "bg-[#c8a95f]/15 border border-[#c8a95f]/35 text-white"
+                  : "text-white/80 hover:text-white hover:bg-white/5 border border-transparent"
               }`}
             >
               Services
@@ -182,18 +183,18 @@ export default function Navbar2() {
             {/* Folder Mega Menu */}
             {openServices && (
               <div className="absolute left-1/2 top-[58px] w-[920px] -translate-x-1/2">
-                <div className="relative rounded-[28px] border border-[#eeeeee] bg-white shadow-[0_24px_70px_rgba(0,0,0,0.14)] overflow-hidden">
-                  <div className="flex items-center justify-between px-7 py-4 border-b border-[#eeeeee] bg-[#fafafa]">
+                <div className="relative rounded-[28px] border border-white/10 bg-[#0b0b0b] shadow-[0_24px_90px_rgba(0,0,0,0.75)] overflow-hidden">
+                  <div className="flex items-center justify-between px-7 py-4 border-b border-white/10 bg-white/5">
                     <div className="flex items-center gap-3">
-                      <span className="h-2 w-2 rounded-full bg-[#3713ec]" />
-                      <p className="text-xs font-black uppercase tracking-[0.28em] text-black/55">
+                      <span className="h-2 w-2 rounded-full bg-[#c8a95f]" />
+                      <p className="text-xs font-black uppercase tracking-[0.28em] text-white/55">
                         Service Suite
                       </p>
                     </div>
 
                     <a
                       href="#contact"
-                      className="inline-flex items-center justify-center rounded-full bg-black px-4 py-2 text-xs font-black text-white shadow-lg hover:opacity-95 transition"
+                      className="inline-flex items-center justify-center rounded-full bg-[#c8a95f] px-4 py-2 text-xs font-black text-black shadow-[0_0_18px_rgba(200,169,95,0.22)] hover:opacity-95 transition"
                     >
                       Book Consultation →
                     </a>
@@ -203,9 +204,9 @@ export default function Navbar2() {
                     {services.map((col) => (
                       <div
                         key={col.heading}
-                        className="p-6 border-r border-[#eeeeee] last:border-r-0"
+                        className="p-6 border-r border-white/10 last:border-r-0"
                       >
-                        <h4 className="text-[12px] font-black uppercase tracking-[0.28em] text-black/55">
+                        <h4 className="text-[12px] font-black uppercase tracking-[0.28em] text-white/55">
                           {col.heading}
                         </h4>
 
@@ -214,12 +215,12 @@ export default function Navbar2() {
                             <Link
                               href={it.href}
                               key={it.title}
-                              className="group block rounded-2xl border border-transparent p-3 hover:border-[#3713ec]/25 hover:bg-[#3713ec]/[0.05] transition"
+                              className="group block rounded-2xl border border-transparent p-3 hover:border-[#c8a95f]/25 hover:bg-[#c8a95f]/[0.06] transition"
                             >
-                              <p className="text-sm font-black text-black group-hover:text-[#3713ec] transition">
+                              <p className="text-sm font-black text-white group-hover:text-[#c8a95f] transition">
                                 {it.title}
                               </p>
-                              <p className="mt-1 text-xs leading-relaxed text-black/55">
+                              <p className="mt-1 text-xs leading-relaxed text-white/55">
                                 {it.desc}
                               </p>
                             </Link>
@@ -229,23 +230,23 @@ export default function Navbar2() {
                     ))}
                   </div>
 
-                  <div className="h-1 w-full bg-gradient-to-r from-transparent via-[#3713ec]/60 to-transparent" />
+                  <div className="h-1 w-full bg-gradient-to-r from-transparent via-[#c8a95f]/60 to-transparent" />
                 </div>
 
-                <div className="mx-auto mt-2 h-3 w-3 rotate-45 border-l border-t border-[#eeeeee] bg-white" />
+                <div className="mx-auto mt-2 h-3 w-3 rotate-45 border-l border-t border-white/10 bg-[#0b0b0b]" />
               </div>
             )}
           </div>
 
           <a
-            className="text-sm font-bold text-black/70 hover:text-black transition"
+            className="text-sm font-bold text-white/80 hover:text-white transition"
             href="#testimonials"
           >
             Reviews
           </a>
 
           <a
-            className="text-sm font-bold text-black/70 hover:text-black transition"
+            className="text-sm font-bold text-white/80 hover:text-white transition"
             href="#contact"
           >
             Contact
@@ -256,7 +257,7 @@ export default function Navbar2() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href="#contact"
-            className="rounded-full bg-[#3713ec] px-6 py-2.5 text-sm font-black text-white shadow-[0_16px_40px_rgba(55,19,236,0.24)] hover:opacity-95 transition"
+            className="rounded-full bg-[#c8a95f] px-6 py-2.5 text-sm font-black text-black shadow-[0_0_18px_rgba(200,169,95,0.22)] hover:opacity-95 transition"
           >
             Get Started
           </a>
@@ -265,7 +266,7 @@ export default function Navbar2() {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpenMobile((s) => !s)}
-          className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-[#eeeeee] bg-white hover:bg-[#f8f9fa] transition"
+          className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition text-white"
           aria-label="Open menu"
         >
           {openMobile ? "✕" : "☰"}
@@ -276,21 +277,18 @@ export default function Navbar2() {
       {openMobile && (
         <div className="lg:hidden fixed inset-0 z-[250]">
           {/* overlay */}
-          <div
-            className="absolute inset-0 bg-black/35"
-            onClick={closeMobile}
-          />
+          <div className="absolute inset-0 bg-black/70" onClick={closeMobile} />
 
           {/* drawer */}
-          <div className="absolute right-0 top-0 h-[100dvh] w-full max-w-[420px] bg-white shadow-[0_40px_120px_rgba(0,0,0,0.25)] border-l border-[#eeeeee] flex flex-col">
+          <div className="absolute right-0 top-0 h-[100dvh] w-full max-w-[420px] bg-[#0b0b0b] shadow-[0_40px_120px_rgba(0,0,0,0.75)] border-l border-white/10 flex flex-col">
             {/* header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-[#eeeeee]">
-              <p className="text-sm font-black tracking-tight text-black">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-white/5">
+              <p className="text-sm font-black tracking-tight text-white">
                 Navigation
               </p>
               <button
                 onClick={closeMobile}
-                className="h-10 w-10 rounded-2xl border border-[#eeeeee] bg-white hover:bg-[#f8f9fa] transition"
+                className="h-10 w-10 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition text-white"
                 aria-label="Close menu"
               >
                 ✕
@@ -301,7 +299,7 @@ export default function Navbar2() {
             <div className="flex-1 overflow-y-auto overscroll-contain px-6 py-5 space-y-3">
               <a
                 onClick={closeMobile}
-                className="block rounded-2xl px-4 py-3 font-black text-black hover:bg-[#f8f9fa]"
+                className="block rounded-2xl px-4 py-3 font-black text-white hover:bg-white/5"
                 href="#work"
               >
                 Work
@@ -309,21 +307,21 @@ export default function Navbar2() {
 
               <a
                 onClick={closeMobile}
-                className="block rounded-2xl px-4 py-3 font-black text-black hover:bg-[#f8f9fa]"
+                className="block rounded-2xl px-4 py-3 font-black text-white hover:bg-white/5"
                 href="#process"
               >
                 Process
               </a>
 
-              <details className="rounded-2xl border border-[#eeeeee] bg-[#f8f9fa] overflow-hidden">
-                <summary className="cursor-pointer list-none px-4 py-3 font-black text-black flex items-center justify-between">
-                  Services <span className="text-black/60">▾</span>
+              <details className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+                <summary className="cursor-pointer list-none px-4 py-3 font-black text-white flex items-center justify-between">
+                  Services <span className="text-white/60">▾</span>
                 </summary>
 
                 <div className="px-4 pb-4 pt-2 space-y-4">
                   {services.map((group) => (
                     <div key={group.heading}>
-                      <p className="text-[11px] font-black uppercase tracking-[0.28em] text-black/50">
+                      <p className="text-[11px] font-black uppercase tracking-[0.28em] text-[#c8a95f]/80">
                         {group.heading}
                       </p>
 
@@ -333,12 +331,12 @@ export default function Navbar2() {
                             key={it.title}
                             href={it.href}
                             onClick={closeMobile}
-                            className="block rounded-2xl bg-white border border-[#eeeeee] px-4 py-3 hover:border-[#3713ec]/30 transition"
+                            className="block rounded-2xl bg-[#0a0a0a] border border-white/10 px-4 py-3 hover:border-[#c8a95f]/35 transition"
                           >
-                            <p className="font-black text-sm text-black">
+                            <p className="font-black text-sm text-white">
                               {it.title}
                             </p>
-                            <p className="mt-1 text-xs text-black/55">
+                            <p className="mt-1 text-xs text-white/55">
                               {it.desc}
                             </p>
                           </Link>
@@ -351,7 +349,7 @@ export default function Navbar2() {
 
               <a
                 onClick={closeMobile}
-                className="block rounded-2xl px-4 py-3 font-black text-black hover:bg-[#f8f9fa]"
+                className="block rounded-2xl px-4 py-3 font-black text-white hover:bg-white/5"
                 href="#testimonials"
               >
                 Reviews
@@ -359,7 +357,7 @@ export default function Navbar2() {
 
               <a
                 onClick={closeMobile}
-                className="block rounded-2xl px-4 py-3 font-black text-black hover:bg-[#f8f9fa]"
+                className="block rounded-2xl px-4 py-3 font-black text-white hover:bg-white/5"
                 href="#contact"
               >
                 Contact
@@ -370,14 +368,14 @@ export default function Navbar2() {
                 <a
                   onClick={closeMobile}
                   href="#contact"
-                  className="rounded-2xl border border-[#eeeeee] bg-white px-4 py-3 text-center text-sm font-black text-black hover:bg-[#f8f9fa] transition"
+                  className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-center text-sm font-black text-white hover:bg-white/10 transition"
                 >
                   Portal
                 </a>
                 <a
                   onClick={closeMobile}
                   href="#contact"
-                  className="rounded-2xl bg-[#3713ec] px-4 py-3 text-center text-sm font-black text-white shadow-[0_16px_40px_rgba(55,19,236,0.24)] hover:opacity-95 transition"
+                  className="rounded-2xl bg-[#c8a95f] px-4 py-3 text-center text-sm font-black text-black shadow-[0_0_18px_rgba(200,169,95,0.22)] hover:opacity-95 transition"
                 >
                   Get Started
                 </a>

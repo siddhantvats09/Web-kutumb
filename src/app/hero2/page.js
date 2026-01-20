@@ -11,12 +11,32 @@ import Navbar2 from "../../../components/Navbar2";
 
 const page = () => {
   return (
-    <>
-    <Navbar2></Navbar2>
-    <Home></Home>
-     {/* <Hero></Hero>
-     <Section2></Section2> */}
-    </>
+   <>
+  {/* ✅ Sticky / Fixed Background */}
+  <div className="fixed inset-0 -z-10">
+    <div
+      className="absolute inset-0 opacity-70"
+      style={{
+        backgroundImage: "url('/images/bgwhy2.jpg')",
+        backgroundRepeat: "repeat",
+        backgroundSize: "520px",
+        backgroundPosition: "top left",
+        backgroundAttachment: "fixed",
+      }}
+    />
+
+    {/* overlay for readability */}
+    <div className="absolute inset-0 bg-black/15" />
+
+    {/* premium gold glow */}
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_10%,rgba(200,169,95,0.18),transparent_60%)]" />
+  </div>
+
+  {/* ✅ Site Content Scrolls */}
+  <Navbar2 />
+  <Home />
+</>
+
   );
 };
 

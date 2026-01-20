@@ -29,7 +29,7 @@ export default function Upgrade() {
         transition={{ duration: 0.65, ease: "easeOut" }}
         className="group"
       >
-        <h2 className="font-[var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.06] tracking-[-0.02em] text-black">
+        <h2 className="font-[var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.06] tracking-[-0.02em] text-white">
           <span className="relative inline-block">
             From Idea to Impact.
             {/* hover underline */}
@@ -39,7 +39,7 @@ export default function Upgrade() {
 
           <span
             className="
-              relative inline-flex items-center gap-3 italic font-medium text-[#3713ec]
+              relative inline-flex items-center gap-3 italic font-medium text-[#c8a95f]
               transition-all duration-500 group-hover:tracking-[-0.01em]
             "
           >
@@ -47,26 +47,16 @@ export default function Upgrade() {
           </span>
         </h2>
 
-        {/* <p className="mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-[#0f172a]/70">
-          We transform concepts into premium digital systems with{" "}
-          <span className="font-bold text-black">website development</span>,{" "}
-          <span className="font-bold text-black">SEO</span>, and{" "}
-          <span className="font-bold text-black">
-            conversion-focused UI systems
-          </span>
-          .
-        </p> */}
-
         {/* ✅ MOBILE micro note */}
         <motion.div
           style={{ opacity: noteOpacity, y: noteY }}
           className="mt-6 md:hidden"
         >
-          <div className="relative overflow-hidden rounded-full border border-[#eeeeee] bg-white/70 px-4 py-2 backdrop-blur">
+          <div className="relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-xl">
             {/* shimmer line */}
             <motion.span
               aria-hidden
-              className="absolute inset-y-0 -left-1/2 w-[45%] bg-gradient-to-r from-transparent via-[#3713ec]/15 to-transparent"
+              className="absolute inset-y-0 -left-1/2 w-[45%] bg-gradient-to-r from-transparent via-[#c8a95f]/18 to-transparent"
               animate={{ x: ["-40%", "220%"] }}
               transition={{ duration: 1.8, repeat: Infinity, ease: "linear" }}
             />
@@ -74,7 +64,7 @@ export default function Upgrade() {
             <div className="relative inline-flex items-center gap-2">
               {/* pulse dot */}
               <motion.span
-                className="h-2 w-2 rounded-full bg-[#3713ec]"
+                className="h-2 w-2 rounded-full bg-[#c8a95f]"
                 animate={{ scale: [1, 1.35, 1], opacity: [0.55, 1, 0.55] }}
                 transition={{
                   duration: 1.2,
@@ -82,18 +72,15 @@ export default function Upgrade() {
                   ease: "easeInOut",
                 }}
               />
-              <span className="text-[10px] font-black uppercase tracking-[0.28em] text-black/60">
+              <span className="text-[10px] font-black uppercase tracking-[0.28em] text-white/70">
                 Scroll to see the upgrade
               </span>
             </div>
           </div>
 
           {/* progress bar */}
-          <div className="mt-3 h-[2px] w-full bg-[#eeeeee] rounded-full overflow-hidden">
-            <motion.div
-              style={{ width: lineWidth }}
-              className="h-full bg-[#3713ec]"
-            />
+          <div className="mt-3 h-[2px] w-full bg-white/10 rounded-full overflow-hidden">
+            <motion.div style={{ width: lineWidth }} className="h-full bg-[#c8a95f]" />
           </div>
         </motion.div>
       </motion.div>
@@ -103,11 +90,11 @@ export default function Upgrade() {
         style={{ opacity: noteOpacity, y: noteY }}
         className="hidden md:flex md:justify-self-end"
       >
-        <div className="relative overflow-hidden rounded-full border border-[#eeeeee] bg-white/70 px-4 py-2 backdrop-blur">
+        <div className="relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-xl">
           {/* shimmer */}
           <motion.span
             aria-hidden
-            className="absolute inset-y-0 -left-1/2 w-[45%] bg-gradient-to-r from-transparent via-[#3713ec]/18 to-transparent"
+            className="absolute inset-y-0 -left-1/2 w-[45%] bg-gradient-to-r from-transparent via-[#c8a95f]/18 to-transparent"
             animate={{ x: ["-40%", "220%"] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: "linear" }}
           />
@@ -115,7 +102,7 @@ export default function Upgrade() {
           <div className="relative flex items-center gap-3 select-none">
             {/* pulse */}
             <motion.span
-              className="h-2 w-2 rounded-full bg-[#3713ec]"
+              className="h-2 w-2 rounded-full bg-[#c8a95f]"
               animate={{ scale: [1, 1.35, 1], opacity: [0.55, 1, 0.55] }}
               transition={{
                 duration: 1.2,
@@ -124,15 +111,15 @@ export default function Upgrade() {
               }}
             />
 
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#3713ec] font-black">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#c8a95f] font-black">
               Scroll to see the upgrade
             </span>
 
             {/* progress line */}
-            <span className="relative h-px w-28 bg-[#eeeeee] overflow-hidden rounded-full">
+            <span className="relative h-px w-28 bg-white/10 overflow-hidden rounded-full">
               <motion.span
                 style={{ width: lineWidth }}
-                className="absolute inset-y-0 left-0 bg-[#3713ec]"
+                className="absolute inset-y-0 left-0 bg-[#c8a95f]"
               />
             </span>
           </div>
