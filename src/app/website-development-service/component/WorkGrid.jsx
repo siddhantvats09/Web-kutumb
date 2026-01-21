@@ -183,127 +183,140 @@ export default function WorkGrid() {
     []
   );
 
-  const [visible, setVisible] = useState(10);
+  const [visible, setVisible] = useState(9);
 
   const handleSeeMore = () => {
     setVisible((prev) =>
-      prev + 5 <= allProjects.length ? prev + 5 : allProjects.length
+      prev + 6 <= allProjects.length ? prev + 6 : allProjects.length
     );
   };
 
   const isVideo = (file) => /\.(mp4|webm|ogg)$/i.test(file);
 
   return (
-    <section id="work" className="relative bg-[#0D0634] py-14 md:py-20">
-      {/* soft background */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(55,19,236,0.08)_0%,transparent_60%)]" />
+  <section id="work" className="relative  py-14 md:py-20 overflow-hidden">
+     <div
+            className="absolute inset-0 opacity-100 z-[-1]"
+            style={{
+              backgroundImage: "url('/images/bgwhy2.jpg')",
+              backgroundRepeat: "repeat",
+              backgroundSize: "420px",
+              backgroundPosition: "top left",
+            }}
+          />
+  {/* soft background */}
+  <div className="pointer-events-none absolute inset-0 -z-10">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(200,169,95,0.10)_0%,transparent_60%)]" />
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_70%,rgba(255,255,255,0.06)_0%,transparent_55%)]" />
+  </div>
+
+  <div className="mx-auto max-w-7xl px-6">
+    {/* heading */}
+    <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p className="text-[10px] md:text-sm font-black uppercase tracking-[0.3em] text-white/70">
+          Portfolio
+        </p>
+
+        <h2 className="mt-4 text-3xl md:text-5xl font-[var(--font-playfair)] font-bold text-white">
+          Recent Work & Visual Proof
+        </h2>
+
+        <p className="mt-4 max-w-2xl text-sm md:text-base text-white/60 leading-relaxed">
+          A mix of website builds, branding, creatives, motion and growth
+          systems — designed for conversion and built for performance.
+        </p>
       </div>
+    </div>
 
-      <div className="mx-auto max-w-7xl px-6">
-        {/* heading */}
-        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-[10px] md:text-sm font-black uppercase tracking-[0.3em] text-white">
-              Portfolio
-            </p>
+    {/* ✅ NEW PORTFOLIO GRID (Beautiful / gallery-style) */}
+    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {allProjects.slice(0, visible).map((p, idx) => (
+        <motion.article
+          key={`${p.title}-${idx}`}
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.55,
+            delay: Math.min(idx * 0.05, 0.25),
+          }}
+          className={[
+            "group relative overflow-hidden rounded-[26px]",
+            "border border-white/10 bg-white/5 backdrop-blur-xl",
+            "transition-all duration-500 hover:-translate-y-[3px] hover:border-[#c8a95f]/35",
+            "shadow-[0_18px_55px_rgba(0,0,0,0.45)] hover:shadow-[0_22px_70px_rgba(0,0,0,0.65)]",
+          ].join(" ")}
+        >
+          {/* media */}
+          <div className="relative h-[250px] w-full overflow-hidden bg-black/20">
+            {isVideo(p.media) ? (
+              <AutoPlayVideo src={p.media} title={p.title} />
+            ) : (
+              <img
+                src={p.media}
+                alt={p.title}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                loading="lazy"
+              />
+            )}
 
-            <h2 className="mt-4 text-3xl md:text-5xl font-[var(--font-playfair)] font-bold text-white">
-              Recent Work & Visual Proof
-            </h2>
+            {/* subtle highlight */}
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.18),transparent_55%)]" />
 
-            <p className="mt-4 max-w-2xl text-sm md:text-base text-white leading-relaxed">
-              A mix of website builds, branding, creatives, motion and growth
-              systems — designed for conversion and built for performance.
-            </p>
+            {/* gold glow corner */}
+            <div className="pointer-events-none absolute -top-24 -right-24 h-56 w-56 rounded-full blur-3xl bg-[#c8a95f]/12 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+            {/* top badge */}
+            <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-black/70 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.24em] text-white backdrop-blur border border-white/10">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#c8a95f]" />
+              Project
+            </div>
           </div>
 
-          {/* <a
-            href="/work"
-            className="hidden md:inline-flex text-sm font-bold text-[#3713ec] hover:underline"
-          >
-            View All Work →
-          </a> */}
-        </div>
-
-        {/* GRID */}
-        <div className="mt-10 grid gap-4 grid-cols-1 md:grid-cols-12 auto-rows-[70px] md:auto-rows-[90px]">
-  {allProjects.slice(0, visible).map((p, idx) => {
-    const span = getSpanClasses(idx);
-
-    return (
-      <motion.article
-        key={`${p.title}-${idx}`}
-        initial={{ opacity: 0, y: 14 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 0.5,
-          delay: Math.min(idx * 0.04, 0.25),
-        }}
-        className={[
-          "group relative overflow-hidden border-2 border-[#ffffff] rounded-[18px] bg-white shadow-sm",
-          "hover:shadow-[0_14px_40px_rgba(0,0,0,0.12)] transition-all duration-500",
-          "hover:-translate-y-[2px]",
-          span,
-        ].join(" ")}
-      >
-        {/* media */}
-        <div className="absolute inset-0 bg-[#f8f9fa]">
-          {isVideo(p.media) ? (
-            <AutoPlayVideo src={p.media} title={p.title} />
-          ) : (
-            <img
-              src={p.media}
-              alt={p.title}
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-              loading="lazy"
-            />
-          )}
-
-          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.32),transparent_55%)]" />
-        </div>
-
-        {/* title */}
-        <Link href={p.badge} target="_blank" rel="noopener noreferrer">
-          <div className="relative flex h-full flex-col justify-end p-3 md:p-4">
-            <div className="w-fit max-w-[88%] rounded-xl border border-white/15 bg-black/45 px-3 py-2 backdrop-blur-md shadow-[0_10px_28px_rgba(0,0,0,0.22)]">
-              <h3 className="text-[13px] md:text-[15px] font-bold text-white leading-snug">
+          {/* content */}
+          <Link href={p.badge} target="_blank" rel="noopener noreferrer">
+            <div className="p-6">
+              <h3 className="text-lg font-bold text-white leading-snug">
                 {p.title}
               </h3>
 
-              <p className="text-[9px] md:text-[11px] mt-1 font-medium text-[#29fe4d]">
-                Click to View
-              </p>
+              <div className="mt-3 flex items-center justify-between">
+                <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/60">
+                  Click to View
+                </span>
+
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all group-hover:border-[#c8a95f]/35 group-hover:bg-[#c8a95f]/15">
+                  →
+                </span>
+              </div>
+
+              {/* micro accent line */}
+              <div className="mt-5 h-[2px] w-12 bg-[#c8a95f]/70 rounded-full" />
             </div>
-          </div>
-        </Link>
-      </motion.article>
-    );
-  })}
-</div>
+          </Link>
+        </motion.article>
+      ))}
+    </div>
 
+    {/* See more */}
+    <div className="mt-10 flex flex-col items-center gap-4">
+      {visible < allProjects.length && (
+        <button
+          onClick={handleSeeMore}
+          className="inline-flex items-center justify-center rounded-2xl bg-[#c8a95f] px-8 py-4 text-sm font-bold text-black shadow-xl hover:opacity-95 transition-all"
+        >
+          See More Work <span className="ml-2">→</span>
+        </button>
+      )}
 
-        {/* See more */}
-        <div className="mt-10 flex flex-col items-center gap-4">
-          {visible < allProjects.length && (
-            <button
-              onClick={handleSeeMore}
-              className="inline-flex items-center justify-center rounded-2xl bg-black px-8 py-4 text-sm font-bold text-white shadow-xl hover:opacity-95 transition-all"
-            >
-              See More Work <span className="ml-2">→</span>
-            </button>
-          )}
+      <a href="/work" className="md:hidden text-sm font-bold text-[#c8a95f] hover:underline">
+        View All Work →
+      </a>
+    </div>
+  </div>
+</section>
 
-          <a
-            href="/work"
-            className="md:hidden text-sm font-bold text-[#3713ec] hover:underline"
-          >
-            View All Work →
-          </a>
-        </div>
-      </div>
-    </section>
   );
 }
 

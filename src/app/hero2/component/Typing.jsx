@@ -58,7 +58,7 @@ export default function TypingText({
       <span className="text-white/95">{fixedText} </span>
 
       {/* Typed highlight */}
-      <p className="font-semibold text-[#c8a95f]">
+      <p className="font-semibold text-[#dbb763]">
         {typed}
         {/* Cursor */}
         <span className="inline-block w-[10px] translate-y-[2px]">

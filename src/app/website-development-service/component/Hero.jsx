@@ -41,43 +41,33 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden">
+      {/* bg video */}
+     <div
+            className="absolute inset-0 opacity-100"
+            style={{
+              backgroundImage: "url('/images/bgwhy2.jpg')",
+              backgroundRepeat: "repeat",
+              backgroundSize: "420px",
+              backgroundPosition: "top left",
+            }}
+          />
 
-        {/* bg video */}
-        {/* <div className="absolute inset-0 z-10">
-          <video
-            className="h-full w-full object-cover opacity-25"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-          >
-            <source src="/videos/bg3.webm" type="video/webm" />
-            <source src="/videos/bg3.mp4" type="video/mp4" />
-          </video>
-
-         </div> */}
-     
-
-      <div className="mx-auto max-w-7xl px-6 md:px-8 pb-8 pt-4  md:py-10 md:pb-16">
+      <div className="mx-auto max-w-7xl px-6 md:px-8 pb-8 pt-4 relative z-1  md:py-10 md:pb-16">
         <div className="grid items-center gap-10 md:grid-cols-2">
           {/* LEFT */}
           <div>
-            
-
             {/* SINGLE H1 */}
             <motion.h1
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="mt-6 text-4xl md:text-5xl lg:text-6xl font-[var(--font-playfair)] font-bold leading-[1.05] tracking-tight text-black"
+              className="mt-6 text-4xl md:text-5xl lg:text-6xl font-[var(--font-playfair)] font-bold leading-[1.05] tracking-tight text-white"
             >
               Custom Website Development
               <br />
-              <span className="italic text-3xl md:text-5xl font-medium text-[#3713ec] inline-block mt-1">
+              <span className="italic text-3xl md:text-5xl font-medium text-[#c8a95f] inline-block mt-1">
                 {typedSubtitle}
-                
               </span>
             </motion.h1>
 
@@ -86,7 +76,7 @@ export default function Hero() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.12 }}
-              className="mt-5 max-w-xl text-base md:text-[17px] leading-relaxed text-[#0f172a]/75"
+              className="mt-5 max-w-xl text-base md:text-[17px] leading-relaxed text-white/85"
             >
               We build modern websites that load fast, rank on Google, and
               convert visitors into leads. Our development process includes{" "}
@@ -104,14 +94,14 @@ export default function Hero() {
             >
               <a
                 href="#contact"
-                className="inline-flex h-12 items-center justify-center rounded-2xl bg-black px-7 text-sm font-bold text-white shadow-[0_18px_55px_rgba(0,0,0,0.16)] hover:opacity-95 transition"
+                className="inline-flex h-12 items-center justify-center rounded-2xl bg-[#c8a95f] px-7 text-sm font-bold text-black shadow-[0_18px_55px_rgba(0,0,0,0.16)] hover:opacity-95 transition"
               >
                 Start Your Website Project →
               </a>
 
               <a
                 href="#work"
-                className="inline-flex h-12 items-center justify-center rounded-2xl border border-[#eeeeee] bg-white/70 px-7 text-sm font-bold text-black hover:bg-[#f8f9fa] transition"
+                className="inline-flex h-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-7 text-sm font-bold text-white hover:bg-white/10 transition"
               >
                 View Website Work
               </a>
@@ -130,11 +120,11 @@ export default function Hero() {
                   {[1, 2, 3].map((i) => (
                     <div
                       key={i}
-                      className="h-9 w-9 rounded-full border-2 border-white bg-[#eeeeee]"
+                      className="h-9 w-9 rounded-full border-2 border-[#0a0a0a] bg-white/10"
                     />
                   ))}
                 </div>
-                <p className="text-sm text-[#0f172a]/60 font-semibold">
+                <p className="text-sm text-white/60 font-semibold">
                   Trusted by 100+ businesses for development & growth
                 </p>
               </div>
@@ -149,19 +139,15 @@ export default function Hero() {
             transition={{ duration: 0.65, delay: 0.1 }}
             className="relative"
           >
-           
             <div className="relative overflow-hidden rounded-[28px] ">
-           
               <img
-                src="/samples/web1.png"
+                src="/samples/web1a.png"
                 alt="Website development preview"
                 className="w-full h-auto object-cover transition-transform duration-700 hover:scale-[1.02]"
                 loading="lazy"
               />
-
-             
             </div>
- </motion.div>
+          </motion.div>
 
           {/* Social proof (mobile) */}
           <div className="md:hidden block">
@@ -170,11 +156,11 @@ export default function Hero() {
                 {[1, 2, 3].map((i) => (
                   <div
                     key={i}
-                    className="h-9 w-9 rounded-full border-2 border-white bg-[#eeeeee]"
+                    className="h-9 w-9 rounded-full border-2 border-[#0a0a0a] bg-white/10"
                   />
                 ))}
               </div>
-              <p className="text-sm text-[#0f172a]/60 font-semibold">
+              <p className="text-sm text-white/60 font-semibold">
                 Trusted by 100+ businesses for development & growth
               </p>
             </div>

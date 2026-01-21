@@ -49,11 +49,20 @@ export default function TechStackLogos() {
   ];
 
   return (
-    <section className="relative overflow-hidden border-y border-[#0f075f] bg-[#080130]">
+    <section className="relative overflow-hidden  bg-[#0a0a0a]">
       {/* background glow */}
+       <div
+            className="absolute inset-0 opacity-100"
+            style={{
+              backgroundImage: "url('/images/bgwhy2.jpg')",
+              backgroundRepeat: "repeat",
+              backgroundSize: "420px",
+              backgroundPosition: "top left",
+            }}
+          />
       <div className="pointer-events-none  absolute inset-0">
-        <div className="absolute -top-44 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full blur-3xl opacity-30 bg-[radial-gradient(circle_at_center,rgba(55,19,236,0.35),transparent_60%)]" />
-        <div className="absolute -bottom-60 right-[-10%] h-[520px] w-[520px] rounded-full blur-3xl opacity-25 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_65%)]" />
+        <div className="absolute -top-44 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full blur-3xl opacity-30 bg-[radial-gradient(circle_at_center,rgba(200,169,95,0.28),transparent_60%)]" />
+        <div className="absolute -bottom-60 right-[-10%] h-[520px] w-[520px] rounded-full blur-3xl opacity-25 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.10),transparent_65%)]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20">
@@ -65,13 +74,6 @@ export default function TechStackLogos() {
           viewport={{ once: true, amount: 0.5 }}
           className="text-center"
         >
-          {/* <motion.p
-            variants={fadeUp}
-            className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.3em] text-white/90"
-          >
-            Platforms & Technologies We Build With
-          </motion.p> */}
-
           <motion.h2
             variants={fadeUp}
             className="my-6 md:my-4 text-2xl sm:text-3xl md:text-5xl font-[var(--font-playfair)] font-bold text-white leading-[1.05]"
@@ -81,7 +83,7 @@ export default function TechStackLogos() {
 
           <motion.p
             variants={fadeUp}
-            className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-white/80 leading-relaxed"
+            className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-white/70 leading-relaxed"
           >
             We build websites using the right platform — Next.js code builds,
             WordPress CMS, Shopify/WooCommerce stores — with tracking + performance.
@@ -112,7 +114,7 @@ export default function TechStackLogos() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="mt-10 text-center text-[10px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-white/80"
+          className="mt-10 text-center text-[10px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-white/70"
         >
           Engineered for Speed • SEO • Tracking • Conversion
         </motion.p>
@@ -130,12 +132,12 @@ function TechCard({ title, subtitle, items }) {
       className="group relative overflow-hidden rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-xl p-5 sm:p-6 shadow-[0_18px_45px_rgba(0,0,0,0.40)] transition-all duration-500 hover:-translate-y-1 hover:bg-white/10"
     >
       {/* glow */}
-      <div className="absolute -top-24 -right-24 h-56 w-56 rounded-full blur-3xl bg-[#3713ec]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute -top-24 -right-24 h-56 w-56 rounded-full blur-3xl bg-[#c8a95f]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <h3 className="relative text-base sm:text-lg font-bold text-white">
         {title}
       </h3>
-      <p className="relative mt-1 text-xs sm:text-sm text-white/75 leading-relaxed">
+      <p className="relative mt-1 text-xs sm:text-sm text-white/70 leading-relaxed">
         {subtitle}
       </p>
 
@@ -148,10 +150,10 @@ function TechCard({ title, subtitle, items }) {
           <motion.div
             key={it.name}
             variants={pillItem}
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/25 px-4 py-2 hover:border-[#3713ec]/35 transition-all"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/25 px-4 py-2 hover:border-[#c8a95f]/35 transition-all"
           >
             <span className="h-4 w-4 text-white/90">{it.icon}</span>
-            <span className="text-[11px] sm:text-xs font-bold text-white/80 whitespace-nowrap">
+            <span className="text-[11px] sm:text-xs font-bold text-white/75 whitespace-nowrap">
               {it.name}
             </span>
           </motion.div>

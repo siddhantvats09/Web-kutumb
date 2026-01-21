@@ -33,22 +33,20 @@ export default function DevProcessTimeline() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-12 md:py-16 px-6">
+    <section className="relative overflow-hidden py-12 md:py-16 px-6 ">
       {/* Background Image */}
-      <div className="absolute inset-0 -z-10">
-        <img
-          src="/images/bgwhy.jpg"
-          alt="Website development process background"
-          className="h-full w-full object-cover object-center"
-          loading="lazy"
-        />
-        {/* overlay for readability */}
-        <div className="absolute inset-0 bg-white/92" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/95 to-white" />
-      </div>
+        <div
+            className="absolute inset-0 opacity-100 z-[-1]"
+            style={{
+              backgroundImage: "url('/images/bgwhy2.jpg')",
+              backgroundRepeat: "repeat",
+              backgroundSize: "420px",
+              backgroundPosition: "top left",
+            }}
+          />
 
       {/* Accent glow */}
-      <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_50%_20%,rgba(55,19,236,0.18)_0%,rgba(55,19,236,0.07)_30%,transparent_70%)]" />
+      <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_50%_20%,rgba(200,169,95,0.16)_0%,rgba(200,169,95,0.07)_30%,transparent_70%)]" />
 
       <div className="mx-auto max-w-6xl">
         {/* Title */}
@@ -58,7 +56,7 @@ export default function DevProcessTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-5xl font-[var(--font-playfair)] font-bold text-black"
+            className="text-3xl md:text-5xl font-[var(--font-playfair)] font-bold text-white"
           >
             Process We Follow
           </motion.h2>
@@ -68,7 +66,7 @@ export default function DevProcessTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.12 }}
-            className="mt-4 text-[#0f172a]/65 text-base md:text-lg leading-relaxed"
+            className="mt-4 text-white/60 text-base md:text-lg leading-relaxed"
           >
             A clear step-by-step workflow designed to deliver a high-performance,
             SEO-optimized website — with predictable timelines and quality execution.
@@ -124,10 +122,10 @@ function StepCard({ step, index, isLast }) {
       {/* Left rail (desktop) */}
       <div className="absolute left-4 top-0 hidden sm:block">
         {!isLast && (
-          <div className="relative h-full w-[2px] bg-[#eeeeee]">
+          <div className="relative h-full w-[2px] bg-white/10">
             <motion.div
               style={{ height: lineHeight }}
-              className="absolute top-0 left-0 w-[2px] bg-gradient-to-b from-[#3713ec] via-[#3713ec] to-transparent"
+              className="absolute top-0 left-0 w-[2px] bg-gradient-to-b from-[#c8a95f] via-[#c8a95f] to-transparent"
             />
           </div>
         )}
@@ -141,7 +139,7 @@ function StepCard({ step, index, isLast }) {
         <div className="relative flex items-start justify-start sm:justify-center">
           {/* mobile line */}
           {!isLast && (
-            <div className="absolute left-[14px] top-10 bottom-[-46px] w-[2px] bg-[#eeeeee] sm:hidden" />
+            <div className="absolute left-[14px] top-10 bottom-[-46px] w-[2px] bg-white/10 sm:hidden" />
           )}
 
           {/* Dot */}
@@ -152,18 +150,18 @@ function StepCard({ step, index, isLast }) {
             transition={{ duration: 0.35 }}
             className="relative mt-1"
           >
-            <div className="h-9 w-9 rounded-full bg-white border border-[#eeeeee] shadow-sm flex items-center justify-center">
-              <div className="h-3 w-3 rounded-full bg-[#3713ec]" />
+            <div className="h-9 w-9 rounded-full bg-[#0a0a0a] border border-white/10 shadow-sm flex items-center justify-center">
+              <div className="h-3 w-3 rounded-full bg-[#c8a95f]" />
             </div>
 
             {/* glow */}
-            <div className="pointer-events-none absolute inset-0 rounded-full blur-xl bg-[#3713ec]/25 opacity-70" />
+            <div className="pointer-events-none absolute inset-0 rounded-full blur-xl bg-[#c8a95f]/25 opacity-70" />
           </motion.div>
         </div>
 
         {/* Card */}
         <div className="relative">
-          <div className="rounded-[26px] border border-[#eeeeee] bg-white/70 backdrop-blur-xl p-5 sm:p-7 shadow-[0_18px_55px_rgba(0,0,0,0.06)] hover:shadow-[0_22px_70px_rgba(0,0,0,0.10)] transition-all">
+          <div className="rounded-[26px] border border-white/10 bg-white/5 backdrop-blur-xl p-5 sm:p-7 shadow-[0_18px_55px_rgba(0,0,0,0.06)] hover:shadow-[0_22px_70px_rgba(0,0,0,0.10)] transition-all">
             {/* Top row */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div className="flex items-center gap-3">
@@ -172,22 +170,22 @@ function StepCard({ step, index, isLast }) {
                 </span>
 
                 <div>
-                  <h3 className="text-[17px] sm:text-lg md:text-xl font-bold text-black leading-snug">
+                  <h3 className="text-[17px] sm:text-lg md:text-xl font-bold text-white leading-snug">
                     {step.title}
                   </h3>
-                  <p className="text-[11px] sm:text-xs text-[#0f172a]/50 font-semibold uppercase tracking-[0.22em] mt-0.5">
+                  <p className="text-[11px] sm:text-xs text-white/45 font-semibold uppercase tracking-[0.22em] mt-0.5">
                     Step {index + 1}
                   </p>
                 </div>
               </div>
 
-              <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.22em] text-[#3713ec] bg-[#3713ec]/10 px-3 py-1 rounded-full w-fit">
+              <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.22em] text-[#c8a95f] bg-[#c8a95f]/10 px-3 py-1 rounded-full w-fit">
                 {step.time}
               </span>
             </div>
 
             {/* Desc */}
-            <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-[#0f172a]/65">
+            <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-white/60">
               {step.desc}
             </p>
 
@@ -211,7 +209,7 @@ function StepCard({ step, index, isLast }) {
 --------------------------------------------- */
 function Chip({ text }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-[#eeeeee] bg-white px-3 py-1 text-[10px] sm:text-[11px] font-bold text-black/70">
+    <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] sm:text-[11px] font-bold text-white/70">
       {text}
     </span>
   );

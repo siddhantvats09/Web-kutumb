@@ -161,8 +161,7 @@ export default function Home() {
               <source src="/videos/bgvideo.mp4" type="video/mp4" />
             </video>
 
-            {/* readability overlay */}
-            <div className="absolute inset-0 bg-black/40" />
+           
           </div>
 
           {/* Accent Glow */}
@@ -173,14 +172,14 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-[var(--font-playfair)] font-medium leading-[0.95] tracking-tight text-white mb-14">
               <span className="italic font-light">Built for Growth.</span>
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-[#c8a95f] to-[#c1a259]">
+              <span className=" text-[#fffffffe]">
                 Powered by Performance.
               </span>
             </h1>
             <TypingText></TypingText>
 
             <div className="mt-8 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-6">
-              <button className="w-full sm:w-auto rounded-2xl bg-[#c1a259] px-6 py-4 text-base font-bold text-black shadow-[0_0_18px_rgba(200,169,95,0.22)] transition hover:opacity-95 sm:px-10 sm:py-4 sm:text-lg flex items-center justify-center gap-3">
+              <button className="w-full sm:w-auto rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-base font-bold text-white backdrop-blur transition hover:border-[#c8a95f]/30 hover:bg-[#c8a95f]/10 sm:px-10 sm:py-4 sm:text-lg flex items-center justify-center gap-3">
                 Explore Services
                 <span className="text-lg sm:text-xl leading-none">↓</span>
               </button>
@@ -302,7 +301,7 @@ export default function Home() {
 
         {/* SERVICES GRID */}
         <section
-          className="relative py-24 px-6 bg-[#0a0a0a] overflow-hidden text-white"
+          className="relative py-13 md:py-24 px-6 bg-[#0a0a0a] overflow-hidden text-white"
           id="services"
         >
           {/* ✅ Background Image Layer */}
@@ -358,10 +357,10 @@ export default function Home() {
                     )}
 
                     {/* Micro label */}
-                    <div className="absolute z-[3] left-5 top-5 inline-flex items-center gap-2 rounded-full bg-black/70 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.24em] text-white backdrop-blur border border-white/10">
+                    {/* <div className="absolute z-[3] left-5 top-5 inline-flex items-center gap-2 rounded-full bg-black/70 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.24em] text-white backdrop-blur border border-white/10">
                       <span className="h-1.5 w-1.5 rounded-full bg-[#c8a95f]" />
                       Featured
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Content */}
@@ -801,12 +800,12 @@ export default function Home() {
       </footer>
 
       {/* Floating Button */}
-      <div className="fixed bottom-8 right-8 z-[100]">
+      {/* <div className="fixed bottom-8 right-8 z-[100]">
         <button className="size-16 bg-black text-white rounded-3xl shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-black to-[#3713ec] opacity-0 group-hover:opacity-100 transition-opacity" />
           <span className="relative z-10 text-2xl">◎</span>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

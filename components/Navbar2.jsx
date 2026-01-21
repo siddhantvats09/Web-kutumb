@@ -127,10 +127,8 @@ export default function Navbar2() {
     <header className="sticky top-0 z-[200] border-b border-white/10 bg-[#0a0a0a]/85 backdrop-blur-2xl">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3 select-none">
-          <div className="h-10 w-10 rounded-2xl bg-[#c8a95f] text-black flex items-center justify-center shadow-[0_0_18px_rgba(200,169,95,0.22)]">
-            <span className="text-sm font-black">6X</span>
-          </div>
+        <Link href="/" className="flex items-center gap-3 select-none">
+         
 
           <div className="leading-tight">
             <Link href="/hero2">
@@ -142,7 +140,7 @@ export default function Navbar2() {
               Web • SEO • Growth
             </p>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">

@@ -95,9 +95,8 @@ export default function WebsiteDevelopmentPage() {
   ];
 
   return (
-    <main className=" bg-white  text-[#0f172a]">
-
-    <Navbar2></Navbar2>
+    <main className="   text-[#0f172a]">
+      <Navbar2></Navbar2>
 
       {/* HERO */}
       <Hero></Hero>
@@ -107,13 +106,25 @@ export default function WebsiteDevelopmentPage() {
       <TechStackLogos></TechStackLogos>
 
       {/* CORE SERVICES */}
-      <section className="md:py-18 py-12">
+      <section className="relative md:py-18 py-12 overflow-hidden">
+        {/* ✅ BG Image (repeat) */}
+        <div
+          className="absolute inset-0 opacity-100 -z-10"
+          style={{
+            backgroundImage: "url('/images/bgwhy2.jpg')",
+            backgroundRepeat: "repeat",
+            backgroundSize: "420px",
+            backgroundPosition: "top left",
+          }}
+        />
+
         <div className="mx-auto max-w-7xl flex justify-center items-center flex-col px-6">
-          <div className="max-w-2xl pb-2  ">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-center  font-[var(--font-playfair)] font-bold text-black">
+          <div className="max-w-2xl pb-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-center font-[var(--font-playfair)] font-bold text-white">
               Core Website Development Services
             </h2>
-            <p className="mt-3 text-lg text-center text-[#0f172a]/65">
+
+            <p className="mt-3 text-lg text-center text-white/60">
               Everything required to build a high-performing website — from UI
               build to SEO integration and launch support.
             </p>
@@ -123,13 +134,15 @@ export default function WebsiteDevelopmentPage() {
             {coreServices.map((s) => (
               <article
                 key={s.title}
-                className="rounded-[26px] border border-[#eeeeee] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_18px_55px_rgba(0,0,0,0.08)] hover:border-[#3713ec]/30"
+                className="rounded-[26px] border border-white/10 bg-white/5 p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_18px_55px_rgba(0,0,0,0.08)] hover:border-[#c8a95f]/35"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#3713ec]/10 text-[#3713ec] font-black">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#c8a95f]/15 text-[#c8a95f] font-black">
                   {s.icon}
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-black">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#0f172a]/65">
+
+                <h3 className="mt-5 text-lg font-bold text-white">{s.title}</h3>
+
+                <p className="mt-3 text-sm leading-relaxed text-white/60">
                   {s.desc}
                 </p>
               </article>
@@ -230,33 +243,60 @@ export default function WebsiteDevelopmentPage() {
       <WorkGrid id="work"></WorkGrid>
 
       {/* REVIEWS */}
-      <section className="md:py-18 py-14 bg-[#f8f9fa] border-y border-[#eeeeee]">
+      <section className="relative md:py-18 py-14 overflow-hidden">
+        {/* subtle bg glow */}
+
+         <div
+            className="absolute inset-0 opacity-100 z-[-1]"
+            style={{
+              backgroundImage: "url('/images/bgwhy2.jpg')",
+              backgroundRepeat: "repeat",
+              backgroundSize: "420px",
+              backgroundPosition: "top left",
+            }}
+          />
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(200,169,95,0.10)_0%,transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(255,255,255,0.06)_0%,transparent_60%)]" />
+        </div>
+
         <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl font-[var(--font-playfair)] font-bold text-black text-center">
+          <h2 className="text-3xl md:text-4xl font-[var(--font-playfair)] font-bold text-white text-center">
             Client Reviews
           </h2>
+
+          <p className="mt-3 text-sm md:text-base text-white/60 text-center max-w-2xl mx-auto leading-relaxed">
+            Real feedback from businesses we’ve helped with website development,
+            SEO and performance growth.
+          </p>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
               <article
                 key={t.name}
-                className="rounded-[26px] border border-[#eeeeee] bg-white p-8 shadow-sm"
+                className="group relative rounded-[26px] border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#c8a95f]/35 hover:shadow-[0_22px_70px_rgba(0,0,0,0.65)]"
               >
-                <div className="flex gap-1 text-[#3713ec] text-sm font-black">
+                {/* subtle glow */}
+                <div className="pointer-events-none absolute -top-24 -right-24 h-56 w-56 rounded-full blur-3xl bg-[#c8a95f]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <div className="relative flex gap-1 text-[#c8a95f] text-sm font-black">
                   ★★★★★
                 </div>
 
-                <p className="mt-4 text-sm leading-relaxed text-[#0f172a]/70 italic">
+                <p className="relative mt-4 text-sm leading-relaxed text-white/60 italic">
                   “{t.quote}”
                 </p>
 
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-[#eeeeee]" />
+                <div className="relative mt-6 flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-white/10 border border-white/10" />
                   <div>
-                    <p className="text-sm font-bold text-black">{t.name}</p>
-                    <p className="text-xs text-[#0f172a]/60">{t.role}</p>
+                    <p className="text-sm font-bold text-white">{t.name}</p>
+                    <p className="text-xs text-white/55">{t.role}</p>
                   </div>
                 </div>
+
+                {/* micro accent line */}
+                <div className="relative mt-6 h-[2px] w-12 bg-[#c8a95f]/70 rounded-full" />
               </article>
             ))}
           </div>
