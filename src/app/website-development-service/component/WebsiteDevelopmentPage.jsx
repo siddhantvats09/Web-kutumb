@@ -96,7 +96,7 @@ export default function WebsiteDevelopmentPage() {
 
   return (
     <main className="   text-[#0f172a]">
-      <Navbar2></Navbar2>
+   
 
       {/* HERO */}
       <Hero></Hero>
@@ -303,40 +303,7 @@ export default function WebsiteDevelopmentPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      {/* <section id="contact" className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="relative overflow-hidden rounded-[32px] bg-[#3713ec] px-8 py-14 text-center shadow-xl shadow-[#3713ec]/25">
-            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:22px_22px]" />
-
-            <h2 className="relative z-10 text-3xl md:text-5xl font-[var(--font-playfair)] font-bold text-white">
-              Ready to build a website that ranks and converts?
-            </h2>
-
-            <p className="relative z-10 mt-4 text-white/90 text-lg max-w-2xl mx-auto">
-              Get a website development plan with performance optimization, SEO
-              structure, and conversion-first UI. Let’s build something
-              powerful.
-            </p>
-
-            <div className="relative z-10 mt-8 flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 text-sm font-black text-[#3713ec] hover:bg-[#f8f9fa] transition"
-              >
-                Get Free Quote
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl border border-white/30 bg-[#3713ec]/30 px-8 py-4 text-sm font-black text-white hover:bg-[#3713ec]/45 transition"
-              >
-                Schedule Consultation
-              </a>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      <ContactSection />
+    
     </main>
   );
 }

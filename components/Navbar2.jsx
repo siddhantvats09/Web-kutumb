@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -57,7 +58,7 @@ export default function Navbar2() {
         {
           title: "eCommerce Stores",
           desc: "Shopify / WooCommerce conversion builds.",
-          href: "/services/ecommerce",
+          href: "/website-development-service",
         },
       ],
     },
@@ -67,17 +68,17 @@ export default function Navbar2() {
         {
           title: "SEO Services",
           desc: "Technical, On-page, Local SEO & content clusters.",
-          href: "/services/seo",
+          href: "/search-engion-optimization-seo-service",
         },
         {
           title: "SEO Audit",
           desc: "Fix indexing, CWV, schema, and content hierarchy.",
-          href: "/services/seo-audit",
+          href: "/search-engion-optimization-seo-service",
         },
         {
           title: "Local SEO",
           desc: "Maps ranking + location pages + citations setup.",
-          href: "/services/local-seo",
+          href: "/search-engion-optimization-seo-service",
         },
       ],
     },
@@ -117,7 +118,7 @@ export default function Navbar2() {
         {
           title: "2D / 3D Animation",
           desc: "Premium motion content for ads & storytelling.",
-          href: "/services/animation",
+          href: "/animation-2d-3d-service-page",
         },
       ],
     },
@@ -127,20 +128,16 @@ export default function Navbar2() {
     <header className="sticky top-0 z-[200] border-b border-white/10 bg-[#0a0a0a]/85 backdrop-blur-2xl">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 select-none">
-         
-
-          <div className="leading-tight">
-            <Link href="/hero2">
-              <p className="text-base font-black tracking-tight text-white">
-                SixthGenX
-              </p>
-            </Link>
-            <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-white/45">
-              Web • SEO • Growth
-            </p>
-          </div>
+     <Link href="/hero2" className="flex items-center space-x-2">
+          <Image
+            src="/images/logos.png"
+            alt="Logo"
+            width={140}
+            height={40}
+            className="hover:scale-105 transition-transform duration-300"
+          />
         </Link>
+        
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">

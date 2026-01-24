@@ -6,8 +6,8 @@ import { FiArrowRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Section2 from "./Section2";
 import Image from "next/image";
-import Testimonial from "./Testimonial";
-import ContactSection from "../../../../components/ContactSection";
+
+
 import Link from "next/link";
 import TypingText from "./Typing";
 
@@ -160,8 +160,6 @@ export default function Home() {
               <source src="/videos/bgvideo.webm" type="video/webm" />
               <source src="/videos/bgvideo.mp4" type="video/mp4" />
             </video>
-
-           
           </div>
 
           {/* Accent Glow */}
@@ -172,9 +170,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-[var(--font-playfair)] font-medium leading-[0.95] tracking-tight text-white mb-14">
               <span className="italic font-light">Built for Growth.</span>
               <br />
-              <span className=" text-[#fffffffe]">
-                Powered by Performance.
-              </span>
+              <span className=" text-[#fffffffe]">Powered by Performance.</span>
             </h1>
             <TypingText></TypingText>
 
@@ -540,10 +536,9 @@ export default function Home() {
           </div>
         </section>
 
-
         <section className="relative bg-[#0a0a0a] text-white min-h-screen flex items-center justify-center px-6 md:px-20 py-24 overflow-hidden">
           {/* Background Image with subtle opacity */}
-            <div
+          <div
             className="absolute inset-0  opacity-100 "
             style={{
               backgroundImage: "url('/images/bgwhy2.jpg')",
@@ -553,7 +548,7 @@ export default function Home() {
             }}
           />
           {/* Readability overlay */}
-         
+
           {/* Floating Gold Gradient Blob */}
           <motion.div
             className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full blur-3xl z-0 "
@@ -614,7 +609,7 @@ export default function Home() {
             >
               <div className="relative max-w-md w-full">
                 {/* Gold Blur Shadow */}
-           
+
                 {/* Video Container */}
                 <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_22px_70px_rgba(0,0,0,0.75)] z-10">
                   <video
@@ -631,181 +626,10 @@ export default function Home() {
           </div>
         </section>
 
-        <div className=" bg-black">
+        {/* <div className=" bg-black">
           <Testimonial></Testimonial>
-        </div>
-
-        
-
-        {/* CONTACT / CONSULTATION (FORM) */}
-        <ContactSection></ContactSection>
+        </div> */}
       </main>
-
-      {/* FOOTER */}
-      <footer className="bg-[#0a0a0a] relative border-t border-white/10 pt-24 pb-12 text-white">
-        <div
-          className="absolute inset-0 z-[1] opacity-100"
-          style={{
-            backgroundImage: "url('/images/bgwhy2.jpg')",
-            backgroundRepeat: "repeat",
-            backgroundSize: "420px",
-            backgroundPosition: "top left",
-          }}
-        />
-        <div className="max-w-7xl relative z-2 mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
-            <div className="md:col-span-5 space-y-8">
-              <div className="flex items-center gap-3">
-                <div className="size-10 flex items-center justify-center bg-[#c8a95f]/15 border border-[#c8a95f]/35 text-white rounded-xl">
-                  <span className="text-xl">↗</span>
-                </div>
-                <span className="text-2xl font-black italic font-[var(--font-playfair)] text-white">
-                  SixthGenX
-                </span>
-              </div>
-
-              <p className="text-white/75 max-w-sm leading-relaxed">
-                SixthGenX is a full-service digital agency offering website
-                design & development, SEO services, performance marketing,
-                Google & Meta Ads, graphic design, and 2D/3D animation.
-              </p>
-            </div>
-
-            <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-12">
-              <div>
-                <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-white">
-                  Services
-                </h4>
-                <ul className="space-y-4 text-sm text-white/75 font-medium">
-                  <li>
-                    <a
-                      className="hover:text-[#c8a95f] transition-colors"
-                      href="#services"
-                    >
-                      Website Design & Development
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-[#c8a95f] transition-colors"
-                      href="#services"
-                    >
-                      SEO Services
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-[#c8a95f] transition-colors"
-                      href="#services"
-                    >
-                      Performance Marketing
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-[#c8a95f] transition-colors"
-                      href="#services"
-                    >
-                      Google & Meta Ads
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-white">
-                  Agency
-                </h4>
-                <ul className="space-y-4 text-sm text-white/75 font-medium">
-                  <li>
-                    <a
-                      className="hover:text-[#c8a95f] transition-colors"
-                      href="#philosophy"
-                    >
-                      Philosophy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-[#c8a95f] transition-colors"
-                      href="#process"
-                    >
-                      Workflow
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-[#c8a95f] transition-colors"
-                      href="#case-studies"
-                    >
-                      Case Studies
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-[#c8a95f] transition-colors"
-                      href="#contact"
-                    >
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-span-2 sm:col-span-1">
-                <h4 className="font-bold text-sm mb-6 uppercase tracking-widest text-white">
-                  Connect
-                </h4>
-
-                <div className="flex gap-4 mb-6">
-                  <a
-                    className="size-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center hover:border-[#c8a95f]/35 hover:bg-[#c8a95f]/15 hover:text-white transition-all"
-                    href="#"
-                    aria-label="Website"
-                    rel="nofollow"
-                  >
-                    🌐
-                  </a>
-                  <a
-                    className="size-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center hover:border-[#c8a95f]/35 hover:bg-[#c8a95f]/15 hover:text-white transition-all"
-                    href="#"
-                    aria-label="Email"
-                    rel="nofollow"
-                  >
-                    ✉
-                  </a>
-                </div>
-
-                {/* micro accent line */}
-                <div className="h-[2px] w-12 bg-[#c8a95f]/70 rounded-full" />
-              </div>
-            </div>
-          </div>
-
-          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/75 font-bold uppercase tracking-widest">
-            <p>
-              © {new Date().getFullYear()} SixthGenX Tech. All rights reserved.
-            </p>
-
-            <div className="flex gap-8">
-              <a className="hover:text-[#c8a95f]" href="#" rel="nofollow">
-                Privacy Policy
-              </a>
-              <a className="hover:text-[#c8a95f]" href="#" rel="nofollow">
-                Terms of Service
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      {/* Floating Button */}
-      {/* <div className="fixed bottom-8 right-8 z-[100]">
-        <button className="size-16 bg-black text-white rounded-3xl shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-tr from-black to-[#3713ec] opacity-0 group-hover:opacity-100 transition-opacity" />
-          <span className="relative z-10 text-2xl">◎</span>
-        </button>
-      </div> */}
     </div>
   );
 }
