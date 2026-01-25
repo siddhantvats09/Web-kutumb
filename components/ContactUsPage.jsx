@@ -6,92 +6,113 @@ import {
   FaLinkedinIn,
   FaFacebookMessenger,
 } from "react-icons/fa";
-import { ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 export default function ContactUsPage() {
   return (
-    <div className="relative bg-black  text-white min-h-[550px] px-6 py-12 overflow-hidden">
-      {/* Background Image */}
-      <img
-        src="/images/bg.jpg"
-        alt="Background"
-        className="absolute inset-0 w-full blur h-full object-cover opacity-50 z-0"
+    <section className="relative min-h-[600px] px-6 py-16 overflow-hidden  text-white">
+      {/* ================= BACKGROUND ================= */}
+      <div
+        className="absolute inset-0 z-0 opacity-90"
+        style={{
+          backgroundImage: "url('/images/bgwhy2.jpg')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "420px",
+          backgroundPosition: "top left",
+        }}
       />
+     
 
-      <div className="relative z-10 text-center mb-10">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-3">Get in Touch</h1>
-        <p className="text-gray-400 max-w-xl mx-auto text-sm sm:text-base">
-          Have a project in mind? Want to collaborate or just say hello? Drop us
-          a message and we’ll get back to you soon.
+      {/* ================= HEADER ================= */}
+      <div className="relative z-10 text-center max-w-2xl mx-auto mb-14">
+        <p className="text-[11px] uppercase tracking-[0.35em] font-black text-[#c8a95f] mb-3">
+          Contact SixthGenX
+        </p>
+
+        <h1 className="text-3xl sm:text-4xl font-[var(--font-playfair)] font-bold mb-4">
+          Let’s Build Something Powerful
+        </h1>
+
+        <p className="text-white/65 text-sm sm:text-base">
+          Have a project in mind? Want to collaborate or just say hello?  
+          Drop us a message and we’ll get back to you shortly.
         </p>
       </div>
 
-      <div className="max-w-4xl mx-auto grid h-[400px] grid-cols-1 md:grid-cols-2 gap-8 relative z-10 items-center">
-        {/* Image */}
-        <div className="relative hidden md:block h-[340px]">
+      {/* ================= CONTENT GRID ================= */}
+      <div className="relative z-10 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        {/* IMAGE SIDE */}
+        <div className="relative hidden md:block h-[360px] rounded-3xl overflow-hidden border border-white/10">
           <img
             src="/images/contact2.jpg"
-            alt="Contact Illustration"
-            className="rounded-2xl opacity-80 w-full h-full object-cover"
+            alt="Contact illustration"
+            className="w-full h-full grayscale object-cover opacity-80"
           />
 
-          <div className="absolute inset-0 flex items-center justify-center text-center py-2">
-            <h2 className="text-[#fff] drop-shadow-[0_2px_8px_rgba(0,0,0,1)] text-lg md:text-2xl border-y-2 w-full font-sans border-white font-extrabold backdrop-blur-2xl py-4">
-              Let’s Create Something <br /> Remarkable Together!
+          <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+            <h2 className="text-center text-xl md:text-2xl font-bold tracking-tight text-white">
+              Let’s Create Something
+              <br />
+              <span className="text-[#c8a95f]">Remarkable Together</span>
             </h2>
           </div>
         </div>
 
-        {/* Contact Info Card */}
-        <div className="flex flex-col justify-center bg-[#1c1c1e58] border border-[#2a2a2a] rounded-2xl shadow-xl p-6 backdrop-blur-md">
+        {/* INFO CARD */}
+        <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-7 shadow-[0_30px_90px_rgba(0,0,0,0.8)]">
+          {/* Email */}
           <div className="mb-6">
-            <h3 className="text-base font-medium text-[#9f9aff] mb-1">Email</h3>
+            <p className="text-[11px] uppercase tracking-[0.28em] text-[#c8a95f] font-bold mb-1">
+              Email
+            </p>
             <a
               href="mailto:sixthgenxtech@gmail.com"
-              className="text-gray-200 hover:text-[#9f9aff] underline decoration-transparent hover:decoration-[#9f9aff] hover:underline-offset-4 transition"
+              className="text-white/85 hover:text-[#c8a95f] hover:underline transition"
             >
               sixthgenxtech@gmail.com
             </a>
           </div>
+
+          {/* Phone */}
           <div className="mb-6">
-            <h3 className="text-base font-medium text-[#9f9aff] mb-1">Phone</h3>
-            {/* <a
-              href="tel:+917988180681"
-              className="text-gray-200 hover:text-[#9f9aff] block hover:underline hover:underline-offset-4 transition"
-            >
-              +91 7988180681
-            </a> */}
+            <p className="text-[11px] uppercase tracking-[0.28em] text-[#c8a95f] font-bold mb-1">
+              Phone
+            </p>
             <a
               href="tel:+919817612848"
-              className="text-gray-200 hover:text-[#9f9aff] block hover:underline hover:underline-offset-4 transition"
+              className="text-white/85 hover:text-[#c8a95f] transition"
             >
-              +91 9817612848
+              +91 98176 12848
             </a>
           </div>
-          <div>
-            <h3 className="text-base font-medium text-[#9f9aff] mb-1">
+
+          {/* Location */}
+          <div className="mb-8">
+            <p className="text-[11px] uppercase tracking-[0.28em] text-[#c8a95f] font-bold mb-1">
               Location
-            </h3>
-            <p className="text-gray-300">Gurgaon, India</p>
+            </p>
+            <p className="text-white/70">Gurgaon, India</p>
           </div>
 
+          {/* WhatsApp CTA */}
           <a
             href="https://wa.me/9817612848"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex justify-center items-center px-5 py-2 bg-transparent border border-white/20 hover:border-[#494646] hover:bg-white/5 hover:shadow-md hover:scale-105 backdrop-blur-sm rounded-xl text-white text-base font-medium transition-all duration-300 ease-in-out"
+            className="inline-flex w-full items-center justify-center gap-3 rounded-2xl border border-[#c8a95f]/35 bg-[#c8a95f]/10 px-6 py-3 font-bold text-[#c8a95f] hover:bg-[#c8a95f]/20 hover:shadow-[0_0_24px_rgba(200,169,95,0.25)] transition-all"
           >
-            WhatsApp
+            Chat on WhatsApp
           </a>
         </div>
       </div>
 
-      {/* Arrow */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-3 flex flex-col items-center z-10">
-        <ChevronDownIcon className="h-5 w-5 text-amber-400 animate-bounce" />
-        <p className="text-white mt-1 text-xs font-medium">Send us Messages</p>
+      {/* ================= SCROLL INDICATOR ================= */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-1 z-10 flex flex-col items-center">
+        <ChevronDownIcon className="h-5 w-5 text-[#c8a95f] animate-bounce" />
+        <p className="mt-1 text-xs text-white/60">
+          Send us a message
+        </p>
       </div>
-    </div>
+    </section>
   );
 }

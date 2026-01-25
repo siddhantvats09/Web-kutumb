@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import Section2 from "./Section2";
 import Image from "next/image";
 
-
 import Link from "next/link";
 import TypingText from "./Typing";
 
@@ -25,6 +24,7 @@ export default function Home() {
           "Brand consistency",
           "High-converting sections",
         ],
+        link: "/website-development-service",
       },
       {
         media: "/images/graphic2.jpg",
@@ -33,6 +33,7 @@ export default function Home() {
         tag: "Brand Consistency",
         tagDesc: "Design system for website, ads, and product creatives.",
         points: ["Logo design", "Brand identity", "Marketing creatives"],
+        link: "/animation-2d-3d-service-page",
       },
       {
         media: "/images/animation1.mp4",
@@ -46,6 +47,7 @@ export default function Home() {
           "3D/2D logo animation",
           "Photoreal renders",
         ],
+        link: "/animation-2d-3d-service-page",
       },
       {
         media: "/images/webdev2.mp4",
@@ -59,6 +61,7 @@ export default function Home() {
           "Next.js / WordPress / Shopify",
           "Landing pages + eCommerce",
         ],
+        link: "/website-development-service",
       },
 
       {
@@ -72,6 +75,7 @@ export default function Home() {
           "Local SEO",
           "Content + internal links",
         ],
+        link: "/search-engion-optimization-seo-service",
       },
       {
         media: "/images/gglads1.mp4",
@@ -80,6 +84,7 @@ export default function Home() {
         tag: "Tracking Setup",
         tagDesc: "GA4 + Pixel + Conversion API + event-based optimization.",
         points: ["Google Ads", "Meta Ads", "Retargeting + scaling"],
+        link: "/google-meta-ads-service",
       },
       //   {
       //     media: "/images/reels.jpg",
@@ -147,10 +152,12 @@ export default function Home() {
       <main>
         {/* HERO */}
         <section className="relative isolate min-h-[95vh] flex items-center justify-center overflow-hidden bg-[#0a0a0a] text-white">
-          {/* Background Image */}
+          {/* ================= BACKGROUND LAYERS ================= */}
+
+          {/* Video Layer */}
           <div className="absolute inset-0 z-0">
             <video
-              className="h-full w-full object-cover  object-center "
+              className="h-full w-full object-cover opacity-90"
               autoPlay
               muted
               loop
@@ -162,32 +169,79 @@ export default function Home() {
             </video>
           </div>
 
-          {/* Accent Glow */}
-          {/* <div className="absolute inset-0 z-[1] pointer-events-none bg-[radial-gradient(circle_at_50%_45%,rgba(200,169,95,0.18)_0%,rgba(200,169,95,0.08)_30%,transparent_70%)]" /> */}
+          {/* Pattern Texture */}
+          <div
+            className="absolute inset-0 z-[1] opacity-70"
+            style={{
+              backgroundImage: "url('/images/bgwhy2.jpg')",
+              backgroundRepeat: "repeat",
+              backgroundSize: "420px",
+              backgroundPosition: "top left",
+            }}
+          />
 
-          {/* Content */}
-          <div className="relative z-[2] max-w-7xl mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-[var(--font-playfair)] font-medium leading-[0.95] tracking-tight text-white mb-14">
-              <span className="italic font-light">Built for Growth.</span>
-              <br />
-              <span className=" text-[#fffffffe]">Powered by Performance.</span>
-            </h1>
-            <TypingText></TypingText>
+          {/* Dark readability overlay */}
+          <div className="absolute inset-0 z-[2] bg-black/10" />
 
-            <div className="mt-8 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-6">
-              <button className="w-full sm:w-auto rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-base font-bold text-white backdrop-blur transition hover:border-[#c8a95f]/30 hover:bg-[#c8a95f]/10 sm:px-10 sm:py-4 sm:text-lg flex items-center justify-center gap-3">
+          {/* ================= FLOATING VISUAL PROOF ================= */}
+          {/* These make the section feel alive & premium */}
+
+          {/* ================= MAIN CONTENT ================= */}
+
+          <div className="relative z-[5] max-w-7xl mx-auto px-6 text-center">
+            {/* Eyebrow */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-6 text-[11px] uppercase tracking-[0.4em] font-black text-[#c8a95f]"
+            >
+              SixthGenX Growth Systems
+            </motion.p>
+
+            {/* Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-[var(--font-playfair)] font-medium leading-[0.95] tracking-tight mb-10"
+            >
+              <span className="italic font-light block">Built for Growth.</span>
+              <span className="block text-white">
+                Powered by <span className="text-[#c8a95f]">Performance.</span>
+              </span>
+            </motion.h1>
+
+            {/* Typing / motion text */}
+            <div className="mt-4">
+              <TypingText />
+            </div>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mt-12 flex w-full flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+            >
+              <Link
+                href="#services"
+                className="w-full sm:w-auto rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-base sm:text-lg font-bold text-white backdrop-blur transition hover:border-[#c8a95f]/40 hover:bg-[#c8a95f]/15 flex items-center gap-3"
+              >
                 Explore Services
-                <span className="text-lg sm:text-xl leading-none">↓</span>
-              </button>
-
+                <span>↓</span>
+              </Link>
               <Link
                 href="/contactus"
-                className="w-full sm:w-auto rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-base font-bold text-white backdrop-blur transition hover:border-[#c8a95f]/30 hover:bg-[#c8a95f]/10 sm:px-10 sm:py-4 sm:text-lg flex items-center justify-center gap-3"
+                className="w-full sm:w-auto rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-base sm:text-lg font-bold text-white backdrop-blur transition hover:border-[#c8a95f]/40 hover:bg-[#c8a95f]/15 flex items-center gap-3"
               >
                 Book Consultation
-                <span className="text-lg sm:text-xl leading-none">→</span>
+                <span>→</span>
               </Link>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -397,10 +451,14 @@ export default function Home() {
                       <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/60">
                         Learn more
                       </span>
-
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all group-hover:border-[#c8a95f]/35 group-hover:bg-[#c8a95f]/15 group-hover:text-white">
-                        →
-                      </span>
+                      <Link
+                        href={s.link}
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all group-hover:border-[#c8a95f]/35 group-hover:bg-[#c8a95f]/15 group-hover:text-white"
+                      >
+                        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all group-hover:border-[#c8a95f]/35 group-hover:bg-[#c8a95f]/15 group-hover:text-white">
+                          →
+                        </span>
+                      </Link>
                     </div>
 
                     {/* micro accent line */}
@@ -591,7 +649,7 @@ export default function Home() {
             border border-[#c8a95f]/50
             hover:opacity-95
             hover:shadow-[0_0_18px_rgba(200,169,95,0.22)]
-            transition-all duration-300 ease-in-out
+            transition-all duration-300 ease-in-out cursor-pointer
           "
                 >
                   Book a Free Consultation <FiArrowRight />

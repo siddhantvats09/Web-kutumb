@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer2 = () => {
   return (
@@ -41,36 +42,52 @@ const Footer2 = () => {
                 </h4>
                 <ul className="space-y-4 text-sm text-white/75 font-medium">
                   <li>
-                    <a
+                    <Link
                       className="hover:text-[#c8a95f] transition-colors"
-                      href="#services"
+                      href="/website-development-service"
                     >
                       Website Design & Development
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="hover:text-[#c8a95f] transition-colors"
-                      href="#services"
+                      href="/search-engion-optimization-seo-service"
                     >
                       SEO Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="hover:text-[#c8a95f] transition-colors"
-                      href="#services"
+                      href="/performance-marketing-googel-meta-ads"
                     >
                       Performance Marketing
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="hover:text-[#c8a95f] transition-colors"
-                      href="#services"
+                      href="/animation-2d-3d-service-page"
+                    >
+                      Graphic and Brand Design
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="hover:text-[#c8a95f] transition-colors"
+                      href="/google-meta-ads-service"
                     >
                       Google & Meta Ads
-                    </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="hover:text-[#c8a95f] transition-colors"
+                      href="/animation-2d-3d-service-page"
+                    >
+                     Animation 3D/2D
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -81,36 +98,36 @@ const Footer2 = () => {
                 </h4>
                 <ul className="space-y-4 text-sm text-white/75 font-medium">
                   <li>
-                    <a
+                    <Link
                       className="hover:text-[#c8a95f] transition-colors"
-                      href="#philosophy"
+                      href="about-us"
                     >
-                      Philosophy
-                    </a>
+                      About Us
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="hover:text-[#c8a95f] transition-colors"
-                      href="#process"
+                      href="/proof"
                     >
-                      Workflow
-                    </a>
+                      Work & Proof
+                    </Link>
                   </li>
-                  <li>
-                    <a
+                  {/* <li>
+                    <Link
                       className="hover:text-[#c8a95f] transition-colors"
                       href="#case-studies"
                     >
                       Case Studies
-                    </a>
-                  </li>
+                    </Link>
+                  </li> */}
                   <li>
-                    <a
+                    <Link
                       className="hover:text-[#c8a95f] transition-colors"
-                      href="#contact"
+                      href="/contactus"
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -123,7 +140,7 @@ const Footer2 = () => {
                 <div className="flex gap-4 mb-6">
                   <a
                     className="size-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center hover:border-[#c8a95f]/35 hover:bg-[#c8a95f]/15 hover:text-white transition-all"
-                    href="#"
+                    href="https://www.sixthgenx.com/"
                     aria-label="Website"
                     rel="nofollow"
                   >
@@ -131,7 +148,7 @@ const Footer2 = () => {
                   </a>
                   <a
                     className="size-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center hover:border-[#c8a95f]/35 hover:bg-[#c8a95f]/15 hover:text-white transition-all"
-                    href="#"
+                    href="mailto:sixthgenxtech@gmail.com"
                     aria-label="Email"
                     rel="nofollow"
                   >

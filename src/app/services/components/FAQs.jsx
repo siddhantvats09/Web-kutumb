@@ -40,32 +40,37 @@ export default function FAQs() {
   };
 
   return (
-    <section className="relative py-8 md:py-16 px-6 md:px-16 h-[790px] md:h-[770px] bg-black overflow-hidden">
-      
-      {/* Background Image */}
-      <img
-        src="/images/bgwhy.jpg"
-        alt="Background"
-        className="absolute inset-0 w-full h-full object-cover opacity-100 z-0"
+    <section className="relative py-12 md:py-20 px-6 md:px-16  bg-[#000] overflow-hidden">
+      <div
+        className="absolute inset-0 z-1 opacity-100 "
+        style={{
+          backgroundImage: "url('/images/bgwhy2.jpg')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "420px",
+          backgroundPosition: "top left",
+        }}
       />
+      {/* Background Image */}
+      
 
       {/* Title */}
-      <div className="relative max-w-4xl mx-auto text-center mb-16 z-10">
+      <div className="relative max-w-4xl mx-auto text-center mb-14 z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-white mb-4"
+          className="text-3xl md:text-4xl font-[var(--font-playfair)] font-bold text-white mb-4"
         >
-          Frequently Asked Questions 
+          Frequently Asked Questions
         </motion.h2>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-gray-300 max-w-xl mx-auto"
+          transition={{ duration: 0.8, delay: 0.15 }}
+          className="text-white/65 max-w-xl mx-auto"
         >
           Everything you need to know before working with us.
         </motion.p>
@@ -76,17 +81,18 @@ export default function FAQs() {
         {faqData.map((faq, index) => (
           <div
             key={index}
-            className="border cursor-pointer border-white/20 rounded-xl backdrop-blur-md bg-gradient-to-br from-[#1c1c1c68] to-[#2a2a2a64] text-white p-4 md:p-6 shadow-xl"
+            className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_18px_55px_rgba(0,0,0,0.55)]"
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="flex justify-between items-center w-full text-left focus:outline-none"
+              className="flex w-full items-center justify-between px-5 py-4 text-left"
             >
-              <h3 className="text-base md:text-lg font-medium">
+              <h3 className="text-sm md:text-base font-semibold text-white">
                 {faq.question}
               </h3>
+
               <ChevronDownIcon
-                className={`h-5 w-5 text-gray-300 cursor-pointer transform transition-transform ${
+                className={`h-5 w-5 text-[#c8a95f] transition-transform duration-300 ${
                   activeIndex === index ? "rotate-180" : ""
                 }`}
               />
@@ -98,8 +104,8 @@ export default function FAQs() {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="mt-4 text-gray-400 text-sm overflow-hidden"
+                  transition={{ duration: 0.05 }}
+                  className="px-5 pb-5 text-sm text-white/65 leading-relaxed overflow-hidden"
                 >
                   {faq.answer}
                 </motion.div>

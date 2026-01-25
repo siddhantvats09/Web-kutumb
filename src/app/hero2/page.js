@@ -34,7 +34,7 @@ const page = () => {
       </div>
 
       {/* ✅ Site Content Scrolls */}
-      <Navbar2 />
+      {/* <Navbar2 /> */}
       <Home />
       <Testimonial2></Testimonial2>
       <ContactSection></ContactSection>

@@ -10,10 +10,10 @@ import Navbar2 from "../../../components/Navbar2";
 const page = () => {
   return (
     <>
-      <Navbar2></Navbar2>
+      {/* <Navbar2></Navbar2> */}
       <WebsiteDevelopmentPage></WebsiteDevelopmentPage>
-      <ContactSection></ContactSection>
-      <Footer2></Footer2>
+      {/* <ContactSection></ContactSection>
+      <Footer2></Footer2> */}
     </>
   );
 };

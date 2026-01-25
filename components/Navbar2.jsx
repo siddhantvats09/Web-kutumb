@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { HiOutlineMenu } from "react-icons/hi";
+import { RiHotelLine } from "react-icons/ri";
 
 export default function Navbar2() {
   const [openServices, setOpenServices] = useState(false);
@@ -43,7 +45,7 @@ export default function Navbar2() {
         {
           title: "Website Design",
           desc: "Premium UI/UX with conversion-first structure.",
-          href: "/services/website-design",
+          href: "/website-development-service",
         },
         {
           title: "Website Development",
@@ -55,11 +57,11 @@ export default function Navbar2() {
           desc: "Funnels built to increase leads & sales.",
           href: "/services/landing-pages",
         },
-        {
-          title: "eCommerce Stores",
-          desc: "Shopify / WooCommerce conversion builds.",
-          href: "/website-development-service",
-        },
+        // {
+        //   title: "eCommerce Stores",
+        //   desc: "Shopify / WooCommerce conversion builds.",
+        //   href: "/website-development-service",
+        // },
       ],
     },
     {
@@ -70,35 +72,35 @@ export default function Navbar2() {
           desc: "Technical, On-page, Local SEO & content clusters.",
           href: "/search-engion-optimization-seo-service",
         },
-        {
-          title: "SEO Audit",
-          desc: "Fix indexing, CWV, schema, and content hierarchy.",
-          href: "/search-engion-optimization-seo-service",
-        },
-        {
-          title: "Local SEO",
-          desc: "Maps ranking + location pages + citations setup.",
-          href: "/search-engion-optimization-seo-service",
-        },
+        // {
+        //   title: "SEO Audit",
+        //   desc: "Fix indexing, CWV, schema, and content hierarchy.",
+        //   href: "/search-engion-optimization-seo-service",
+        // },
+        // {
+        //   title: "Local SEO",
+        //   desc: "Maps ranking + location pages + citations setup.",
+        //   href: "/search-engion-optimization-seo-service",
+        // },
       ],
     },
     {
       heading: "Marketing",
       items: [
         {
-          title: "Google Ads",
+          title: "Google & Meta Ads",
           desc: "High-intent leads with tracking & optimization.",
-          href: "/services/google-ads",
+          href: "/google-meta-ads-service",
         },
-        {
-          title: "Meta Ads",
-          desc: "Creative + funnel + retargeting for growth.",
-          href: "/services/meta-ads",
-        },
+        // {
+        //   title: "Meta Ads",
+        //   desc: "Creative + funnel + retargeting for growth.",
+        //   href: "/services/meta-ads",
+        // },
         {
           title: "Performance Marketing",
           desc: "Full-funnel ROI-first strategy + execution.",
-          href: "/services/performance-marketing",
+          href: "performance-marketing-googel-meta-ads",
         },
       ],
     },
@@ -126,34 +128,42 @@ export default function Navbar2() {
 
   return (
     <header className="sticky top-0 z-[200] border-b border-white/10 bg-[#0a0a0a]/85 backdrop-blur-2xl">
+      <div
+        className="absolute inset-0 -z-10 opacity-100"
+        style={{
+          backgroundImage: "url('/images/bgwhy2.jpg')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "420px",
+          backgroundPosition: "top left",
+        }}
+      />
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
-     <Link href="/hero2" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2">
           <Image
-            src="/images/logos.png"
+            src="/images/logos2.png"
             alt="Logo"
             width={140}
             height={40}
-            className="hover:scale-105 transition-transform duration-300"
+            className="hover:scale-105 sepia transition-transform duration-300"
           />
         </Link>
-        
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">
-          <a
+          <Link
             className="text-sm font-bold text-white/80 hover:text-white transition"
-            href="#work"
+            href="/proof"
           >
             Work
-          </a>
+          </Link>
 
-          <a
+          <Link
             className="text-sm font-bold text-white/80 hover:text-white transition"
-            href="#process"
+            href="/about-us"
           >
-            Process
-          </a>
+            About Us
+          </Link>
 
           {/* Services dropdown */}
           <div className="relative" ref={panelRef}>
@@ -187,18 +197,19 @@ export default function Navbar2() {
                       </p>
                     </div>
 
-                    <a
-                      href="#contact"
+                    <Link
+                      href="/contactus"
                       className="inline-flex items-center justify-center rounded-full bg-[#c8a95f] px-4 py-2 text-xs font-black text-black shadow-[0_0_18px_rgba(200,169,95,0.22)] hover:opacity-95 transition"
                     >
                       Book Consultation →
-                    </a>
+                    </Link>
                   </div>
 
                   <div className="grid grid-cols-4 gap-0">
                     {services.map((col) => (
                       <div
                         key={col.heading}
+                         onClick={() => setOpenServices((s) => !s)}
                         className="p-6 border-r border-white/10 last:border-r-0"
                       >
                         <h4 className="text-[12px] font-black uppercase tracking-[0.28em] text-white/55">
@@ -210,6 +221,7 @@ export default function Navbar2() {
                             <Link
                               href={it.href}
                               key={it.title}
+                              
                               className="group block rounded-2xl border border-transparent p-3 hover:border-[#c8a95f]/25 hover:bg-[#c8a95f]/[0.06] transition"
                             >
                               <p className="text-sm font-black text-white group-hover:text-[#c8a95f] transition">
@@ -233,29 +245,29 @@ export default function Navbar2() {
             )}
           </div>
 
-          <a
+          <Link
             className="text-sm font-bold text-white/80 hover:text-white transition"
-            href="#testimonials"
+            href="/"
           >
-            Reviews
-          </a>
+            Home
+          </Link>
 
-          <a
+          <Link
             className="text-sm font-bold text-white/80 hover:text-white transition"
             href="#contact"
           >
             Contact
-          </a>
+          </Link>
         </nav>
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <a
-            href="#contact"
+          <Link
+            href="/contactus"
             className="rounded-full bg-[#c8a95f] px-6 py-2.5 text-sm font-black text-black shadow-[0_0_18px_rgba(200,169,95,0.22)] hover:opacity-95 transition"
           >
             Get Started
-          </a>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -292,21 +304,21 @@ export default function Navbar2() {
 
             {/* ✅ scrollable content */}
             <div className="flex-1 overflow-y-auto overscroll-contain px-6 py-5 space-y-3">
-              <a
+              <Link
                 onClick={closeMobile}
                 className="block rounded-2xl px-4 py-3 font-black text-white hover:bg-white/5"
-                href="#work"
+                href="/proof"
               >
                 Work
-              </a>
+              </Link>
 
-              <a
+              <Link
                 onClick={closeMobile}
                 className="block rounded-2xl px-4 py-3 font-black text-white hover:bg-white/5"
-                href="#process"
+                href="/about-us"
               >
-                Process
-              </a>
+               About Us
+              </Link>
 
               <details className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
                 <summary className="cursor-pointer list-none px-4 py-3 font-black text-white flex items-center justify-between">
@@ -342,38 +354,38 @@ export default function Navbar2() {
                 </div>
               </details>
 
-              <a
+              <Link
                 onClick={closeMobile}
                 className="block rounded-2xl px-4 py-3 font-black text-white hover:bg-white/5"
-                href="#testimonials"
+                href="/"
               >
-                Reviews
-              </a>
+                Home
+              </Link>
 
-              <a
+              <Link
                 onClick={closeMobile}
                 className="block rounded-2xl px-4 py-3 font-black text-white hover:bg-white/5"
                 href="#contact"
               >
                 Contact
-              </a>
+              </Link>
 
               {/* CTA */}
               <div className="pt-2 grid grid-cols-2 gap-3">
-                <a
+                {/* <a
                   onClick={closeMobile}
                   href="#contact"
                   className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-center text-sm font-black text-white hover:bg-white/10 transition"
                 >
                   Portal
-                </a>
-                <a
+                </a> */}
+                <Link
                   onClick={closeMobile}
-                  href="#contact"
+                  href="/contactus"
                   className="rounded-2xl bg-[#c8a95f] px-4 py-3 text-center text-sm font-black text-black shadow-[0_0_18px_rgba(200,169,95,0.22)] hover:opacity-95 transition"
                 >
                   Get Started
-                </a>
+                </Link>
               </div>
 
               <div className="h-10" />

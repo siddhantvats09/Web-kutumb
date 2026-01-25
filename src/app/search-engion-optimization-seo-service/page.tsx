@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react'
 import SEOservicepage from "./components/SEOservicepage"
 import SEOCapablities from "./components/SEOCapablities"
@@ -11,14 +12,14 @@ import Testimonial2 from '../../../components/Testimonial2'
 const page = () => {
   return (
     <>
-    <Navbar2></Navbar2>
+    {/* <Navbar2></Navbar2> */}
     <SEOservicepage></SEOservicepage>
     <SEOCapablities></SEOCapablities>
     <SEOResults></SEOResults>
     <SEOCases></SEOCases>
     <Testimonial2></Testimonial2>
-    <ContactSection></ContactSection>
-    <Footer2></Footer2>
+    {/* <ContactSection></ContactSection>
+    <Footer2></Footer2> */}
     </>
   )
 }
