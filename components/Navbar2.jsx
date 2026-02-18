@@ -108,15 +108,15 @@ export default function Navbar2() {
       heading: "Creative",
       items: [
         {
-          title: "Branding & Logo",
-          desc: "Identity system built for trust + recall.",
-          href: "/services/branding",
+          title: "Branding, Logo & Graphic Design",
+          desc: "Identity system built for trust + Social creatives + product designs",
+          href: "/graphic-logo-design-service",
         },
-        {
-          title: "Graphic Design",
-          desc: "Social creatives + product designs + campaign kits.",
-          href: "/services/graphic-design",
-        },
+        // {
+        //   title: "Graphic Design",
+        //   desc: "Social creatives + product designs + campaign kits.",
+        //   href: "/graphic-logo-design-service",
+        // },
         {
           title: "2D / 3D Animation",
           desc: "Premium motion content for ads & storytelling.",

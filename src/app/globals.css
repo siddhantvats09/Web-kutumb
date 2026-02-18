@@ -53,3 +53,9 @@ body {
 .animate-pulseSlow {
   animation: pulseSlow 6s ease-in-out infinite;
 }
+
+@layer base {
+  ::selection {
+    @apply bg-[#c8a95f] text-black;
+  }
+}
