@@ -8,13 +8,13 @@ export default function GraphicDesignPage() {
   return (
     <main className="bg-black  text-white">
       {/* ================= HERO ================= */}
-      <section className="relative h-[90vh] py-18 md:py-26 overflow-hidden">
+      <section className="relative h-[90vh] py-14 md:py-26 pt-30 md:pt-36 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
             src="/samples/graphichero.jpg"
             alt="Graphic design background"
-            className="w-full h-full object-cover opacity-15"
+            className="w-full h-full object-cover opacity-10"
           />
         </div>
 

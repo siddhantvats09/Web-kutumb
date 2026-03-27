@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function GoogleMetaAdsPage() {
   return (
-    <main className="bg-black font-display text-white transition-colors duration-300">
+    <main className="bg-black  font-display text-white transition-colors duration-300">
       {/* HERO */}
-      <section className="relative overflow-hidden py-16 md:pt-20 md:pb-20 md:px-6">
+      <section className="relative overflow-hidden py-16 pt-30 md:pt-30 md:pb-20 md:px-6">
         <div
           className="absolute inset-0 z-0"
           style={{
@@ -48,7 +48,7 @@ export default function GoogleMetaAdsPage() {
               src="/samples/meta2.jpg"
               alt="Google Ads and Meta Ads performance dashboard"
               fill
-              className="object-cover grayscale hover:grayscale-0 transition-all"
+              className="object-cover  transition-all"
             />
           </div>
         </div>

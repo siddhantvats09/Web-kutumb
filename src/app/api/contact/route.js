@@ -1,10 +1,13 @@
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
-  const { fullName, email, phone, serviceNeeded, message } = await req.json();
+
+  const { name, phone, email, company, companySize, planPurpose, businessType, message } = await req.json();
 
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.hostinger.com",
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS
@@ -14,22 +17,38 @@ export async function POST(req) {
   const mailOptions = {
     from: email,
     to: process.env.EMAIL_USER,
-    subject: `New Inquiry from ${fullName}`,
+    subject: `New CRM Demo Request from ${name}`,
     html: `
-      <h3>New Contact Submission</h3>
-      <p><strong>Name:</strong> ${fullName}</p>
-      <p><strong>Email:</strong> ${email}</p>
+      <h2>New CRM Demo Request</h2>
+
+      <p><strong>Name:</strong> ${name}</p>
       <p><strong>Phone:</strong> ${phone}</p>
-      <p><strong>Service:</strong> ${serviceNeeded}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Company:</strong> ${company}</p>
+      <p><strong>Company Size:</strong> ${companySize}</p>
+      <p><strong>Purpose:</strong> ${planPurpose}</p>
+      <p><strong>Business Type:</strong> ${businessType}</p>
       <p><strong>Message:</strong><br/>${message}</p>
     `
   };
 
   try {
+
     await transporter.sendMail(mailOptions);
-    return new Response(JSON.stringify({ success: true }), { status: 200 });
+
+    return new Response(
+      JSON.stringify({ success: true }),
+      { status: 200 }
+    );
+
   } catch (error) {
+
     console.error("Error sending email:", error);
-    return new Response(JSON.stringify({ error: "Email failed" }), { status: 500 });
+
+    return new Response(
+      JSON.stringify({ error: "Email failed" }),
+      { status: 500 }
+    );
+
   }
 }

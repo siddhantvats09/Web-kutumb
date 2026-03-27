@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function SEOservicepage() {
   return (
-    <section className="relative overflow-hidden text-white">
+    <section className="relative overflow-hidden  text-white">
       {/* BACKGROUND (same as Hero) */}
       <div
         className="absolute inset-0"
@@ -22,7 +22,7 @@ export default function SEOservicepage() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8 py-10 md:py-20">
+      <div className="relative pt-30 md:pt-34 z-10 mx-auto max-w-7xl px-6 md:px-8 py-10 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
           {/* LEFT : CONTENT */}
           <div className="max-w-xl">

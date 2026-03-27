@@ -7,7 +7,7 @@ import Typing from "./Typing";
 
 export default function AnimationPage() {
   return (
-    <main className="overflow-hidden text-white">
+    <main className="overflow-hidden text-white pt-6">
       {/* ================= HERO ================= */}
       <section className="relative px-6 pt-24 md:pb-10 overflow-hidden">
         {/* Background */}

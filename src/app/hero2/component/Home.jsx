@@ -151,7 +151,7 @@ export default function Home() {
 
       <main>
         {/* HERO */}
-        <section className="relative isolate min-h-[95vh] flex items-center justify-center overflow-hidden bg-[#0a0a0a] text-white">
+        <section className="relative pt-26 isolate min-h-[95vh] flex items-center justify-center overflow-hidden bg-[#0a0a0a] text-white">
           {/* ================= BACKGROUND LAYERS ================= */}
 
           {/* Video Layer */}
@@ -215,7 +215,7 @@ export default function Home() {
             </motion.h1>
 
             {/* Typing / motion text */}
-            <div className="mt-4">
+            <div className="mt-2">
               <TypingText />
             </div>
 

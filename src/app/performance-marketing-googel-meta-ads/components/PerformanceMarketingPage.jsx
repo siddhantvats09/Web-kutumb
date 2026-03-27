@@ -9,7 +9,7 @@ export default function PerformanceMarketingPage() {
   return (
     <main className=" text-white overflow-hidden">
       {/* ================= HERO ================= */}
-      <section className="relative px-6 pt-14 md:pt-22 md:pb-20 pb-5">
+      <section className="relative px-6 pt-24 md:pt-30 md:pb-20 pb-5">
         {/* subtle grid bg */}
         <div
           className="absolute inset-0 z-0"
@@ -21,7 +21,7 @@ export default function PerformanceMarketingPage() {
           }}
         />
 
-        <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+        <div className="relative max-w-7xl mx-auto px-2 md:px-6 grid md:grid-cols-2 gap-14 items-center">
           {/* LEFT */}
           <div>
             <motion.h1
