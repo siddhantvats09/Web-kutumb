@@ -54,7 +54,7 @@ export default function TypingText({
   }, [typed, isDeleting, currentPhrase, typingSpeed, deletingSpeed, holdTime]);
 
   return (
-    <p className={["max-w-2xl md:py-6 pb-6 mx-auto text-lg md:text-xl font-light leading-relaxed", className].join(" ")}>
+    <p className={["max-w-2xl md:py-4 pb-2 mx-auto text-lg md:text-xl font-light leading-relaxed", className].join(" ")}>
       <span className="text-white/95">{fixedText} </span>
 
       {/* Typed highlight */}

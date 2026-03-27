@@ -24,7 +24,7 @@ export default function ContactUsPage() {
      
 
       {/* ================= HEADER ================= */}
-      <div className="relative z-10 text-center max-w-2xl mx-auto mb-14">
+      <div className="relative z-10 pt-20 text-center max-w-2xl mx-auto mb-14">
         <p className="text-[11px] uppercase tracking-[0.35em] font-black text-[#c8a95f] mb-3">
           Contact SixthGenX
         </p>

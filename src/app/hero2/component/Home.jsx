@@ -151,13 +151,13 @@ export default function Home() {
 
       <main>
         {/* HERO */}
-        <section className="relative pt-26 isolate min-h-[95vh] flex items-center justify-center overflow-hidden bg-[#0a0a0a] text-white">
-          {/* ================= BACKGROUND LAYERS ================= */}
+        <section className="relative pt-10 md:pt-12 isolate min-h-[100vh] flex items-center justify-center overflow-hidden bg-[#0a0a0a] text-white">
+          {/* ================= BACKGROUND ARCHITECTURE ================= */}
 
-          {/* Video Layer */}
-          <div className="absolute inset-0 z-0">
+          {/* Layer 1: The Video "Core" */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
             <video
-              className="h-full w-full object-cover opacity-90"
+              className="h-full w-full object-cover opacity-60 scale-110"
               autoPlay
               muted
               loop
@@ -169,79 +169,111 @@ export default function Home() {
             </video>
           </div>
 
-          {/* Pattern Texture */}
+          {/* Layer 2: Geometric Mask & Texture */}
           <div
-            className="absolute inset-0 z-[1] opacity-70"
+            className="absolute inset-0 z-[1] opacity-40 mix-blend-overlay pointer-events-none"
             style={{
               backgroundImage: "url('/images/bgwhy2.jpg')",
               backgroundRepeat: "repeat",
-              backgroundSize: "420px",
-              backgroundPosition: "top left",
+              backgroundSize: "380px",
             }}
           />
 
-          {/* Dark readability overlay */}
-          <div className="absolute inset-0 z-[2] bg-black/10" />
-
-          {/* ================= FLOATING VISUAL PROOF ================= */}
-          {/* These make the section feel alive & premium */}
+          {/* Layer 3: The "Grid of Glass" - Separates this from templates */}
+          <div className="absolute inset-0 z-[2] pointer-events-none">
+            <div className="h-full w-full grid grid-cols-4 grid-rows-1 opacity-20">
+              <div className="border-r border-white/10 backdrop-blur-[2px]" />
+              <div className="border-r border-white/10" />
+              <div className="border-r border-white/10 backdrop-blur-[1px]" />
+              <div className="border-white/10" />
+            </div>
+            {/* Radial Vignette for focus */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#0a0a0a_85%)]" />
+          </div>
 
           {/* ================= MAIN CONTENT ================= */}
+          <div className="relative z-[10] max-w-7xl mx-auto px-6">
+            <div className="flex flex-col items-center">
+              {/* Precision Eyebrow */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="group block md:hidden relative mb-10 flex items-center gap-3 rounded-full border border-white/10 bg-black/40 px-5 py-2 backdrop-blur-md"
+              >
+                <span className="flex h-2 w-2 rounded-full bg-[#c8a95f] animate-pulse" />
+                <p className="text-[7px] md:text-[10px] uppercase tracking-[0.5em] font-black text-white/70">
+                  SixthGenX <span className="text-[#c8a95f]">Proprietary</span>{" "}
+                  Systems
+                </p>
+              </motion.div>
 
-          <div className="relative z-[5] max-w-7xl mx-auto px-6 text-center">
-            {/* Eyebrow */}
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-6 text-[11px] uppercase tracking-[0.4em] font-black text-[#c8a95f]"
-            >
-              SixthGenX Growth Systems
-            </motion.p>
+              {/* Kinetic Headline */}
+              <div className="text-center mb-6">
+                <motion.h1
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-6xl md:text-6xl lg:text-[8rem] font-[var(--font-playfair)] leading-[0.8] tracking-tighter"
+                >
+                  <span className="relative inline-block italic font-extralight text-white/90">
+                    Engineered
+                    <motion.span
+                      initial={{ width: 0 }}
+                      animate={{ width: "110%" }}
+                      transition={{ delay: 0.8, duration: 1 }}
+                      className="absolute -bottom-2 -left-[5%] h-[1px] bg-[#c8a95f]/40"
+                    />
+                  </span>
+                  <br />
+                  <span className="font-black text-white mix-blend-difference">
+                    For <span className="text-[#c8a95f]">Scale.</span>
+                  </span>
+                </motion.h1>
+              </div>
 
-            {/* Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-[var(--font-playfair)] font-medium leading-[0.95] tracking-tight mb-10"
-            >
-              <span className="italic font-light block">Built for Growth.</span>
-              <span className="block text-white">
-                Powered by <span className="text-[#c8a95f]">Performance.</span>
-              </span>
-            </motion.h1>
+              {/* Typing Subtext Wrapper */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="relative mt-5 py-4 md:py-0 px-4 border-x border-[#c8a95f]/20"
+              >
+                <TypingText />
+              </motion.div>
 
-            {/* Typing / motion text */}
-            <div className="mt-2">
-              <TypingText />
+              {/* High-Octane CTAs */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.6 }}
+                className="mt-10 flex flex-col sm:flex-row items-center gap-8"
+              >
+                <Link
+                  href="/contactus"
+                  className="group relative overflow-hidden rounded-full bg-[#c8a95f] px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_20px_50px_rgba(200,169,95,0.15)] transition-all hover:-translate-y-1 hover:shadow-[#c8a95f]/50"
+                >
+                  <span className="relative z-10">Initiate Growth</span>
+                  <div className="absolute inset-0 bg-white translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
+                </Link>
+
+                <Link
+                  href="#services"
+                  className="group flex items-center gap-4 text-sm font-black uppercase tracking-widest text-white/50 hover:text-white transition-colors"
+                >
+                  <span className="md:py-4">The Services</span>
+                  <div className="h-[1px] w-12 bg-white/20 group-hover:w-20 group-hover:bg-[#c8a95f] transition-all duration-500" />
+                </Link>
+              </motion.div>
             </div>
+          </div>
 
-            {/* CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-12 flex w-full flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
-            >
-              <Link
-                href="#services"
-                className="w-full sm:w-auto rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-base sm:text-lg font-bold text-white backdrop-blur transition hover:border-[#c8a95f]/40 hover:bg-[#c8a95f]/15 flex items-center gap-3"
-              >
-                Explore Services
-                <span>↓</span>
-              </Link>
-              <Link
-                href="/contactus"
-                className="w-full sm:w-auto rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-base sm:text-lg font-bold text-white backdrop-blur transition hover:border-[#c8a95f]/40 hover:bg-[#c8a95f]/15 flex items-center gap-3"
-              >
-                Book Consultation
-                <span>→</span>
-              </Link>
-            </motion.div>
+          {/* ================= VISUAL ANCHOR (Unique Element) ================= */}
+          <div className="absolute bottom-12 left-12 hidden lg:block overflow-hidden">
+            <div className="h-[1px] w-32 bg-gradient-to-r from-[#c8a95f] to-transparent opacity-50" />
+            <p className="mt-2 text-[9px] uppercase tracking-[0.3em] text-white/30 font-bold">
+              Performance Optimized <br /> Deployment v2.6
+            </p>
           </div>
         </section>
 
