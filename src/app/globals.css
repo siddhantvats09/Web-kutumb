@@ -1,9 +1,14 @@
 @import "tailwindcss";
 
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F9F9FF;
+  --foreground: #1D1D1F;
+  --accent: #5C66F5;
+  --accent-light: #606CF0;
+  --border: #EDEDF2;
+  --card: #FFFFFF;
+  --muted: #6E6E73;
+  --gradient-top: #E6E9FF;
 }
 
 @theme inline {
@@ -13,49 +18,61 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
-
 @keyframes floatSlow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .animate-float-slow {
   animation: floatSlow 6s ease-in-out infinite;
 }
+
 @keyframes pulseSlow {
-  0%, 100% {
-    opacity: 0.1;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 0.4;
-    transform: translateY(20px);
-  }
+  0%, 100% { opacity: 0.1; transform: translateY(0); }
+  50% { opacity: 0.4; transform: translateY(20px); }
 }
 
 .animate-pulseSlow {
   animation: pulseSlow 6s ease-in-out infinite;
 }
 
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+
+@keyframes gradientFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientFlow 6s ease infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
 @layer base {
   ::selection {
-    @apply bg-[#c8a95f] text-black;
+    background-color: #5C66F5;
+    color: #fff;
   }
 }

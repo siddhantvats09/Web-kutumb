@@ -33,7 +33,7 @@ export default function Home() {
         tag: "Brand Consistency",
         tagDesc: "Design system for website, ads, and product creatives.",
         points: ["Logo design", "Brand identity", "Marketing creatives"],
-        link: "/animation-2d-3d-service-page",
+        link: "/graphic-logo-design-service",
       },
       {
         media: "/images/animation1.mp4",
@@ -328,6 +328,7 @@ export default function Home() {
                     "Clear CTAs + user flow",
                     "Brand-consistent UI",
                   ],
+                  link: "/website-development-service",
                 },
                 {
                   title: "SEO Authority & Organic Growth",
@@ -337,6 +338,7 @@ export default function Home() {
                     "Local SEO + maps",
                     "Topical authority building",
                   ],
+                  link: "/search-engion-optimization-seo-service",
                 },
                 {
                   title: "Performance Marketing That Scales",
@@ -346,6 +348,7 @@ export default function Home() {
                     "Retargeting funnels",
                     "CPL reduction strategy",
                   ],
+                  link: "/performance-marketing-googel-meta-ads",
                 },
               ].map((card) => (
                 <div
@@ -367,10 +370,11 @@ export default function Home() {
                     <span className="text-[10px] font-black uppercase tracking-[0.28em] text-[#c8a95f]">
                       Growth pillar
                     </span>
-
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all group-hover:border-[#c8a95f]/35 group-hover:bg-[#c8a95f]/15 group-hover:text-white">
-                      →
-                    </span>
+                    <Link href={card.link}>
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all group-hover:border-[#c8a95f]/35 group-hover:bg-[#c8a95f]/15 group-hover:text-white">
+                        →
+                      </span>
+                    </Link>
                   </div>
 
                   {/* micro accent like premium UI */}
