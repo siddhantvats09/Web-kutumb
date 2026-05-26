@@ -7,7 +7,7 @@ import { UserIcon } from "@heroicons/react/24/solid";
 export default function TeamCard() {
   const team = [
     { name: "Shivansh", role: "Founder & CEO", image: "" },
-    { name: "Siddhant Vats", role: "Technical  Sales Head ", image: "" }, // No image provided
+    { name: "Siddhant Vats", role: "Technical & Sales Head ", image: "" }, // No image provided
     {
       name: "Raman Dagar",
       role: "AI  Specialist & Lead Developer",
